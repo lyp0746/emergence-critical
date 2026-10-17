@@ -1,0 +1,29 @@
+<h2 class="chapter">第二十九章　推导与解析（四）：有限尺度标度与临界指数的估计</h2>
+<div class="box"><p>理论给了临界指数，但"怎么从数据里把它估出来"？这一章讲有限尺度标度——这是把"相变"从"概念"变成"可测量"的关键技术。</p></div>
+<h3 id="sec29-1">29.1　为什么需要有限尺度标度</h3>
+<p>在无限系统里，关联长度 <code>ξ</code> 在临界点发散。但任何真实系统都是<strong>有限大小</strong> <code>L</code>。</p>
+<p><strong>有限大小会"抹平"临界点：</strong> <code>ξ</code> 最多长到 <code>L</code>，所以临界行为被"圆滑"了。<strong>你直接测，永远测不到"尖锐的奇点"。</strong></p>
+<p><strong>解决办法：</strong> 用不同 <code>L</code> 的数据，做"标度坍缩"。</p>
+<h3 id="sec29-2">29.2　标度假设</h3>
+<p>设某个可观测量 <code>A</code>（如磁化、序参量）满足：</p>
+<p>``<code> A(L, T) = L^{ω/ν} · f( L^{1/ν} (T − T_c) ) </code>``</p>
+<p>其中 <code>ν</code> 是关联长度指数，<code>ω</code> 是 <code>A</code> 的标度维数，<code>f</code> 是标度函数。</p>
+<p><strong>这个假设的意思是：</strong> 不同 <code>L</code> 的曲线，只要按 <code>L</code> 重新标度，就会"坍缩"到同一条 <code>f</code> 上。</p>
+<h3 id="sec29-3">29.3　数据坍缩：三步</h3>
+<p><strong>第一步：固定 <code>T_c</code> 与 <code>ν</code> 的猜测值。</strong></p>
+<p><strong>第二步：把每个 <code>L</code> 的数据，画成 <code>L^{−ω/ν} A</code> 对 <code>L^{1/ν}(T−T_c)</code>。</strong></p>
+<p><strong>第三步：调 <code>T_c</code>、<code>ν</code>、<code>ω</code>，直到所有曲线"叠成一条"。</strong></p>
+<p><strong>叠得越好，参数越可信。</strong> 这就是"用数据估临界指数"的标准做法。</p>
+<h3 id="sec29-4">29.4　Binder 累积量：更稳的 <code>T_c</code> 估计</h3>
+<p>``<code> U = 1 − ⟨m⁴⟩ / (3⟨m²⟩²) </code>``</p>
+<p><strong>为什么用它？</strong> 因为不同 <code>L</code> 的 <code>U</code> 曲线，<strong>在 <code>T_c</code> 处相交</strong>。<strong>交点就是 <code>T_c</code>，而且它不依赖 <code>ω</code>。</strong></p>
+<p><strong>这是"最稳"的 <code>T_c</code> 估计法之一。</strong></p>
+<h3 id="sec29-5">29.5　一个可复算的例子</h3>
+<p>以二维伊辛为例（<code>T_c≈2.269</code>）：</p>
+<ul><li>取 <code>L=16, 32, 64, 128</code>；</li><li>每个 <code>L</code> 跑 Monte Carlo，测 <code>m</code>、<code>χ</code>、<code>U</code>；</li><li>画 <code>U</code> 对 <code>T</code>，找交点 → <code>T_c</code>；</li><li>画 <code>m L^{β/ν}</code> 对 <code>L^{1/ν}(T−T_c)</code>，调 <code>β/ν</code>、<code>ν</code> 直到坍缩；</li><li>得到 <code>β≈0.125</code>、<code>ν≈1</code>。</li></ul>
+<p><strong>这与 Onsager 的精确解一致。</strong> 这就是"数值验证理论"的完整流程。</p>
+<h3 id="sec29-6">29.6　这对本书的意义</h3>
+<p><strong>它说明"临界指数"不是"哲学词"，而是"可以估出来的数"。</strong> 但本书也承认：<strong>这套方法需要"可重复的实验/模拟"与"大样本"。</strong></p>
+<p><strong>社会/历史系统，两条都不满足。</strong> 所以，本书只能借"标度"的<strong>思想</strong>（不同尺度要一起看），不能借"标度坍缩"的<strong>技术</strong>。</p>
+<h3 id="sec29-7">29.7　一句话带走</h3>
+<div class="box"><p><strong>临界指数之所以可信，不是因为它"推导得漂亮"，而是因为它"能被数据坍缩估出来"。</strong></p></div>

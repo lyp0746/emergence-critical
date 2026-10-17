@@ -1,0 +1,108 @@
+<h2 class="chapter">第十章　形式化的地平线：为什么效力会递减</h2>
+<p>一条路一直往前走，走到雾里就看不见了。有人问：“路是不是断了？”向导说：“不是断了，是看不见了。”<b>看不见和不存在，是两件事。</b></p>
+<h3 id="sec10-1">10.1　先把"复杂度 C"定义清楚</h3>
+<p>"复杂度"是最容易被滥用的词。本书把它拆成三个可判断的分量：</p>
+<p>``<code> C = (1 − 微观可知性) + (1 − 序参量可测性) + (1 − 定义客观性) </code>``</p>
+<ul><li><strong>微观可知性</strong>：微观规则是否已知、可写？（物理≈1，社会≈0.3，历史≈0.1）</li><li><strong>序参量可测性</strong>：是否存在可测量、可复现的宏观序参量？（物理≈1，社会≈0.3，历史≈0.1）</li><li><strong>定义客观性</strong>：临界点与"是否发生质变"，是否独立于观察者？（物理≈1，社会≈0.4，历史≈0.05）</li></ul>
+<p>C 越大，越难形式化。</p>
+<div class="box"><p><strong>这个定义的一个好处：</strong> 它把"数学公理系统"归为<strong>低 C</strong>（规则已知、定义客观），所以"数学既高 F 又高 H"并不构成反例。<strong>反例之所以出现，往往是因为把"概念抽象"误当成了"形式化困难"。</strong></p></div>
+<h3 id="sec10-2">10.2　.2　"C 的定义"如何影响 F(C)</h3>
+<p>上面的 C 是<strong>加法</strong>（三项相加）。如果改成<strong>乘法</strong>呢？</p>
+<p>``<code> C_mul = (1−微观可知) × (1−序参量可测) × (1−定义客观) </code>``</p>
+<ul><li><strong>加法</strong>：一项掉到 0，整体只掉 1/3；</li><li><strong>乘法</strong>：一项掉到 0，整体直接归零。</li></ul>
+<p><strong>两种定义会给出不同的曲线。</strong> 加法更"宽容"（社会系统还能得点分），乘法更"苛刻"（只要定义不客观，C 就爆炸）。</p>
+<p><strong>本书选加法，是因为它更贴近"诊断"的直觉：一项弱，不代表全盘皆输。</strong> 但读者必须知道：<strong>换一种定义，F(C) 的形状就会变。</strong> 这本身就说明：<strong>连"形式化地平线"这个观察，也是框架依赖的。</strong></p>
+<h3 id="sec10-3">10.3　一个函数关系：F(C)</h3>
+<p>把上面的直觉写成一个粗略的关系：</p>
+<p>``<code> F(C) = F_min + (F_0 − F_min) · exp(−λ · C) </code>``</p>
+<ul><li><code>F</code>：可形式化程度（0—1）；</li><li><code>C</code>：上面的合成复杂度；</li><li><code>F_0</code>：物理系统的上限（≈0.95）；</li><li><code>F_min</code>：可接受的最小形式化（≈0.2）；</li><li><code>λ</code>：衰减率（经验参数）。</li></ul>
+<p><strong>它的意思：</strong> 复杂度每增加一点，可形式化程度就按指数衰减，最后逼近一个"只能定性"的下限。</p>
+<p><strong>但"指数衰减"不是唯一可能。</strong> 至少还有两种形状：</p>
+<ul><li><strong>S 形</strong>：在某些复杂度区间，"形式化"会突然崩塌（不是渐变）；</li><li><strong>多峰</strong>：存在"高复杂度但高 F"的特例（如某些高度形式化的社会科学模型）。</li></ul>
+<p><strong>本书采用指数型，只是因为它最简单、最容易画。</strong> 它不是定律，是一个<strong>说明性模型</strong>〔等级：C／丙〕。</p>
+<img class="fig" src="assets/svg/fig-formalization-horizon.svg" alt="图 5.1　形式化的地平线"><div class="cap"><b>图 5.1　形式化的地平线</b></div>
+<h3 id="sec10-4">10.4　五个系统的 F(C) 曲线</h3>
+<table class="nat">
+<tr><th class="l">系统</th><th class="l">微观可知</th><th class="l">序参量可测</th><th class="l">定义客观</th><th class="l">C（估）</th><th class="l">F（估）</th></tr>
+<tr><td class="l">图（区分的语法）</td><td class="l">0.95</td><td class="l">0.90</td><td class="l">0.95</td><td class="l">0.20</td><td class="l">0.80</td></tr>
+<tr><td class="l">记忆（遗忘）</td><td class="l">0.40</td><td class="l">0.30</td><td class="l">0.60</td><td class="l">1.70</td><td class="l">0.45</td></tr>
+<tr><td class="l">社会（错位）</td><td class="l">0.40</td><td class="l">0.30</td><td class="l">0.40</td><td class="l">1.90</td><td class="l">0.40</td></tr>
+<tr><td class="l">知识（选择）</td><td class="l">0.50</td><td class="l">0.40</td><td class="l">0.50</td><td class="l">1.60</td><td class="l">0.55</td></tr>
+<tr><td class="l">历史（诠释）</td><td class="l">0.10</td><td class="l">0.10</td><td class="l">0.05</td><td class="l">2.75</td><td class="l">0.20</td></tr>
+</table>
+<div class="box"><p><strong>这些数字是估计，不是测量。</strong> 它们的用途是<strong>排序</strong>，不是<strong>比较大小</strong>。</p></div>
+<h3 id="sec10-5">10.5　反例：什么时候 F(C) 会"违反"递减？</h3>
+<ul><li><strong>高 C、高 F</strong>：某些经济学模型——假设极强、定义极清晰，所以形式化很高，但<strong>现实效度</strong>很低。<strong>这说明 F 高不等于"好"。</strong></li><li><strong>低 C、低 F</strong>：某些工程经验手册——规则很清楚，但拒绝形式化。<strong>这说明 F 低不等于"对象复杂"。</strong></li><li><strong>同一对象的不同尺度</strong>：一个社会系统，在"个体"尺度上 F 很低，在"统计"尺度上 F 可能很高。<strong>这说明 C 不是对象的固有属性，而是"对象 + 尺度"的属性。</strong></li></ul>
+<div class="box"><p><strong>结论：</strong> F(C) 是一个<strong>有用的粗略规律</strong>，不是一条严格定律。<strong>把它当定律，就是本书要批评的"虚假精确"。</strong></p></div>
+<h3 id="sec10-6">10.6　三条递减条件</h3>
+<p>相变框架要在某个系统中"严格成立"，需要三个条件。它们随系统复杂度依次失效：</p>
+<ol><li><strong>微观可知性</strong>：微观规则是否已知、可写？</li><li><strong>序参量可测性</strong>：是否存在一个可测量、可复现的宏观序参量？</li><li><strong>定义客观性</strong>：临界点与"是否发生质变"，是否独立于观察者？</li></ol>
+<p><strong>三条全满足</strong> → 严格相变（如《区分的语法》）； <strong>掉一条</strong> → 需要削弱（如《遗忘》《错位》）； <strong>掉两条以上</strong> → 只能类比（如《选择》《诠释》）。</p>
+<h3 id="sec10-7">10.7　F(C) 的三种形状</h3>
+<p><strong>指数型。</strong> 本书采用的形状：复杂度每增一点，可形式化程度按比例衰减。<strong>它假设“衰减率恒定”。</strong></p>
+<p><strong>S 形。</strong> 在某些复杂度区间，“形式化”会突然崩塌，而不是渐变。<strong>它假设“存在一个崩塌区间”。</strong></p>
+<p><strong>多峰。</strong> 存在“高复杂度但高 F”的特例（如高度形式化的社会科学模型）。<strong>它假设“复杂度不是唯一变量”。</strong></p>
+<p><strong>三种形状，对应三种“地平线观”：</strong> 渐变、突变、非单调。<strong>本书选指数型，只是因为它最简单；并不意味着它是“对的”。</strong></p>
+<h3 id="sec10-8">10.8　怎么估计 C</h3>
+<p><code>C</code> 有三个分量，各可以操作化：</p>
+<ul><li><strong>微观可知性</strong>：能用多少“可写出的规则”描述系统？（0—1）</li><li><strong>序参量可测性</strong>：能不能独立测量一个宏观序参量？（0—1）</li><li><strong>定义客观性</strong>：临界点是否依赖观察者？（0—1）</li></ul>
+<p><strong>操作化的关键，是“用同一把尺子量不同系统”。</strong> 这把尺子本身是主观的——<strong>所以 C 只能用于“排序”，不能用于“绝对比较”。</strong></p>
+<h3 id="sec10-9">10.9　地平线的伦理</h3>
+<p><strong>不要把“低 F”当成“低质量”。</strong> 历史学不能写出状态方程，不是历史的缺陷，是历史的本性。</p>
+<p><strong>也不要把“高 F”当成“更真”。</strong> 一个高度形式化的模型，可能只是“假设极强”。</p>
+<p><strong>地平线的用途，是“说明边界”，不是“给对象排名”。</strong> 这是本书反复强调的。</p>
+<h3 id="sec11-10">11.10　三个不可通约的案例</h3>
+<p><strong>历史分期。</strong> “唐宋之间是不是一个转折”——换一个分期尺度，答案就变。</p>
+<p><strong>社会分裂。</strong> “这个社会是不是撕裂了”——换一个极化指标，答案就变。</p>
+<p><strong>艺术风格。</strong> “这是不是一次风格革命”——换一个特征定义，答案就变。</p>
+<p><strong>三个案例的共同点：</strong> 不是“没有事实”，而是“事实的边界由观察者划定”。</p>
+<h3 id="sec11-11">11.11　能不能用“多观察者”缓解？</h3>
+<p><strong>一种思路。</strong> 让多个观察者独立判定，取“多数”。</p>
+<p><strong>问题。</strong> 多数能解决“事实分歧”，不能解决“尺度分歧”——<strong>因为不同观察者可能用了不同的尺度。</strong></p>
+<p><strong>所以，“多观察者”能提高“事实层”的置信度，不能消除“诠释层”的不可通约。</strong></p>
+<h3 id="sec11-12">11.12　不可通约 ≠ 相对主义</h3>
+<p><strong>相对主义说：</strong> “怎么都行，没有对错。”</p>
+<p><strong>本书说：</strong> “有些对象无法被非主观地判定为相变，但事实层仍然有对错。”</p>
+<p><strong>区别在“分层”：</strong> 事实层可以争对错；诠释层只能争“位置”。<strong>把两层混在一起，才会滑向“怎么都行”。</strong></p>
+<h3 id="sec12-13">12.13　把“地平线”当“借口”</h3>
+<p><strong>表现。</strong> “反正历史只能讲，那我随便讲。”</p>
+<p><strong>为什么错。</strong> 地平线说明“不能精确”，不说明“不能负责”。<strong>事实层仍然要讲证据。</strong></p>
+<p><strong>怎么改。</strong> 在“能讲证据”的地方讲证据，在“只能讲意义”的地方标出“这是意义”。</p>
+<h3 id="sec12-14">12.14　把“低 F”当“低质量”</h3>
+<p><strong>表现。</strong> “历史学没有公式，所以不如物理学。”</p>
+<p><strong>为什么错。</strong> F 低是“对象性质”，不是“学科水平”。</p>
+<p><strong>怎么改。</strong> 问：“它在自己的对象上，做到最好吗？”</p>
+<h3 id="sec12-15">12.15　把“高 F”当“真理”</h3>
+<p><strong>表现。</strong> “这个模型有方程，所以它是对的。”</p>
+<p><strong>为什么错。</strong> 方程只保证“推导有效”，不保证“前提为真”。</p>
+<p><strong>怎么改。</strong> 问：“它的前提，在现实里成立吗？”</p>
+<h3 id="sec18-16">18.16　六个系统的共同“数据缺口”</h3>
+<p>疫情缺“未检测感染数”，气候缺“长时段观测”，金融缺“表外杠杆”，技术缺“反事实”，社会缺“非主观指标”，历史缺“可重复实验”。</p>
+<p><strong>六个缺口，指向同一个事实：</strong> <strong>复杂系统的“诊断”，永远在“数据不全”下进行。</strong></p>
+<h3 id="sec18-17">18.17　如果只能保留一个“诊断工具”</h3>
+<p>如果只能保留一个，我会保留<strong>“临界慢化”</strong>。</p>
+<p><strong>为什么？</strong> 因为它是<strong>唯一“事前”</strong>的标记。<strong>其他标记都要等“越过”之后才能看见，只有慢化能在“越过之前”给你一个窗口。</strong></p>
+<p><strong>但我也承认：</strong> 慢化最难测，最容易误判。<strong>“最有用的工具”，往往也是“最危险的工具”。</strong></p>
+<h3 id="sec18-18">18.18　跨领域测试的元结论</h3>
+<p>把五个（乃至更多）陌生系统并排，会得到一个“元结论”：</p>
+<div class="box"><p><strong>“临界”这个词的流行，远超过它的“可测量性”。</strong></p></div>
+<p><strong>大多数被称为“临界”的现象，其实只是“变化”；只有少数，能被“三中二”识别；更少数，能被“临界指数”刻画。</strong></p>
+<p><strong>这就是本书想说的“诚实”：不是“什么都是相变”，而是“少数是，多数不是”。</strong></p>
+<h3 id="sec10-19">10.19　形式化的三个必要步骤，与本书走到第几步</h3>
+<p>“形式化”常被当成一个褒义词，其实它有明确的门槛。这一节把它拆成三步，并诚实标出本书的位置。</p>
+<p><strong>第一步：定义。</strong> 每一个量都要有可操作的定义——不是“给出一个词”，而是“给出一个能在数据上算出来的式子”。Ising 的 m 是 (1/N)Σs_i；渗流的 P_∞ 是最大连通块占比；<strong>本书的 F(C)、H、三中二，都只有“描述性定义”，没有“可计算的式子”。</strong></p>
+<p><strong>第二步：测量。</strong> 定义之后，要有一个独立于作者的测量程序，且不同人做出来一致。第十三章的两个 MVU 做到了这一点（脚本 + 参数 + 种子）；<strong>但全书的五个应用没有做到。</strong></p>
+<p><strong>第三步：复现。</strong> 别人用你的程序，得到同样的数（在误差内）。这一步最难，因为它要求把“环境的偶然”也写清楚：随机种子、边界条件、迭代次数、硬件精度。<strong>本书对 MVU 做到了，对社会案例做不到。</strong></p>
+<p><strong>本书的位置：</strong></p>
+<table class="nat">
+<tr><th class="l">部分</th><th class="l">定义</th><th class="l">测量</th><th class="l">复现</th><th class="l">等级</th></tr>
+<tr><td class="l">二维 Ising 的临界指数</td><td class="l">有</td><td class="l">有</td><td class="l">有（脚本+种子）</td><td class="l">A</td></tr>
+<tr><td class="l">渗流阈值</td><td class="l">有</td><td class="l">有</td><td class="l">有</td><td class="l">A</td></tr>
+<tr><td class="l">τ 的序数诊断</td><td class="l">半有（依赖口径）</td><td class="l">有（可算）</td><td class="l">部分</td><td class="l">B</td></tr>
+<tr><td class="l">F(C) 曲线</td><td class="l">无（说明性）</td><td class="l">无</td><td class="l">无</td><td class="l">C</td></tr>
+<tr><td class="l">H、三中二</td><td class="l">无</td><td class="l">无（自评）</td><td class="l">无</td><td class="l">C</td></tr>
+</table>
+<p><strong>这张表就是“地平线”的准确位置。</strong> 地平线不在“社会系统太复杂”这种笼统的说法里，而在<strong>这三步的第二步与第三步</strong>：定义可以勉强给，测量与复现给不出来。</p>
+<p><strong>为什么还要写下去？</strong> 因为“知道地平线在哪”本身是有用的：它让你在 borrowed 一个物理词之前，先问“我走到第几步了”。<strong>一个只走到第一步的框架，仍然可以提出好问题——但它不能宣称自己已经回答了。</strong></p>
+<p><div class="box box-more2"><p><b>【再想一层】</b>把这张表倒过来读，就是一份“如何把隐喻变成科学”的操作清单：<b>先给式子，再给程序，最后给种子。</b> 三样齐了，才轮到“普适”这个词。</p></div></p>
+<div class="case"><p>【人的尺度】一位年轻研究者问：“形式化到底能走多远？”导师说：“走到你自己也看不懂的那一步。”<b>地平线的意义不是让人绝望，是让人知道自己的手电筒照到哪儿会暗下去。</b></p></div>

@@ -1,0 +1,56 @@
+<h2 class="chapter">第二十五章　推导与解析（一）：朗道理论、临界指数与标度关系</h2>
+<div class="box"><p>前面讲“序参量”“临界指数”，但没推导。这一章补上：从自由能出发，推出临界指数与标度关系。</p></div>
+<h3 id="sec25-1">25.1　朗道自由能</h3>
+<p>设序参量为 <code>η</code>，外场为 <code>h</code>。把自由能按 <code>η</code> 展开（对称性要求只含偶次项）：</p>
+<p>``<code> F(η) = F₀ + a η² + b η⁴ − h η </code>``</p>
+<p>其中 <code>a = a₀(T − T_c)</code>，<code>b > 0</code>。</p>
+<p><strong>为什么只含偶次项？</strong> 因为 <code>η → −η</code> 是对称的（例如磁化方向翻转，能量不变）。<strong>这一条对称性，决定了临界指数的“普适”。</strong></p>
+<h3 id="sec25-2">25.2　平衡态：对 η 求极小</h3>
+<p>``<code> ∂F/∂η = 2aη + 4bη³ − h = 0 </code>``</p>
+<p><strong>情形一：h=0。</strong></p>
+<ul><li><code>T > T_c</code>（<code>a>0</code>）：唯一极小在 <code>η=0</code>；</li><li><code>T < T_c</code>（<code>a<0</code>）：<code>η=0</code> 变成极大，极小在 <code>η² = −a/(2b)</code>。</li></ul>
+<p>于是：</p>
+<p>``<code> η = ± sqrt( a₀(T_c − T) / (2b) )  ∝ (T_c − T)^{1/2} </code>``</p>
+<p><strong>所以 <code>β = 1/2</code>。</strong> 这是平均场的第一条指数。</p>
+<h3 id="sec25-3">25.3　磁化率：对 h 求导</h3>
+<p>在 <code>T > T_c</code>、<code>h→0</code> 时，<code>η ≈ h/(2a)</code>，于是：</p>
+<p>``<code> χ = ∂η/∂h = 1/(2a) ∝ (T − T_c)^{−1} </code>``</p>
+<p><strong>所以 <code>γ = 1</code>。</strong></p>
+<h3 id="sec25-4">25.4　比热：对温度求二阶导</h3>
+<p><code>F</code> 在 <code>T_c</code> 处有一个“折点”，比热 <code>C = −T ∂²F/∂T²</code> 出现<strong>有限跳变</strong>，而不是发散。</p>
+<p><strong>所以 <code>α = 0</code>（平均场）。</strong></p>
+<h3 id="sec25-5">25.5　关联长度</h3>
+<p>在平均场里，关联函数 <code>G(r) ∝ e^{−r/ξ}/r</code>，而 <code>ξ ∝ |T − T_c|^{−1/2}</code>。</p>
+<p><strong>所以 <code>ν = 1/2</code>。</strong></p>
+<h3 id="sec25-6">25.6　标度关系：指数之间不是独立的</h3>
+<p>临界指数不是“六个独立的数”，它们满足<strong>标度关系</strong>：</p>
+<p>``<code> Rushbrooke:   α + 2β + γ = 2 Widom:        γ = β(δ − 1) Josephson:    ν d = 2 − α Fisher:       γ = ν(2 − η) </code>``</p>
+<p><strong>这些关系，把六个指数压缩成两个独立指数。</strong> 这就是“普适类”的数学基础。</p>
+<h3 id="sec25-7">25.7　平均场指数表</h3>
+<table class="nat">
+<tr><th class="l">指数</th><th class="l">平均场值</th><th class="l">2D 伊辛</th><th class="l">3D 伊辛</th></tr>
+<tr><td class="l">α</td><td class="l">0（跳变）</td><td class="l">0（对数）</td><td class="l">0.110</td></tr>
+<tr><td class="l">β</td><td class="l">1/2</td><td class="l">1/8</td><td class="l">0.326</td></tr>
+<tr><td class="l">γ</td><td class="l">1</td><td class="l">7/4</td><td class="l">1.237</td></tr>
+<tr><td class="l">δ</td><td class="l">3</td><td class="l">15</td><td class="l">4.789</td></tr>
+<tr><td class="l">ν</td><td class="l">1/2</td><td class="l">1</td><td class="l">0.630</td></tr>
+<tr><td class="l">η</td><td class="l">0</td><td class="l">1/4</td><td class="l">0.036</td></tr>
+</table>
+<p><strong>平均场与真实值的差别，说明“平均场只在 d≥4 时严格”。</strong> 这就是“上临界维度” <code>d_c=4</code>。</p>
+<h3 id="sec25-8">25.8　这对本书的意义</h3>
+<p>本书的“普适类”不是空话：<strong>它有一套可推导的指数与标度关系。</strong> 但本书也承认：<strong>社会/历史系统，几乎不可能测出这些指数。</strong> 所以，本书只借“结构”，不借“数值”。</p>
+<h3 id="sec25-9">25.9　朗道理论的局限</h3>
+<p>朗道理论是“平均场”：它假设 <code>η</code> 在空间均匀。<strong>这忽略了涨落。</strong></p>
+<p><strong>什么时候涨落可以忽略？</strong> 当维度 <code>d</code> 大于“上临界维度” <code>d_c</code> 时。<strong>对标准相变，<code>d_c=4</code>。</strong></p>
+<p><strong>为什么？</strong> 用“金兹堡判据”：涨落在关联体积 <code>ξ^d</code> 内的方差，要小于 <code>η</code> 的均值。<strong>当 <code>d>4</code>，这个条件满足；当 <code>d<4</code>，涨落改写指数。</strong></p>
+<p><strong>所以，朗道的指数（β=1/2 等）只在 <code>d≥4</code> 严格。</strong> 二维、三维的伊辛，指数不同——这就是“平均场失效”。</p>
+<h3 id="sec25-10">25.10　一阶相变的朗道描述</h3>
+<p>如果 <code>b<0</code>，自由能 <code>F = aη² + bη⁴ + cη⁶</code>（<code>c>0</code>），会出现“双阱”。</p>
+<p><strong>当 <code>a</code> 从正变负，两个极小“交换高度”</strong>——在某个 <code>a_c</code>，<code>η=0</code> 与 <code>η≠0</code> 的极小等高。<strong>这就是一阶相变：序参量跳变。</strong></p>
+<p><strong>一阶相变的标志：</strong> 潜热、滞后、两相共存。</p>
+<h3 id="sec25-11">25.11　三临界点</h3>
+<p>如果 <code>b</code> 也随参数变化，在 <code>b=0</code> 处，系统从“二阶”变成“一阶”——<strong>这个点叫“三临界点”（tricritical point）。</strong></p>
+<p><strong>它的意义：</strong> 它说明“相变的类型”本身，也可以随参数改变。<strong>“二阶”不是绝对的，它可以是“一阶”的边界。</strong></p>
+<h3 id="sec25-12">25.12　朗道与本书</h3>
+<p>本书借“序参量”“对称破缺”“临界指数”，但<strong>不借“平均场”的强假设</strong>。原因：社会/历史系统，既没有“空间均匀性”，也没有“可测的涨落”。</p>
+<p><strong>所以，本书只借“骨架”，不借“血肉”。</strong> 这是“借用工具，不冒充理论”的又一处。</p>

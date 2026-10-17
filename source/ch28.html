@@ -1,0 +1,46 @@
+<h2 class="chapter">第二十八章　边界：为什么决定性质的是"边"，不是"里面"</h2>
+<div class="box"><p>前面讲"临界点"，但没讲"边界"这个更一般的概念。这一章把数学的边界条件、经济学的边际、物理化学生物的临界条件并排，看它们是不是同一件事。</p></div>
+<h3 id="sec28-1">28.1　数学：边界条件决定解</h3>
+<p><strong>最干净的例子：拉普拉斯方程。</strong></p>
+<p>``<code> ∇²u = 0  （在区域 Ω 内） u = f     （在边界 ∂Ω 上） </code>``</p>
+<p><strong>关键：</strong> 方程本身（<code>∇²u=0</code>）有无穷多解；<strong>是边界条件 <code>u=f</code> 把解“钉死”的。</strong> 换一个边界条件，就换一个解。</p>
+<ul><li><strong>Dirichlet 条件</strong>：给定边界上的值；</li><li><strong>Neumann 条件</strong>：给定边界上的法向导数；</li><li><strong>混合条件</strong>：两者都有。</li></ul>
+<p><strong>这就是“边界决定性质”的最直接版本：内部方程相同，边界不同，解就不同。</strong></p>
+<p><strong>更深一层：边界算子。</strong> 拓扑学里，一个区域 <code>Ω</code> 的边界记作 <code>∂Ω</code>，而 <code>∂(∂Ω)=∅</code>（边界的边界是空集）。<strong>这个“<code>∂²=0</code>”，是斯托克斯定理 <code>∫_Ω dω = ∫_{∂Ω} ω</code> 的代数根源。</strong> 边界不是“附属品”，它是“内部”的对偶。</p>
+<p><strong>极限与奇点。</strong> 数学里还有一类“边界”：<strong>定义域的边界</strong>。函数在边界上可能连续、可能发散、可能不可导。<strong>很多“性质”只在边界上才显现</strong>（如 <code>1/x</code> 在 <code>x=0</code> 的奇点）。</p>
+<h3 id="sec28-2">28.2　经济学：边际是“增量的边界”</h3>
+<p><strong>边际效用。</strong> <code>MU = dU/dx</code>。<strong>“边际效用递减”</strong>（Gossen 第一定律）：随着消费增加，每多一单位带来的效用递减。</p>
+<p><strong>边际成本与收益。</strong> 利润最大化条件：<code>MR = MC</code>。<strong>不是“总收益最大”，而是“再走一步的收益 = 再走一步的成本”。</strong></p>
+<p><strong>边际替代率。</strong> <code>MRS = MU_x / MU_y</code>；它决定“无差异曲线”的斜率。</p>
+<p><strong>拉格朗日乘子。</strong> 约束优化 <code>max f(x) s.t. g(x)=0</code>，拉格朗日函数 <code>L = f − λg</code>。<strong>乘子 <code>λ</code> 是“影子价格”：约束放松一单位，目标能增加多少。</strong></p>
+<p><strong>角点解与内点解。</strong> 最优解可能在“内部”（<code>MR=MC</code>），也可能在“边界”（如预算全花光、产量为零）。<strong>“边界解”是经济学里最容易被忽略、却最常见的情形。</strong></p>
+<p><strong>边际与平均。</strong> 一个漂亮的结论：<strong>边际成本曲线穿过平均成本曲线的最低点。</strong> 因为“再走一步的成本”与“平均成本”的关系，决定了平均成本是升还是降。</p>
+<h3 id="sec28-3">28.3　物理：临界条件是“相边界”</h3>
+<p><strong>相边界。</strong> 在 <code>P-T</code> 图上，固/液/气的分界线，就是“相边界”。<strong>跨过它，物质就换了相。</strong></p>
+<p><strong>Clausius–Clapeyron 方程。</strong> 相边界斜率：</p>
+<p>``<code> dP/dT = L / (T ΔV) </code>``</p>
+<p>其中 <code>L</code> 是潜热，<code>ΔV</code> 是体积变化。<strong>它告诉你“边界往哪边走”。</strong></p>
+<p><strong>成核的临界尺寸。</strong> 一个新相要长出来，需要克服表面能：</p>
+<p>``<code> r* = 2γ / ΔG_v </code>``</p>
+<p><code>r<r*</code> 的核会溶解，<code>r>r*</code> 的核会生长。<strong>“临界尺寸”就是“生与死”的边界。</strong></p>
+<p><strong>活化能。</strong> 化学反应速率 <code>k = A exp(−E_a/RT)</code>。<strong>只有能量超过 <code>E_a</code> 的分子，才能越过“反应边界”。</strong></p>
+<h3 id="sec28-4">28.4　化学：阈值与平衡</h3>
+<p><strong>反应阈值。</strong> 很多反应需要“临界浓度”或“临界温度”才能启动。</p>
+<p><strong>平衡。</strong> <code>ΔG = 0</code> 是“反应方向”的边界：<code>ΔG<0</code> 正向，<code>ΔG>0</code> 逆向。</p>
+<p><strong>催化。</strong> 催化剂不改变平衡，只降低“活化能”——<strong>它把“边界”挪低了，但没挪走。</strong></p>
+<h3 id="sec28-5">28.5　生物：阈值与临界质量</h3>
+<p><strong>神经元。</strong> 膜电位达到“阈值”（约 −55 mV），才触发动作电位。<strong>低于阈值，全是“局部电位”；越过阈值，才是“全或无”的脉冲。</strong></p>
+<p><strong>种群。</strong> Allee 效应：种群低于“临界规模”，增长率变负——<strong>太少，也会灭绝。</strong></p>
+<p><strong>生态。</strong> 临界点（tipping point）：湖泊富营养化、珊瑚白化、森林退化，都有“越过就回不去”的阈值。</p>
+<p><strong>酶动力学。</strong> Michaelis–Menten：<code>v = V_max [S]/(K_m+[S])</code>。<strong>它没有“阈值”，只有“饱和”——这提醒我们：不是所有“边界”都是“临界点”。</strong></p>
+<h3 id="sec28-6">28.6　共同结构：为什么“边”决定“里”</h3>
+<p>把五个领域并排，会看到一个共同结构：</p>
+<ol><li><strong>边界条件决定解</strong>（数学）：内部方程相同，边界不同，解不同；</li><li><strong>边际决定决策</strong>（经济学）：不是“总量”，而是“再走一步的增量”；</li><li><strong>临界条件决定相</strong>（物理化学生物）：跨过边界，就换规则。</li></ol>
+<p><strong>三者其实是同一句话的三种说法：</strong></p>
+<div class="box"><p><strong>一个系统的“性质”，往往不由“内部”决定，而由“它与外部的交界”决定。</strong></p></div>
+<p><strong>为什么？</strong> 因为“内部”是“被边界约束的解”；“边际”是“解的导数在边界上的值”；“临界”是“解在边界上的不连续”。</p>
+<h3 id="sec28-7">28.7　与本书的关系</h3>
+<ul><li><strong>C-A-T 三角</strong>：它是“可行域的边界”——不是“内部怎么走”，而是“边界在哪”。</li><li><strong>τ</strong>：它是“时间的边界”——不是“系统有多强”，而是“还剩多少时间”。</li><li><strong>临界点</strong>：它是“相边界”——不是“相内怎么变”，而是“跨过去就换规则”。</li><li><strong>边际</strong>：它是“值的边界”——不是“总量多少”，而是“再多一单位值不值”。</li></ul>
+<p><strong>所以，本书的“临界”只是“边界”的一个特例：边界是“相”的边界；边际是“值”的边界；可行域是“策略”的边界。</strong></p>
+<h3 id="sec28-8">28.8　一句话带走</h3>
+<div class="box"><p><strong>决定性质的，往往不是“里面有什么”，而是“边界在哪里、跨过去会发生什么”。</strong></p></div>

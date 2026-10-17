@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414" width="1000" height="1414">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#0e1117"/><stop offset="0.55" stop-color="#151a23"/><stop offset="1" stop-color="#0b0e14"/>
+</linearGradient></defs>
+<rect x="0" y="0" width="1000" height="1414" fill="url(#bg)"/>
+<rect x="0" y="0" width="1000" height="8" fill="#b8862f" opacity="0.85"/>
+<polyline points="120,760 128,760 135,759 143,759 150,758 158,757 166,757 173,756 181,755 188,754 196,753 204,752 211,751 219,750 226,749 234,748 242,747 249,746 257,744 264,743 272,742 280,740 287,739 295,737 302,735 310,734 318,732 325,730 333,728 340,727 348,725 356,723 363,721 371,718 378,716 386,714 394,712 401,710 409,707 416,705 424,702 432,700 439,697 447,695 454,692 462,689 470,687 477,684 485,681 492,678 500,675 508,672 515,669 523,366 530,363 538,359 546,356 553,353 561,349 568,346 576,342 584,339 591,335 599,332 606,328 614,324 622,320 629,316 637,313 644,309 652,305 660,301 667,296 675,292 682,288 690,284 698,279 705,275 713,271 720,266 728,262 736,257 743,252 751,248 758,243 766,238 774,233 781,228 789,223 796,218 804,213 812,208 819,203 827,198 834,193 842,187 850,182 857,177 865,171 872,166 880,160" fill="none" stroke="#7d8a99" stroke-width="2"/>
+<circle cx="515" cy="669" r="10" fill="none" stroke="#b8862f" stroke-width="2"/>
+<line x1="515" y1="520" x2="515" y2="1010" stroke="#b8862f" stroke-width="1" stroke-dasharray="5,6" opacity="0.6"/>
+<text x="515" y="500" text-anchor="middle" class="sm">临界点</text>
+<text x="300" y="1010" text-anchor="middle" class="sm">量变</text>
+<text x="720" y="1010" text-anchor="middle" class="sm">质变</text>
+<style>
+text{font-family:'Microsoft YaHei','SimHei',Arial,sans-serif;}
+.ttl{font-size:108px;font-weight:700;letter-spacing:10px;fill:#e8e6df;}
+.sub{font-size:27px;fill:#9aa0a6;letter-spacing:2px;}
+.eng{font-size:20px;fill:#9aa0a6;letter-spacing:1px;}
+.au{font-size:30px;fill:#e8e6df;letter-spacing:2px;}
+.rule{stroke:#9aa0a6;stroke-width:1;opacity:0.6;}
+.sm{font-size:20px;fill:#cfd6de;letter-spacing:2px;}
+</style>
+<text x="80" y="176" class="eng">THE CRITICALITY OF EMERGENCE</text>
+<text x="80" y="300" class="ttl">涌现的临界</text>
+<line x1="84" y1="344" x2="700" y2="344" class="rule"/>
+<text x="84" y="396" class="sub">为什么有些变化回不去</text>
+<text x="84" y="440" class="sub">临界、涌现与形式化的边界</text>
+<text x="80" y="1230" class="au">李毅芃　著</text>
+<text x="80" y="1282" class="eng">Phase Transitions and the Mechanics of Emergence</text>
+<text x="80" y="1324" class="eng">学术专著 · 2026</text>
+</svg>

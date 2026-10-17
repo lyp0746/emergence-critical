@@ -1,0 +1,248 @@
+<h2 class="chapter">附录 X　推导与边界：五个补编</h2>
+<div class="box"><p><b>【补编说明】</b>本附录收拢的是原稿中被合并、但未并入正文的几节。它们不是“新增内容”，而是此前被漏装的正文；保留原有小节编号，便于与正文引用对照。</p></div>
+<h3 id="secx-1">X.1　第二十五章　推导与解析（一）：朗道理论、临界指数与标度关系</h3>
+
+<div class="box"><p>前面讲“序参量”“临界指数”，但没推导。这一章补上：从自由能出发，推出临界指数与标度关系。</p></div>
+<h4 id="sec25-1">25.1　朗道自由能</h4>
+<p>设序参量为 <code>η</code>，外场为 <code>h</code>。把自由能按 <code>η</code> 展开（对称性要求只含偶次项）：</p>
+<p>``<code> F(η) = F₀ + a η² + b η⁴ − h η </code>``</p>
+<p>其中 <code>a = a₀(T − T_c)</code>，<code>b > 0</code>。</p>
+<p><strong>为什么只含偶次项？</strong> 因为 <code>η → −η</code> 是对称的（例如磁化方向翻转，能量不变）。<strong>这一条对称性，决定了临界指数的“普适”。</strong></p>
+<h4 id="sec25-2">25.2　平衡态：对 η 求极小</h4>
+<p>``<code> ∂F/∂η = 2aη + 4bη³ − h = 0 </code>``</p>
+<p><strong>情形一：h=0。</strong></p>
+<ul><li><code>T > T_c</code>（<code>a>0</code>）：唯一极小在 <code>η=0</code>；</li><li><code>T < T_c</code>（<code>a<0</code>）：<code>η=0</code> 变成极大，极小在 <code>η² = −a/(2b)</code>。</li></ul>
+<p>于是：</p>
+<p>``<code> η = ± sqrt( a₀(T_c − T) / (2b) )  ∝ (T_c − T)^{1/2} </code>``</p>
+<p><strong>所以 <code>β = 1/2</code>。</strong> 这是平均场的第一条指数。</p>
+<h4 id="sec25-3">25.3　磁化率：对 h 求导</h4>
+<p>在 <code>T > T_c</code>、<code>h→0</code> 时，<code>η ≈ h/(2a)</code>，于是：</p>
+<p>``<code> χ = ∂η/∂h = 1/(2a) ∝ (T − T_c)^{−1} </code>``</p>
+<p><strong>所以 <code>γ = 1</code>。</strong></p>
+<h4 id="sec25-4">25.4　比热：对温度求二阶导</h4>
+<p><code>F</code> 在 <code>T_c</code> 处有一个“折点”，比热 <code>C = −T ∂²F/∂T²</code> 出现<strong>有限跳变</strong>，而不是发散。</p>
+<p><strong>所以 <code>α = 0</code>（平均场）。</strong></p>
+<h4 id="sec25-5">25.5　关联长度</h4>
+<p>在平均场里，关联函数 <code>G(r) ∝ e^{−r/ξ}/r</code>，而 <code>ξ ∝ |T − T_c|^{−1/2}</code>。</p>
+<p><strong>所以 <code>ν = 1/2</code>。</strong></p>
+<h4 id="sec25-6">25.6　标度关系：指数之间不是独立的</h4>
+<p>临界指数不是“六个独立的数”，它们满足<strong>标度关系</strong>：</p>
+<p>``<code> Rushbrooke:   α + 2β + γ = 2 Widom:        γ = β(δ − 1) Josephson:    ν d = 2 − α Fisher:       γ = ν(2 − η) </code>``</p>
+<p><strong>这些关系，把六个指数压缩成两个独立指数。</strong> 这就是“普适类”的数学基础。</p>
+<h4 id="sec25-7">25.7　平均场指数表</h4>
+<table class="nat">
+<tr><th class="l">指数</th><th class="l">平均场值</th><th class="l">2D 伊辛</th><th class="l">3D 伊辛</th></tr>
+<tr><td class="l">α</td><td class="l">0（跳变）</td><td class="l">0（对数）</td><td class="l">0.110</td></tr>
+<tr><td class="l">β</td><td class="l">1/2</td><td class="l">1/8</td><td class="l">0.326</td></tr>
+<tr><td class="l">γ</td><td class="l">1</td><td class="l">7/4</td><td class="l">1.237</td></tr>
+<tr><td class="l">δ</td><td class="l">3</td><td class="l">15</td><td class="l">4.789</td></tr>
+<tr><td class="l">ν</td><td class="l">1/2</td><td class="l">1</td><td class="l">0.630</td></tr>
+<tr><td class="l">η</td><td class="l">0</td><td class="l">1/4</td><td class="l">0.036</td></tr>
+</table>
+<p><strong>平均场与真实值的差别，说明“平均场只在 d≥4 时严格”。</strong> 这就是“上临界维度” <code>d_c=4</code>。</p>
+<h4 id="sec25-8">25.8　这对本书的意义</h4>
+<p>本书的“普适类”不是空话：<strong>它有一套可推导的指数与标度关系。</strong> 但本书也承认：<strong>社会/历史系统，几乎不可能测出这些指数。</strong> 所以，本书只借“结构”，不借“数值”。</p>
+<h4 id="sec25-9">25.9　朗道理论的局限</h4>
+<p>朗道理论是“平均场”：它假设 <code>η</code> 在空间均匀。<strong>这忽略了涨落。</strong></p>
+<p><strong>什么时候涨落可以忽略？</strong> 当维度 <code>d</code> 大于“上临界维度” <code>d_c</code> 时。<strong>对标准相变，<code>d_c=4</code>。</strong></p>
+<p><strong>为什么？</strong> 用“金兹堡判据”：涨落在关联体积 <code>ξ^d</code> 内的方差，要小于 <code>η</code> 的均值。<strong>当 <code>d>4</code>，这个条件满足；当 <code>d<4</code>，涨落改写指数。</strong></p>
+<p><strong>所以，朗道的指数（β=1/2 等）只在 <code>d≥4</code> 严格。</strong> 二维、三维的伊辛，指数不同——这就是“平均场失效”。</p>
+<h4 id="sec25-10">25.10　一阶相变的朗道描述</h4>
+<p>如果 <code>b<0</code>，自由能 <code>F = aη² + bη⁴ + cη⁶</code>（<code>c>0</code>），会出现“双阱”。</p>
+<p><strong>当 <code>a</code> 从正变负，两个极小“交换高度”</strong>——在某个 <code>a_c</code>，<code>η=0</code> 与 <code>η≠0</code> 的极小等高。<strong>这就是一阶相变：序参量跳变。</strong></p>
+<p><strong>一阶相变的标志：</strong> 潜热、滞后、两相共存。</p>
+<h4 id="sec25-11">25.11　三临界点</h4>
+<p>如果 <code>b</code> 也随参数变化，在 <code>b=0</code> 处，系统从“二阶”变成“一阶”——<strong>这个点叫“三临界点”（tricritical point）。</strong></p>
+<p><strong>它的意义：</strong> 它说明“相变的类型”本身，也可以随参数改变。<strong>“二阶”不是绝对的，它可以是“一阶”的边界。</strong></p>
+<h4 id="sec25-12">25.12　朗道与本书</h4>
+<p>本书借“序参量”“对称破缺”“临界指数”，但<strong>不借“平均场”的强假设</strong>。原因：社会/历史系统，既没有“空间均匀性”，也没有“可测的涨落”。</p>
+<p><strong>所以，本书只借“骨架”，不借“血肉”。</strong> 这是“借用工具，不冒充理论”的又一处。</p>
+
+<h3 id="secx-2">X.2　第二十七章　推导与解析（三）：图拉普拉斯、渗流与复杂网络</h3>
+
+<div class="box"><p>这一章给“图上的相变”一套完整推导：从拉普拉斯谱，到两阶段相变，再到渗流与网络。</p></div>
+<h4 id="sec27-1">27.1　图拉普拉斯</h4>
+<p>设图 <code>G=(V,E)</code>，度矩阵 <code>D</code>，邻接矩阵 <code>A</code>。拉普拉斯：</p>
+<p>``<code> L = D − A </code>``</p>
+<p>二次型：</p>
+<p>``<code> xᵀLx = Σ_{(u,v)∈E} (x_u − x_v)² </code>``</p>
+<p><strong>它衡量“x 在边上有多不平”。</strong> <code>x</code> 越平滑，<code>xᵀLx</code> 越小。</p>
+<h4 id="sec27-2">27.2　谱与连通性</h4>
+<p><code>L</code> 是实对称半正定，谱 <code>0=λ₁ ≤ λ₂ ≤ … ≤ λₙ</code>。</p>
+<ul><li><code>λ₁=0</code> 对应常数向量（全图一致）；</li><li><code>λ₂</code>（Fiedler 值）衡量“图有多容易裂成两半”：<code>λ₂</code> 越小，越容易裂。</li></ul>
+<p><strong>这就是“谱决定连通性”的数学版本。</strong></p>
+<h4 id="sec27-3">27.3　线性动力学：临界耦合</h4>
+<p>设区分强度 <code>D</code> 满足：</p>
+<p>``<code> Ḋ = (−αI + βL) D </code>``</p>
+<p>按特征向量展开，第 k 个模式的增长率是 <code>−α + βλ_k</code>。</p>
+<p><strong>临界条件：</strong> <code>−α + βλ_k = 0</code>，即 <code>β = α/λ_k</code>。</p>
+<ul><li>最大的 <code>λₙ</code> 对应“最高频、最局部”的模式，临界 <code>β₁ = α/λₙ</code>；</li><li>次小的 <code>λ₂</code> 对应“最全局”的模式，临界 <code>β₂ = α/λ₂</code>。</li></ul>
+<p><strong>因为 <code>λ₂ ≤ λₙ</code>，所以 <code>β₁ ≤ β₂</code>——局部先解锁，全局后解锁。</strong> 这就是“两阶段相变”的全部推导。</p>
+<h4 id="sec27-4">27.4　数值例子</h4>
+<table class="nat">
+<tr><th class="l">图</th><th class="l"><code>λ₂</code></th><th class="l"><code>λₙ</code></th><th class="l"><code>β₁</code></th><th class="l"><code>β₂</code></th></tr>
+<tr><td class="l">Petersen</td><td class="l">2</td><td class="l">5</td><td class="l">0.2</td><td class="l">0.5</td></tr>
+<tr><td class="l">环 C₁₀</td><td class="l">0.382</td><td class="l">4</td><td class="l">0.25</td><td class="l">2.618</td></tr>
+<tr><td class="l">完全图 Kₙ</td><td class="l">n</td><td class="l">n</td><td class="l">1/n</td><td class="l">1/n</td></tr>
+</table>
+<p><strong>完全图无中间相</strong>，因为 <code>λ₂=λₙ</code>，两个临界点重合。</p>
+<h4 id="sec27-5">27.5　渗流：另一种“图上的相变”</h4>
+<p><strong>模型。</strong> 每条边以概率 <code>p</code> 保留，问“是否存在一个无限大连通块”。</p>
+<p><strong>临界概率。</strong> 二维方格：<code>p_c ≈ 0.593</code>（座渗流）、<code>p_c = 0.5</code>（边渗流）。</p>
+<p><strong>临界行为。</strong> 在 <code>p_c</code> 附近：</p>
+<p>``<code> P_∞ ∝ (p − p_c)^β,   β = 5/36 ≈ 0.139（2D） </code>``</p>
+<p><strong>集团分布：</strong> <code>n_s ∝ s^{−τ} exp(−s/s*)</code>，2D 的 <code>τ = 187/91 ≈ 2.055</code>。</p>
+<p><strong>分形维数：</strong> 在 <code>p_c</code>，最大集团 <code>∝ N^{d_f/d}</code>，2D 的 <code>d_f = 91/48 ≈ 1.896</code>。</p>
+<p><strong>渗流是“最干净的相变样本”之一：</strong> 它有精确的临界概率、临界指数、分形维数。</p>
+<h4 id="sec27-6">27.6　复杂网络上的渗流</h4>
+<p><strong>随机图。</strong> <code>G(N,p)</code>，平均度 <code>⟨k⟩</code>。临界点 <code>p_c = 1/⟨k⟩</code>。</p>
+<p><strong>一般网络。</strong> 用“分支因子” <code>κ = ⟨k²⟩/⟨k⟩</code>，临界点 <code>p_c = 1/(κ−1)</code>。</p>
+<p><strong>无标度网络。</strong> 若度分布 <code>P(k) ∝ k^{−γ}</code>：</p>
+<ul><li><code>γ > 3</code>：<code>⟨k²⟩</code> 有限，<code>p_c > 0</code>；</li><li><code>2 < γ ≤ 3</code>：<code>⟨k²⟩</code> 发散，<code>p_c → 0</code>。</li></ul>
+<p><strong>这意味着：</strong> 无标度网络对“随机故障”极其鲁棒（<code>p_c→0</code>），但对“针对性攻击”极其脆弱（攻击枢纽节点）。</p>
+<p><strong>这就是“鲁棒却脆弱”的数学版本。</strong></p>
+<h4 id="sec27-7">27.7　这对本书的意义</h4>
+<p><strong>这是全书唯一“可以完全算出来”的部分。</strong> 它说明：<strong>“相变”不是比喻，而是可以从谱、从概率、从网络结构推出来的。</strong></p>
+<p><strong>但它也说明：</strong> 一旦离开“图”这个对象，推导就变得困难。<strong>这正是“形式化地平线”的数学根源。</strong></p>
+<h4 id="sec27-8">27.8　Fiedler 值的界</h4>
+<p><code>λ₂</code> 与“图的连通性”有严格的界：</p>
+<p>``<code> λ₂ ≤ (n/(n−1)) · min_{v} deg(v) </code>``</p>
+<p><strong>它说明：</strong> 度数越小的节点，越限制“全局连通”。<strong>这就是“瓶颈”的谱版本。</strong></p>
+<p><strong>另一个界：</strong> <code>λ₂ ≤ 2 · edge_connectivity / n</code>。<strong>边连通性越小，<code>λ₂</code> 越小，越容易裂。</strong></p>
+<h4 id="sec27-9">27.9　谱与随机游走</h4>
+<p>在图上做随机游走，转移矩阵 <code>P = D^{−1}A</code>。<strong>它的特征值与拉普拉斯谱直接相关：</strong></p>
+<p>``<code> μ_k = 1 − λ_k / d   （对 d-正则图） </code>``</p>
+<p><strong>混合时间</strong>（走到稳态的时间）由 <code>1/(1−μ₂) = d/λ₂</code> 决定。<strong><code>λ₂</code> 越小，混合越慢。</strong></p>
+<p><strong>这给“慢化”一个图论版本：</strong> 图越“接近分裂”，随机游走越慢——<strong>“临界慢化”在图上的对应。</strong></p>
+<h4 id="sec27-10">27.10　网络渗流的严格条件</h4>
+<p>对配置模型（给定度分布），渗流阈值：</p>
+<p>``<code> p_c = 1 / (κ − 1),   κ = ⟨k²⟩ / ⟨k⟩ </code>``</p>
+<p><strong>推导要点：</strong> 从“一个节点出发，沿边能到达的节点数”的分支过程，临界条件是“分支因子 = 1”。</p>
+<ul><li>若 <code>κ>2</code>：<code>p_c>0</code>，有“有限阈值”；</li><li>若 <code>κ≤2</code>：<code>p_c=0</code>，任意小的 <code>p</code> 都能连通。</li></ul>
+<p><strong>无标度网络 <code>P(k)∝k^{−γ}</code>：</strong> <code>γ≤3</code> 时 <code>⟨k²⟩</code> 发散，<code>κ→∞</code>，<code>p_c→0</code>。<strong>这就是“鲁棒却脆弱”的严格版本。</strong></p>
+<h4 id="sec27-11">27.11　与本书两阶段相变的关系</h4>
+<p>本书的“两阶段相变”（<code>β₁=α/λₙ</code>、<code>β₂=α/λ₂</code>）是<strong>“线性动力学”</strong>的结果；渗流是<strong>“随机连通”</strong>的结果。</p>
+<p><strong>两者不同：</strong> 前者是“确定性的模式解锁”，后者是“随机的集团生长”。</p>
+<p><strong>但它们共享一个结构：</strong> <strong>都是“图上的阈值现象”</strong>——跨过某个 <code>p</code> 或 <code>β</code>，全局性质改变。</p>
+<p><strong>这正是“同约束而不同构”的例子：</strong> 同一张图，两种机制，两种相变。</p>
+
+<h3 id="secx-3">X.3　第二十九章　推导与解析（四）：有限尺度标度与临界指数的估计</h3>
+
+<div class="box"><p>理论给了临界指数，但"怎么从数据里把它估出来"？这一章讲有限尺度标度——这是把"相变"从"概念"变成"可测量"的关键技术。</p></div>
+<h4 id="sec29-1">29.1　为什么需要有限尺度标度</h4>
+<p>在无限系统里，关联长度 <code>ξ</code> 在临界点发散。但任何真实系统都是<strong>有限大小</strong> <code>L</code>。</p>
+<p><strong>有限大小会"抹平"临界点：</strong> <code>ξ</code> 最多长到 <code>L</code>，所以临界行为被"圆滑"了。<strong>你直接测，永远测不到"尖锐的奇点"。</strong></p>
+<p><strong>解决办法：</strong> 用不同 <code>L</code> 的数据，做"标度坍缩"。</p>
+<h4 id="sec29-2">29.2　标度假设</h4>
+<p>设某个可观测量 <code>A</code>（如磁化、序参量）满足：</p>
+<p>``<code> A(L, T) = L^{ω/ν} · f( L^{1/ν} (T − T_c) ) </code>``</p>
+<p>其中 <code>ν</code> 是关联长度指数，<code>ω</code> 是 <code>A</code> 的标度维数，<code>f</code> 是标度函数。</p>
+<p><strong>这个假设的意思是：</strong> 不同 <code>L</code> 的曲线，只要按 <code>L</code> 重新标度，就会"坍缩"到同一条 <code>f</code> 上。</p>
+<h4 id="sec29-3">29.3　数据坍缩：三步</h4>
+<p><strong>第一步：固定 <code>T_c</code> 与 <code>ν</code> 的猜测值。</strong></p>
+<p><strong>第二步：把每个 <code>L</code> 的数据，画成 <code>L^{−ω/ν} A</code> 对 <code>L^{1/ν}(T−T_c)</code>。</strong></p>
+<p><strong>第三步：调 <code>T_c</code>、<code>ν</code>、<code>ω</code>，直到所有曲线"叠成一条"。</strong></p>
+<p><strong>叠得越好，参数越可信。</strong> 这就是"用数据估临界指数"的标准做法。</p>
+<h4 id="sec29-4">29.4　Binder 累积量：更稳的 <code>T_c</code> 估计</h4>
+<p>``<code> U = 1 − ⟨m⁴⟩ / (3⟨m²⟩²) </code>``</p>
+<p><strong>为什么用它？</strong> 因为不同 <code>L</code> 的 <code>U</code> 曲线，<strong>在 <code>T_c</code> 处相交</strong>。<strong>交点就是 <code>T_c</code>，而且它不依赖 <code>ω</code>。</strong></p>
+<p><strong>这是"最稳"的 <code>T_c</code> 估计法之一。</strong></p>
+<h4 id="sec29-5">29.5　一个可复算的例子</h4>
+<p>以二维伊辛为例（<code>T_c≈2.269</code>）：</p>
+<ul><li>取 <code>L=16, 32, 64, 128</code>；</li><li>每个 <code>L</code> 跑 Monte Carlo，测 <code>m</code>、<code>χ</code>、<code>U</code>；</li><li>画 <code>U</code> 对 <code>T</code>，找交点 → <code>T_c</code>；</li><li>画 <code>m L^{β/ν}</code> 对 <code>L^{1/ν}(T−T_c)</code>，调 <code>β/ν</code>、<code>ν</code> 直到坍缩；</li><li>得到 <code>β≈0.125</code>、<code>ν≈1</code>。</li></ul>
+<p><strong>这与 Onsager 的精确解一致。</strong> 这就是"数值验证理论"的完整流程。</p>
+<h4 id="sec29-6">29.6　这对本书的意义</h4>
+<p><strong>它说明"临界指数"不是"哲学词"，而是"可以估出来的数"。</strong> 但本书也承认：<strong>这套方法需要"可重复的实验/模拟"与"大样本"。</strong></p>
+<p><strong>社会/历史系统，两条都不满足。</strong> 所以，本书只能借"标度"的<strong>思想</strong>（不同尺度要一起看），不能借"标度坍缩"的<strong>技术</strong>。</p>
+<h4 id="sec29-7">29.7　一句话带走</h4>
+<div class="box"><p><strong>临界指数之所以可信，不是因为它"推导得漂亮"，而是因为它"能被数据坍缩估出来"。</strong></p></div>
+
+<h3 id="secx-4">X.4　第三十章　边界（二）：约束、可行域与 KKT</h3>
+
+<div class="box"><p>第二十八章讲"边界决定性质"的直觉。这一章把它形式化：约束优化、可行域、KKT 条件——这是"边际"与"边界"的数学骨架。</p></div>
+<h4 id="sec30-1">30.1　约束优化</h4>
+<p>``<code> max f(x)   s.t.  g_i(x) ≤ 0,  h_j(x) = 0 </code>``</p>
+<p><strong>可行域</strong> <code>𝔽 = {x : g_i(x)≤0, h_j(x)=0}</code>。<strong>最优解可能在"内部"，也可能在"边界"。</strong></p>
+<h4 id="sec30-2">30.2　拉格朗日乘子</h4>
+<p>对等式约束 <code>h(x)=0</code>，构造：</p>
+<p>``<code> L = f(x) − λ h(x) </code>``</p>
+<p>一阶条件：<code>∇f = λ ∇h</code>。<strong>几何意义：在最优解处，目标函数的梯度，与约束曲面的法向平行。</strong></p>
+<p><strong><code>λ</code> 的经济意义：影子价格。</strong> 约束放松一单位，目标能增加 <code>λ</code>。</p>
+<h4 id="sec30-3">30.3　KKT 条件</h4>
+<p>对不等式约束，最优解满足：</p>
+<p>``<code> ∇f = Σ μ_i ∇g_i + Σ λ_j ∇h_j μ_i ≥ 0,   μ_i g_i = 0 g_i ≤ 0,   h_j = 0 </code>``</p>
+<p><strong>关键是"互补松弛" <code>μ_i g_i = 0</code>：</strong></p>
+<ul><li>若约束<strong>不起作用</strong>（<code>g_i<0</code>），则 <code>μ_i=0</code>；</li><li>若约束<strong>起作用</strong>（<code>g_i=0</code>，在边界上），则 <code>μ_i≥0</code>。</li></ul>
+<p><strong>这就是"边界解"与"内点解"的数学区分：</strong> 内点解里，约束的"价格"为零；边界解里，约束有正价格。</p>
+<h4 id="sec30-4">30.4　与"边际"的关系</h4>
+<p>在经济学里：</p>
+<ul><li><code>∇f</code> 是"边际收益"；</li><li><code>∇g</code> 是"边际成本"；</li><li><code>λ</code>、<code>μ</code> 是"边际约束的价格"。</li></ul>
+<p><strong>所以，"边际分析"就是"在边界上做导数"。</strong> 不是在"总量"上做文章，而是在"再走一步"上做文章。</p>
+<h4 id="sec30-5">30.5　与 C-A-T 三角的关系</h4>
+<p>本书的 C-A-T 三角，本质上是一个<strong>可行域</strong>：</p>
+<ul><li>三项预算 <code>Σ ≤ K</code>；</li><li>三角的边界，就是"可行域的边界"；</li><li>"让出哪一个顶点"，就是"在边界的哪一段"。</li></ul>
+<p><strong>"诊断"的动作，就是"找边界"：不是问"系统内部怎么运作"，而是问"它撞到了哪条边界"。</strong></p>
+<h4 id="sec30-6">30.6　分岔：稳定性的边界</h4>
+<p>除了"约束边界"，还有"稳定性边界"。</p>
+<p>设系统 <code>ẋ = F(x, μ)</code>。平衡点 <code>x*(μ)</code> 的稳定性，由 Jacobian <code>J = ∂F/∂x</code> 的特征值决定：</p>
+<ul><li>所有特征值实部为负 → 稳定；</li><li>有特征值实部为正 → 不稳定；</li><li>特征值实部过零 → <strong>分岔</strong>。</li></ul>
+<p><strong>分岔点，就是"稳定性边界"。</strong> 越过它，系统的"质"就变了。</p>
+<h4 id="sec30-7">30.7　三种边界，一个结构</h4>
+<table class="nat">
+<tr><th class="l">边界类型</th><th class="l">数学</th><th class="l">例子</th></tr>
+<tr><td class="l">约束边界</td><td class="l">KKT、可行域</td><td class="l">预算、产能、三角</td></tr>
+<tr><td class="l">稳定性边界</td><td class="l">特征值过零、分岔</td><td class="l">失稳、振荡、临界慢化</td></tr>
+<tr><td class="l">相边界</td><td class="l">自由能极小切换</td><td class="l">固/液/气、序参量跃变</td></tr>
+</table>
+<p><strong>三者都是"边界决定性质"的不同写法：</strong></p>
+<ul><li>约束边界决定"能做什么"；</li><li>稳定性边界决定"稳不稳"；</li><li>相边界决定"是什么相"。</li></ul>
+<h4 id="sec30-8">30.8　一句话带走</h4>
+<div class="box"><p><strong>"边际"是在边界上做导数，"分岔"是稳定性过零，"相变"是自由能极小切换——三者都是"边界决定性质"。</strong></p></div>
+
+<h3 id="secx-5">X.5　第二十八章　边界：为什么决定性质的是"边"，不是"里面"</h3>
+
+<div class="box"><p>前面讲"临界点"，但没讲"边界"这个更一般的概念。这一章把数学的边界条件、经济学的边际、物理化学生物的临界条件并排，看它们是不是同一件事。</p></div>
+<h4 id="sec28-1">28.1　数学：边界条件决定解</h4>
+<p><strong>最干净的例子：拉普拉斯方程。</strong></p>
+<p>``<code> ∇²u = 0  （在区域 Ω 内） u = f     （在边界 ∂Ω 上） </code>``</p>
+<p><strong>关键：</strong> 方程本身（<code>∇²u=0</code>）有无穷多解；<strong>是边界条件 <code>u=f</code> 把解“钉死”的。</strong> 换一个边界条件，就换一个解。</p>
+<ul><li><strong>Dirichlet 条件</strong>：给定边界上的值；</li><li><strong>Neumann 条件</strong>：给定边界上的法向导数；</li><li><strong>混合条件</strong>：两者都有。</li></ul>
+<p><strong>这就是“边界决定性质”的最直接版本：内部方程相同，边界不同，解就不同。</strong></p>
+<p><strong>更深一层：边界算子。</strong> 拓扑学里，一个区域 <code>Ω</code> 的边界记作 <code>∂Ω</code>，而 <code>∂(∂Ω)=∅</code>（边界的边界是空集）。<strong>这个“<code>∂²=0</code>”，是斯托克斯定理 <code>∫_Ω dω = ∫_{∂Ω} ω</code> 的代数根源。</strong> 边界不是“附属品”，它是“内部”的对偶。</p>
+<p><strong>极限与奇点。</strong> 数学里还有一类“边界”：<strong>定义域的边界</strong>。函数在边界上可能连续、可能发散、可能不可导。<strong>很多“性质”只在边界上才显现</strong>（如 <code>1/x</code> 在 <code>x=0</code> 的奇点）。</p>
+<h4 id="sec28-2">28.2　经济学：边际是“增量的边界”</h4>
+<p><strong>边际效用。</strong> <code>MU = dU/dx</code>。<strong>“边际效用递减”</strong>（Gossen 第一定律）：随着消费增加，每多一单位带来的效用递减。</p>
+<p><strong>边际成本与收益。</strong> 利润最大化条件：<code>MR = MC</code>。<strong>不是“总收益最大”，而是“再走一步的收益 = 再走一步的成本”。</strong></p>
+<p><strong>边际替代率。</strong> <code>MRS = MU_x / MU_y</code>；它决定“无差异曲线”的斜率。</p>
+<p><strong>拉格朗日乘子。</strong> 约束优化 <code>max f(x) s.t. g(x)=0</code>，拉格朗日函数 <code>L = f − λg</code>。<strong>乘子 <code>λ</code> 是“影子价格”：约束放松一单位，目标能增加多少。</strong></p>
+<p><strong>角点解与内点解。</strong> 最优解可能在“内部”（<code>MR=MC</code>），也可能在“边界”（如预算全花光、产量为零）。<strong>“边界解”是经济学里最容易被忽略、却最常见的情形。</strong></p>
+<p><strong>边际与平均。</strong> 一个漂亮的结论：<strong>边际成本曲线穿过平均成本曲线的最低点。</strong> 因为“再走一步的成本”与“平均成本”的关系，决定了平均成本是升还是降。</p>
+<h4 id="sec28-3">28.3　物理：临界条件是“相边界”</h4>
+<p><strong>相边界。</strong> 在 <code>P-T</code> 图上，固/液/气的分界线，就是“相边界”。<strong>跨过它，物质就换了相。</strong></p>
+<p><strong>Clausius–Clapeyron 方程。</strong> 相边界斜率：</p>
+<p>``<code> dP/dT = L / (T ΔV) </code>``</p>
+<p>其中 <code>L</code> 是潜热，<code>ΔV</code> 是体积变化。<strong>它告诉你“边界往哪边走”。</strong></p>
+<p><strong>成核的临界尺寸。</strong> 一个新相要长出来，需要克服表面能：</p>
+<p>``<code> r* = 2γ / ΔG_v </code>``</p>
+<p><code>r<r*</code> 的核会溶解，<code>r>r*</code> 的核会生长。<strong>“临界尺寸”就是“生与死”的边界。</strong></p>
+<p><strong>活化能。</strong> 化学反应速率 <code>k = A exp(−E_a/RT)</code>。<strong>只有能量超过 <code>E_a</code> 的分子，才能越过“反应边界”。</strong></p>
+<h4 id="sec28-4">28.4　化学：阈值与平衡</h4>
+<p><strong>反应阈值。</strong> 很多反应需要“临界浓度”或“临界温度”才能启动。</p>
+<p><strong>平衡。</strong> <code>ΔG = 0</code> 是“反应方向”的边界：<code>ΔG<0</code> 正向，<code>ΔG>0</code> 逆向。</p>
+<p><strong>催化。</strong> 催化剂不改变平衡，只降低“活化能”——<strong>它把“边界”挪低了，但没挪走。</strong></p>
+<h4 id="sec28-5">28.5　生物：阈值与临界质量</h4>
+<p><strong>神经元。</strong> 膜电位达到“阈值”（约 −55 mV），才触发动作电位。<strong>低于阈值，全是“局部电位”；越过阈值，才是“全或无”的脉冲。</strong></p>
+<p><strong>种群。</strong> Allee 效应：种群低于“临界规模”，增长率变负——<strong>太少，也会灭绝。</strong></p>
+<p><strong>生态。</strong> 临界点（tipping point）：湖泊富营养化、珊瑚白化、森林退化，都有“越过就回不去”的阈值。</p>
+<p><strong>酶动力学。</strong> Michaelis–Menten：<code>v = V_max [S]/(K_m+[S])</code>。<strong>它没有“阈值”，只有“饱和”——这提醒我们：不是所有“边界”都是“临界点”。</strong></p>
+<h4 id="sec28-6">28.6　共同结构：为什么“边”决定“里”</h4>
+<p>把五个领域并排，会看到一个共同结构：</p>
+<ol><li><strong>边界条件决定解</strong>（数学）：内部方程相同，边界不同，解不同；</li><li><strong>边际决定决策</strong>（经济学）：不是“总量”，而是“再走一步的增量”；</li><li><strong>临界条件决定相</strong>（物理化学生物）：跨过边界，就换规则。</li></ol>
+<p><strong>三者其实是同一句话的三种说法：</strong></p>
+<div class="box"><p><strong>一个系统的“性质”，往往不由“内部”决定，而由“它与外部的交界”决定。</strong></p></div>
+<p><strong>为什么？</strong> 因为“内部”是“被边界约束的解”；“边际”是“解的导数在边界上的值”；“临界”是“解在边界上的不连续”。</p>
+<h4 id="sec28-7">28.7　与本书的关系</h4>
+<ul><li><strong>C-A-T 三角</strong>：它是“可行域的边界”——不是“内部怎么走”，而是“边界在哪”。</li><li><strong>τ</strong>：它是“时间的边界”——不是“系统有多强”，而是“还剩多少时间”。</li><li><strong>临界点</strong>：它是“相边界”——不是“相内怎么变”，而是“跨过去就换规则”。</li><li><strong>边际</strong>：它是“值的边界”——不是“总量多少”，而是“再多一单位值不值”。</li></ul>
+<p><strong>所以，本书的“临界”只是“边界”的一个特例：边界是“相”的边界；边际是“值”的边界；可行域是“策略”的边界。</strong></p>
+<h4 id="sec28-8">28.8　一句话带走</h4>
+<div class="box"><p><strong>决定性质的，往往不是“里面有什么”，而是“边界在哪里、跨过去会发生什么”。</strong></p></div>

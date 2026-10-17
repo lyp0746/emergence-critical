@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" font-family="Microsoft YaHei, PingFang SC, SimHei, sans-serif">
+<rect width="820" height="500" fill="#ffffff"/>
+<text x="410" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">序参量：什么在“变得有序”？</text>
+<text x="410" y="62" text-anchor="middle" font-size="14" fill="#666">η 在临界点从 0 跃变为非 0（或反之）</text>
+<line x1="110" y1="400" x2="730" y2="400" stroke="#333" stroke-width="2"/>
+<line x1="110" y1="400" x2="110" y2="100" stroke="#333" stroke-width="2"/>
+<text x="420" y="436" text-anchor="middle" font-size="14">参数 T →</text>
+<text x="52" y="250" text-anchor="middle" font-size="14" transform="rotate(-90 52 250)">序参量 η</text>
+<line x1="451.0" y1="400" x2="451.0" y2="100" stroke="#b8862f" stroke-width="1.6" stroke-dasharray="7,5"/>
+<text x="451.0" y="422" text-anchor="middle" font-size="13" fill="#b8862f" font-weight="bold">T_c</text>
+<path d="M 110 400 L 451.0 400 L 451.0 175.0 L 730 175.0" fill="none" stroke="#c62828" stroke-width="3.5"/>
+<text x="260" y="370" text-anchor="middle" font-size="14" fill="#666" font-weight="normal">无序相：η = 0</text>
+<text x="580" y="155.0" text-anchor="middle" font-size="14" fill="#c62828" font-weight="normal">有序相：η ≠ 0</text>
+<text x="467.0" y="280.0" text-anchor="start" font-size="13" fill="#b8862f" font-weight="normal">跃变</text>
+</svg>

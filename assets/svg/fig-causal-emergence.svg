@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" font-family="Microsoft YaHei, PingFang SC, SimHei, sans-serif">
+<rect width="820" height="480" fill="#ffffff"/>
+<text x="410" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">因果涌现：为什么“宏观”有时比“微观”更好用？</text>
+<text x="410" y="62" text-anchor="middle" font-size="14" fill="#666">Φ = I_macro − I_micro，在某粗粒化尺度上达到峰值</text>
+<line x1="110" y1="390" x2="730" y2="390" stroke="#333" stroke-width="2"/>
+<line x1="110" y1="390" x2="110" y2="100" stroke="#333" stroke-width="2"/>
+<text x="420" y="426" text-anchor="middle" font-size="14">粗粒化程度（细 → 粗）→</text>
+<text x="52" y="245" text-anchor="middle" font-size="14" transform="rotate(-90 52 245)">有效信息 Φ</text>
+<path d="M 110.0 371.2 L 116.2 370.4 L 122.4 369.4 L 128.6 368.3 L 134.8 367.0 L 141.0 365.5 L 147.2 363.7 L 153.4 361.8 L 159.6 359.6 L 165.8 357.0 L 172.0 354.2 L 178.2 351.1 L 184.4 347.6 L 190.6 343.7 L 196.8 339.4 L 203.0 334.8 L 209.2 329.7 L 215.4 324.1 L 221.6 318.1 L 227.8 311.7 L 234.0 304.9 L 240.2 297.6 L 246.4 289.9 L 252.6 281.9 L 258.8 273.5 L 265.0 264.7 L 271.2 255.8 L 277.4 246.6 L 283.6 237.2 L 289.8 227.8 L 296.0 218.3 L 302.2 208.9 L 308.4 199.7 L 314.6 190.7 L 320.8 182.0 L 327.0 173.7 L 333.2 165.9 L 339.4 158.6 L 345.6 152.0 L 351.8 146.1 L 358.0 141.0 L 364.2 136.8 L 370.4 133.4 L 376.6 131.0 L 382.8 129.5 L 389.0 129.0 L 395.2 129.5 L 401.4 131.0 L 407.6 133.4 L 413.8 136.8 L 420.0 141.0 L 426.2 146.1 L 432.4 152.0 L 438.6 158.6 L 444.8 165.9 L 451.0 173.7 L 457.2 182.0 L 463.4 190.7 L 469.6 199.7 L 475.8 208.9 L 482.0 218.3 L 488.2 227.8 L 494.4 237.2 L 500.6 246.6 L 506.8 255.8 L 513.0 264.7 L 519.2 273.5 L 525.4 281.9 L 531.6 289.9 L 537.8 297.6 L 544.0 304.9 L 550.2 311.7 L 556.4 318.1 L 562.6 324.1 L 568.8 329.7 L 575.0 334.8 L 581.2 339.4 L 587.4 343.7 L 593.6 347.6 L 599.8 351.1 L 606.0 354.2 L 612.2 357.0 L 618.4 359.6 L 624.6 361.8 L 630.8 363.7 L 637.0 365.5 L 643.2 367.0 L 649.4 368.3 L 655.6 369.4 L 661.8 370.4 L 668.0 371.2 L 674.2 371.9 L 680.4 372.5 L 686.6 373.0 L 692.8 373.5 L 699.0 373.8 L 705.2 374.1 L 711.4 374.4 L 717.6 374.6 L 723.8 374.8 L 730.0 374.9" fill="none" stroke="#b8862f" stroke-width="3.2"/>
+<line x1="389" y1="390" x2="389" y2="129" stroke="#b8862f" stroke-width="1.4" stroke-dasharray="6,5"/>
+<text x="389.0" y="119.0" text-anchor="middle" font-size="14" fill="#b8862f" font-weight="bold">最优尺度</text>
+<text x="190" y="350" text-anchor="middle" font-size="12" fill="#666" font-weight="normal">太细：噪声</text>
+<text x="640" y="350" text-anchor="middle" font-size="12" fill="#666" font-weight="normal">太粗：丢结构</text>
+</svg>

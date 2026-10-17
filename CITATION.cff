@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below. 若使用本作，请按下述格式引用。"
+type: book
+title: "涌现的临界：为什么有些变化回不去——临界、涌现与形式化的边界 / The Criticality of Emergence: Why Some Changes Cannot Be Undone — Criticality, Emergence, and the Limits of Formalization"
+abstract: >-
+  本著作提出“临界”的可操作定义与检验程序，用以回答“变化究竟在哪一刻换了一个东西”。 核心主张：一次质变＝系统在某个尺度上获得不可由微观无损推出的宏观序；它有三个可观测标记（序参量跃变、临界慢化、宏观更好用），三个中两个才叫质变。 结构与证据：25 章、附录 A—X、14 幅图；以二维 Ising 作校准（T_c、γ/ν 与精确解一致，β/ν 与 ν 的偏差如实报告），以雪崩、渗流与慢化实验检验三个标记；核心发现是诊断效力与可观测尺度成正比——尺度不够时，两个竞争假设的图形会一样好看。 诚实的纪律：六个最小验证单元按“能不能真做”排序，并标明哪些已做、哪些只到部分通过；失败记录单独成节；每张图都配脚本与种子。 边界：多数社会案例只能到隐喻级；单一指标不能定向；慢化报“近”，不报“何时”。 版本：2026-10-18，212 页，25 章，14 图，附录 A—X；实验脚本与失败记录随书公开，内容 CC BY 4.0，代码 MIT。
+  Abstract (English). This work offers an operational definition and test procedure for criticality, answering the question of when a change becomes another thing. Core thesis: a qualitative transition is the emergence, at some scale, of macro-order that cannot be derived losslessly from the micro-level; it has three observable markers (order-parameter jump, critical slowing down, macro-level usefulness), and two out of three are required. Structure and evidence: 25 chapters, appendices A–X, 14 figures; calibrated on the 2D Ising model (T_c and γ/ν agree with the exact solution; deviations in β/ν and ν are reported), with avalanche, percolation and slowing-down experiments testing the markers. The central finding is that diagnostic power scales with the observable scale — with too small a scale, two competing hypotheses look equally good. Discipline: six minimal verification units are ordered by feasibility and marked as done, partial or open; failures have their own section; every figure ships with a script and a seed. Boundaries: most social cases reach only metaphor; a single indicator cannot orient; slowing down reports “near”, not “when”. Edition: 2026-10-18, 212 pages, 25 chapters, 14 figures, appendices A–X.
+authors:
+  - family-names: "李"
+    given-names: "毅芃"
+    alias: "Li Yipeng"
+    email: "1610369302@qq.com"
+    affiliation: "独立研究者 / Independent Researcher"
+date-released: "2026-10-18"
+license: CC-BY-4.0
+repository-code: "https://github.com/lyp0746/emergence-critical"
+url: "https://github.com/lyp0746/emergence-critical"
+keywords:
+  - "涌现的临界"
+  - "相变"
+  - "序参量"
+  - "临界慢化"
+  - "标度律"
+  - "普适类"
+  - "有限尺度标度"
+  - "因果涌现"
+  - "可证伪性"
+  - "语言：中文（含英文摘要）"
+  - "Language: Chinese (with English abstract)"
+identifiers:
+  - type: url
+    value: "https://github.com/lyp0746/emergence-critical"
+    description: "源码、可复算脚本与构建流程"
+  - type: url
+    value: "https://github.com/lyp0746/knowledge-tradeoffs"
+    description: "系列入口与外部登记库"
+references:
+  - type: book
+    title: "错位的时间：为什么我们总是来不及——社会系统的时间错配与可控性边界 / Desynchronized Time: Why We Are Always Too Late — Temporal Mismatch and the Boundary of Controllability in Social Systems"
+  - type: book
+    title: "遗忘的边界：有限容量下的记忆、智能与自我 / The Boundary of Forgetting: Memory, Intelligence, and the Self under Finite Capacity"
+  - type: book
+    title: "区分的语法：五个领域，同一个二次型 / The Grammar of Distinction: Five Domains, One Quadratic Form"
+  - type: book
+    title: "选择的代价：完备、可组合与可传递的三维权衡——复杂知识系统如何形成、演化与更新 / The Price of Choice: The Impossibility Triangle of Completeness, Composability, and Transfer"
+  - type: book
+    title: "诠释的权衡：历史研究中的置信度、权衡与理论流变——从人物还原到范式转移的五个应用 / The Tradeoffs of Interpretation: Confidence, Trade-offs, and Theoretical Change in Historical Research — Five Applications from Restoring Persons to Paradigm Shifts"

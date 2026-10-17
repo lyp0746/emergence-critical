@@ -1,0 +1,56 @@
+<h2 class="chapter">第二十六章　推导与解析（二）：伊辛模型与重整化群</h2>
+<p>一盘围棋，越下越整齐：先是零散几子，后来连成片，最后整盘只剩两种颜色。<b>秩序不是被摆出来的，是下出来的。</b></p>
+<div class="box"><p>朗道理论是“平均场”。这一章讲“超越平均场”的两件工具：伊辛模型的精确解，与重整化群的“粗粒化”。</p></div>
+<h3 id="sec26-1">26.1　伊辛模型</h3>
+<p>``<code> H = −J Σ_{⟨ij⟩} s_i s_j − h Σ_i s_i,   s_i = ±1 </code>``</p>
+<p><strong>为什么它重要？</strong> 它是最简单的“有相变”的模型；它的临界指数，成了“普适类”的基准。</p>
+<h3 id="sec26-2">26.2　一维：没有有限温相变</h3>
+<p>用转移矩阵：</p>
+<p>``<code> T = [ e^{K+h}   e^{−K} ] [ e^{−K}    e^{K−h} ],   K = J/(k_B T) </code>``</p>
+<p>配分函数 <code>Z = λ_+^N + λ_−^N</code>，<code>λ_± = e^K cosh h ± sqrt(e^{2K} sinh²h + e^{−2K})</code>。</p>
+<p><strong>关键：</strong> 对 <code>h=0</code>，<code>λ_+ = 2 cosh K</code>，<code>λ_− = 2 sinh K</code>，都是 <code>T</code> 的光滑函数。<strong>没有奇点，就没有相变。</strong> 所以一维伊辛在 <code>T>0</code> 时<strong>没有</strong>有限温相变。</p>
+<p><strong>这个结果很重要：</strong> 它说明“有相互作用”不等于“有相变”；<strong>维度</strong>是关键。</p>
+<h3 id="sec26-3">26.3　二维：Onsager 的精确解</h3>
+<p>``<code> sinh(2J/(k_B T_c)) = 1   ⇒   T_c = 2J / (k_B ln(1+√2)) ≈ 2.269 J/k_B </code>``</p>
+<p>序参量在 <code>T_c</code> 附近：</p>
+<p>``<code> η ∝ (T_c − T)^{1/8} </code>``</p>
+<p><strong>所以二维伊辛的 <code>β = 1/8</code>，与平均场的 <code>1/2</code> 不同。</strong> 这就是“平均场失效”的直接证据。</p>
+<h3 id="sec26-4">26.4　重整化群：把“粗粒化”写成变换</h3>
+<p><strong>思想。</strong> 把自旋按块（如 2×2）聚合成“块自旋”，再问“块自旋之间的有效耦合 <code>K'</code> 是多少”。</p>
+<p><strong>一维的例子。</strong> 对一维伊辛，消去一半自旋，得到：</p>
+<p>``<code> K' = (1/2) ln cosh(2K) </code>``</p>
+<p><strong>固定点：</strong> 解 <code>K* = (1/2) ln cosh(2K*)</code>，只有 <code>K*=0</code> 与 <code>K*=∞</code>——<strong>没有有限温固定点</strong>，与“一维无相变”一致。</p>
+<p><strong>二维的例子。</strong> 块变换有“有限温固定点” <code>K*</code>，在它附近线性化：</p>
+<p>``<code> K' − K* ≈ λ (K − K*) </code>``</p>
+<p>临界指数由 <code>λ</code> 给出：<code>ν = ln b / ln λ</code>（<code>b</code> 是块的大小）。</p>
+<p><strong>这就是“普适类”的来源：</strong> 不同的微观模型，只要“块变换”在同一个固定点附近有相同的 <code>λ</code>，就有相同的临界指数。</p>
+<h3 id="sec26-5">26.5　上临界维度</h3>
+<p>平均场在 <code>d ≥ 4</code> 时严格。<strong>为什么是 4？</strong> 因为 <code>d=4</code> 时，涨落的“相空间”刚好让平均场自洽；<code>d<4</code> 时，涨落会“改写”指数。</p>
+<p><strong>这就是“上临界维度” <code>d_c=4</code> 的来历。</strong></p>
+<h3 id="sec26-6">26.6　这对本书的意义</h3>
+<p>本书借用“普适类”的概念，但<strong>不借用它的数值</strong>。原因很简单：<strong>社会/历史系统，既没有“自旋”，也没有“块变换”，更没有“可测的临界指数”。</strong></p>
+<p><strong>所以，本书只借“结构”（有固定点、有普适类），不借“公式”（具体指数）。</strong> 这是“借用工具，不冒充理论”的又一处。</p>
+<h3 id="sec26-7">26.7　一维转移矩阵的完整推导</h3>
+<p>设 <code>H = −J Σ s_i s_{i+1}</code>，配分函数：</p>
+<p>``<code> Z = Σ_{s_1...s_N} Π_i T(s_i, s_{i+1}) </code>``</p>
+<p>其中 <code>T(a,b) = exp(K ab)</code>，<code>K=J/(k_B T)</code>。矩阵形式：</p>
+<p>``<code> T = [ e^K   e^{−K} ] [ e^{−K}  e^K  ] </code>``</p>
+<p><strong>对角化：</strong> 特征值 <code>λ_+ = 2 cosh K</code>、<code>λ_− = 2 sinh K</code>。于是 <code>Z = λ_+^N + λ_−^N</code>。</p>
+<p><strong>关键：</strong> 当 <code>N→∞</code>，<code>Z ≈ λ_+^N</code>。<strong><code>λ_+</code> 是 <code>K</code> 的光滑函数，没有奇点——所以没有相变。</strong></p>
+<p><strong>这个推导干净地说明：</strong> “有相互作用”不等于“有相变”；<strong>维度</strong>才是关键。</p>
+<h3 id="sec26-8">26.8　二维 Onsager：结果与意义</h3>
+<p>Onsager 在 1944 年给出二维伊辛的精确解：</p>
+<p>``<code> sinh(2K_c) = 1  ⇒  K_c = (1/2) ln(1+√2) ≈ 0.4407 T_c = 2J / (k_B ln(1+√2)) ≈ 2.269 J/k_B </code>``</p>
+<p>序参量 <code>η ∝ (T_c−T)^{1/8}</code>，比热对数发散，关联长度指数 <code>ν=1</code>。</p>
+<p><strong>意义：</strong> 它证明“相变可以在二维发生”，并且“平均场的指数是错的”。<strong>这是“普适类”概念的起点。</strong></p>
+<h3 id="sec26-9">26.9　块自旋的详细计算</h3>
+<p><strong>一维。</strong> 把两个自旋 <code>s1,s2</code> 合成块自旋 <code>S</code>（取多数）。消去 <code>s</code> 后，有效耦合：</p>
+<p>``<code> K' = (1/2) ln cosh(2K) </code>``</p>
+<p><strong>固定点：</strong> <code>K* = (1/2) ln cosh(2K*)</code>。解只有 <code>K*=0</code>（高温）与 <code>K*=∞</code>（零温）——<strong>没有有限温固定点。</strong></p>
+<p><strong>二维。</strong> 块变换更复杂，但存在“有限温固定点” <code>K*</code>。线性化 <code>K'−K* ≈ λ(K−K*)</code>，<code>ν = ln b/ln λ</code>。</p>
+<p><strong>这就是“普适类”的来源：</strong> 不同微观模型，只要“块变换”在同一固定点附近有相同 <code>λ</code>，就有相同指数。</p>
+<h3 id="sec26-10">26.10　普适类的实验验证</h3>
+<p><strong>液-气</strong>与<strong>铁磁</strong>的临界指数，在实验中高度一致——尽管微观机制完全不同。</p>
+<p><strong>这是“普适类”最有力的证据：</strong> 它说明“临界行为”不依赖微观细节，只依赖“维度”与“对称性”。</p>
+<p><strong>但本书也承认：</strong> 社会/历史系统，几乎没有“可测的临界指数”。<strong>所以，本书只借“普适类”的概念，不借它的数值。</strong></p>
+<div class="case"><p>【人的尺度】一位化学系学生说，他第一次看到“临界指数与微观细节无关”时，觉得世界是可以被理解的。<b>重整化群最动人的地方，不是技术，是它告诉人：在足够大的尺度上，很多差别会消失。</b></p></div>

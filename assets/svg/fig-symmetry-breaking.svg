@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" width="820" height="460" font-family="Microsoft YaHei, PingFang SC, SimHei, sans-serif">
+<rect width="820" height="460" fill="#ffffff"/>
+<text x="410" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">对称破缺：微观没变，宏观“选了一个方向”</text>
+<text x="410" y="62" text-anchor="middle" font-size="14" fill="#666">临界点前各向同性；临界点后集体对齐</text>
+<text x="230" y="110" text-anchor="middle" font-size="16" fill="#2f6db0" font-weight="bold">临界点前：无序（对称）</text>
+<line x1="230" y1="260" x2="300" y2="260" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="300" cy="260" r="7" fill="#2f6db0"/>
+<line x1="230" y1="260" x2="279" y2="309" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="279" cy="309" r="7" fill="#2f6db0"/>
+<line x1="230" y1="260" x2="230" y2="330" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="230" cy="330" r="7" fill="#2f6db0"/>
+<line x1="230" y1="260" x2="181" y2="309" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="181" cy="309" r="7" fill="#2f6db0"/>
+<line x1="230" y1="260" x2="160" y2="260" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="160" cy="260" r="7" fill="#2f6db0"/>
+<line x1="230" y1="260" x2="181" y2="211" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="181" cy="211" r="7" fill="#2f6db0"/>
+<line x1="230" y1="260" x2="230" y2="190" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="230" cy="190" r="7" fill="#2f6db0"/>
+<line x1="230" y1="260" x2="279" y2="211" stroke="#2f6db0" stroke-width="2"/>
+<circle cx="279" cy="211" r="7" fill="#2f6db0"/>
+<text x="590" y="110" text-anchor="middle" font-size="16" fill="#c62828" font-weight="bold">临界点后：对齐（破缺）</text>
+<line x1="485" y1="320" x2="485" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="485" cy="200" r="7" fill="#c62828"/>
+<circle cx="485" cy="320" r="7" fill="#c62828"/>
+<line x1="515" y1="320" x2="515" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="515" cy="200" r="7" fill="#c62828"/>
+<circle cx="515" cy="320" r="7" fill="#c62828"/>
+<line x1="545" y1="320" x2="545" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="545" cy="200" r="7" fill="#c62828"/>
+<circle cx="545" cy="320" r="7" fill="#c62828"/>
+<line x1="575" y1="320" x2="575" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="575" cy="200" r="7" fill="#c62828"/>
+<circle cx="575" cy="320" r="7" fill="#c62828"/>
+<line x1="605" y1="320" x2="605" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="605" cy="200" r="7" fill="#c62828"/>
+<circle cx="605" cy="320" r="7" fill="#c62828"/>
+<line x1="635" y1="320" x2="635" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="635" cy="200" r="7" fill="#c62828"/>
+<circle cx="635" cy="320" r="7" fill="#c62828"/>
+<line x1="665" y1="320" x2="665" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="665" cy="200" r="7" fill="#c62828"/>
+<circle cx="665" cy="320" r="7" fill="#c62828"/>
+<line x1="695" y1="320" x2="695" y2="200" stroke="#c62828" stroke-width="2"/>
+<circle cx="695" cy="200" r="7" fill="#c62828"/>
+<circle cx="695" cy="320" r="7" fill="#c62828"/>
+<text x="410" y="420" text-anchor="middle" font-size="13" fill="#666" font-weight="normal">微观相互作用规则完全没变；变的只是“整体选了哪个方向”。</text>
+</svg>

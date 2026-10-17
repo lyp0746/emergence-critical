@@ -1,0 +1,47 @@
+{
+ "tc_exact": 2.26919,
+ "tc_binder_coarse_16_24": 2.2244,
+ "tc_binder_fine_24_32": 2.3018,
+ "tc_binder_fine_32_48": 2.2645,
+ "beta_over_nu_measured": 0.1563,
+ "beta_over_nu_exact": 0.125,
+ "gamma_over_nu_measured": 1.7518,
+ "gamma_over_nu_exact": 1.75,
+ "nu_measured": null,
+ "nu_exact": 1.0,
+ "chi_peak": {
+  "24": [
+   2.36,
+   13.24
+  ],
+  "32": [
+   2.32,
+   21.75
+  ],
+  "48": [
+   2.32,
+   44.55
+  ]
+ },
+ "m_at_tc": {
+  "24": 0.6673,
+  "32": 0.6609,
+  "48": 0.6011
+ },
+ "collapse_residual_exact": 0.0509,
+ "collapse_residual_meanfield": 0.0594,
+ "collapse_by_scale": {
+  "L24": {
+   "exact": null,
+   "meanfield": null
+  },
+  "L24_32": {
+   "exact": 0.0339,
+   "meanfield": 0.0316
+  },
+  "L24_32_48": {
+   "exact": 0.0509,
+   "meanfield": 0.0594
+  }
+ }
+}
