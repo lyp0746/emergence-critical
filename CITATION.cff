@@ -12,10 +12,13 @@ authors:
     alias: "Li Yipeng"
     email: "1610369302@qq.com"
     affiliation: "独立研究者 / Independent Researcher"
-date-released: "2026-10-18"
+date-released: 2026-10-30
+version: "2026-10-30"
+doi: 10.5281/zenodo.23447311
+concept-doi: 10.5281/zenodo.23440900
 license: CC-BY-4.0
 repository-code: "https://github.com/lyp0746/emergence-critical"
-url: "https://github.com/lyp0746/emergence-critical"
+url: "https://doi.org/10.5281/zenodo.23447311"
 keywords:
   - "涌现的临界"
   - "相变"
