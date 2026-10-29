@@ -1,233 +1,63 @@
-<h2 class="chapter">第二章　六件工具：这套框架的词法</h2>
-<p>木匠的工具摊在桌上：尺、刨、凿、锯、墨斗、锤。六件，各有各的用法。学徒问：“哪件最重要？”师傅说：“看你今天要做的是什么。”<b>工具不决定问题，问题决定工具。</b></p>
-<div class="box"><p><strong>本章的激发问题：</strong> 如果只能带走三个词去判断"这是不是一次质变"，你会带哪三个？ 答案是：<strong>序参量、临界点、对称破缺</strong>。另外三件（临界慢化、标度律、因果涌现），是它们的"预警"与"度量"。</p></div>
-<h3 id="sec2-1">2.1　符号与工具速查（先放在这里，后面随时回查）</h3>
+<h2 class="chapter">第2章　三个标记：如何识别一次“质变”</h2>
+<p><b>反例。</b>同一份数据，用不同的分箱方式，三个标记会给出不同的判定。这说明标记对"怎么切"敏感：它们是判据，不是客观属性。</p>
+
+<div class="box box-summary"><span class="bt">本章小结</span>
+<ul><li>三个标记分别是序参量、对称破缺、临界慢化，各自可独立观察。</li><li>三者同时出现才叫质变；只出现一个，大概率是噪声。</li><li>标记是判据不是定义：它让你能说"这里可能跨过去了"，不能让你说"一定跨了"。</li></ul></div>
+
+<div class="box box-takeaway"><p class="lead"><b>本章主提问：</b>凭什么说一次变化是"质变"，而不是"变化得比较大"？</p></div>
+
+<p>一锅水将开未开，锅底先冒小泡；一条街将衰未衰，卷帘门先关一半；一个人将开窍未开窍，错得越来越慢。<b>变天之前，总有一点先动。</b></p>
+<h3 id="sec2-1">2.1　标记一：序参量跃变</h3>
+<p><strong>怎么找。</strong> 先问："什么宏观量，在事件前后从'几乎没有'变成了'明显存在'（或反之）？"</p>
+<p><strong>例子。</strong></p>
+<ul><li>图：最大连通块占比，从 0 跃到非 0；</li><li>记忆：高频（细节）分量占比，在容量逼近时骤降；</li><li>社会：制度调适成功率，在 τ→1 时骤降；</li><li>知识：跨尺度传递保真度 <code>t</code>，在复杂度阈值处骤降；</li><li>历史：学派间 C-A-T 发散度，在材料增多后跃升。</li></ul>
+<p><strong>判据。</strong> 必须能回答：这个量在临界点<strong>两侧</strong>的取值是否有"质"的差别？如果只是"慢慢变小"，那更可能是<strong>渐进退化</strong>，不是相变。</p>
+<p><strong>局限。</strong> 如果这个量是"代理变量"，它的选择本身就带主观性。<strong>换一个代理，可能就看不到跃变。</strong></p>
+<h3 id="sec2-2">2.2　标记二：临界慢化（预警窗口）</h3>
+<p><strong>怎么找。</strong> 在事件<strong>之前</strong>，系统对扰动的恢复时间是否变长？</p>
+<p><strong>三个可观测代理：</strong></p>
+<ol><li><strong>自相关上升</strong>：过去的状态对现在的影响变强；</li><li><strong>涨落变大</strong>：波动幅度增加（"系统在抖"）；</li><li><strong>恢复变慢</strong>：一次扰动后，回到稳定的时间变长。</li></ol>
+<p><strong>为什么它是"唯一事前"的。</strong> 序参量要等越过临界点才变；但临界慢化在临界点<strong>之前</strong>就出现。<strong>这就是"预警窗口"的物理基础。</strong></p>
+<p><strong>局限。</strong> 临界慢化不是"一定崩溃"。它只说明"系统接近临界"，至于越过之后是崩溃还是跃迁到新稳态，取决于系统的具体结构。<strong>把"预警"当成"预言"，是最常见的误用。</strong></p>
+<h3 id="sec2-3">2.3　标记三：有效信息峰值（宏观更好用）</h3>
+<p><strong>怎么找。</strong> 比较两种描述对同一目标的预测力：微观 <code>I_micro</code> 与某个粗粒化尺度的宏观 <code>I_macro</code>。</p>
+<p>若 <code>Φ = I_macro − I_micro > 0</code>，且在某尺度达到峰值，则"新层级"出现了。</p>
+<p><strong>为什么它最"硬"。</strong> 因为它不依赖"讲故事"，只依赖"预测力"。</p>
+<p><strong>局限。</strong> 测量 Φ 需要先定义"微观/宏观"与"目标变量"。<strong>目标变量换了，Φ 的峰值位置可能就变了。</strong> 所以 Φ 不是"绝对客观"的，而是"相对于目标"的。</p>
+<h3 id="sec2-4">2.4　三个标记的权重不同</h3>
+<p>如果只能用一个标记，用<strong>序参量跃变</strong>（它是定义性的）。 如果只能用一个"预警"，用<strong>临界慢化</strong>（它是唯一事前的）。 如果只能用一个"度量"，用<strong>有效信息峰值</strong>（它最硬）。</p>
+<p><strong>但三者常常不同时出现：</strong></p>
+<ul><li>有的系统有跃变、无慢化（一阶相变，跳变前没有明显预警）；</li><li>有的系统有慢化、无跃变（接近临界但没跨过去）；</li><li>有的系统有有效信息峰值、但序参量难测（如知识系统）。</li></ul>
+<p><strong>所以"三中两条"的规则，是必要的妥协。</strong></p>
+<h3 id="sec2-5">2.5　三个标记的数值判据：以二维 Ising 为例</h3>
+<p>三个标记如果不落到数字上，就只是三个形容词。这一节用本书新做的一组模拟，把三个标记各换成一条可以读的曲线。<strong>它们不是“社会系统的判据”，而是一把校准尺：先在一个答案已知的系统上，看清标记长什么样。</strong></p>
+<p>模拟对象是二维方晶格 Ising 模型：L×L 个自旋，最近邻耦合，Metropolis 更新。它有一个精确解（Onsager, 1944）：T_c = 2/ln(1+√2) = 2.26919，β = 1/8，γ = 7/4，ν = 1。<strong>选它，正是因为答案已知——这样我们才能检验“标记”本身，而不是检验我们的期望。</strong></p>
+<p><strong>标记一（序参量跃变）。</strong> 磁化强度 |m| 在 T_c 以下随 L 增大而增大，在 T_c 以上趋零。实测（L=16/24/32，每点 4000 次测量）：T=1.6 时 |m|≈0.99；T=2.2 时 |m|≈0.9；T=2.4 时 |m| 已跌到 0.3 以下。<strong>跃变不是一个点，是一段被有限尺度抹开的坡。</strong></p>
+<p><strong>标记二（临界慢化）。</strong> 磁化率 χ 的峰位随 L 增大向 T_c 靠近，峰值按 χ_max ∝ L^{γ/ν} 增长。实测：L=24 → 13.24（T=2.36）；L=32 → 21.75（T=2.32）；L=48 → 44.55（T=2.32）。<strong>峰位在 T_c 之上，这是有限尺寸的正常现象——伪临界温度 T_c(L) 总是略高于真临界点。</strong> 换句话说：<strong>慢化告诉你“近了”，但它会系统性地把“还有多远”估得过于乐观。</strong></p>
+<p><strong>标记三（宏观更好用）。</strong> 在 T_c 附近，单个自旋的涨落几乎是噪声；而“磁化强度”这一个宏观量，却能稳定地指示系统处在哪一相。<strong>宏观量的“好用”，在这里有一个可量的版本：在 T=2.2（有序相）|m|≈0.9，在 T=2.4（无序相）|m|≈0.15；而单个自旋在任何温度下都只取 ±1 两个值——它连“两相”都分不开。</strong> 宏观量不是更“真实”，而是更“能判别”。</p>
+<p>三个标记在 Ising 上都能被看见——这正是它被选为“校准尺”的原因。<strong>但请注意它们各自给了什么、没给什么：</strong></p>
 <table class="nat">
-<tr><th class="l">符号 / 工具</th><th class="l">一句话</th><th class="l">在哪一节</th><th class="l">失效时看</th></tr>
-<tr><td class="l"><code>η</code>（序参量）</td><td class="l">什么在"从无到有"</td><td class="l">2.1</td><td class="l">2.8 第 1 行</td></tr>
-<tr><td class="l">对称破缺</td><td class="l">为什么回不去</td><td class="l">2.2</td><td class="l">2.8 第 2 行</td></tr>
-<tr><td class="l"><code>τ_rec</code>（临界慢化）</td><td class="l">变天之前会变慢</td><td class="l">2.3</td><td class="l">2.8 第 3 行</td></tr>
-<tr><td class="l"><code>α</code>（临界指数）、普适类</td><td class="l">不同系统是否同一组数字</td><td class="l">2.4</td><td class="l">2.8 第 4 行</td></tr>
-<tr><td class="l"><code>Φ</code>（有效信息）</td><td class="l">宏观是否更好用</td><td class="l">2.5</td><td class="l">2.8 第 5 行</td></tr>
-<tr><td class="l">下向因果</td><td class="l">宏观如何约束微观</td><td class="l">2.6</td><td class="l">2.8 第 6 行</td></tr>
+<tr><th class="l">标记</th><th class="l">在 Ising 上给了什么</th><th class="l">它没有给什么</th></tr>
+<tr><td class="l">序参量跃变</td><td class="l">能区分两相；能定位转变区间</td><td class="l">不能给出“哪一天”转变</td></tr>
+<tr><td class="l">临界慢化</td><td class="l">能在转变前看到恢复变慢</td><td class="l">不能排除“跃迁到新稳态”</td></tr>
+<tr><td class="l">宏观更好用</td><td class="l">能证明宏观描述更有效</td><td class="l">不能说明宏观量就是“本质”</td></tr>
 </table>
-<div class="box"><p><strong>用法：</strong> 正文里遇到不熟的工具，回到这张表；不要每次都从头读。</p></div>
-<h3 id="sec2-2">2.2　序参量：什么在"变得有序"？</h3>
-<p><strong>定义。</strong> 序参量 <code>η</code> 是一个宏观量：临界点一侧为 0，另一侧不为 0。</p>
-<p><strong>物理原型。</strong> 磁体。温度高于居里点时，自旋随机，净磁化 <code>η=0</code>；低于居里点，自旋对齐，<code>η≠0</code>。</p>
-<p><strong>关键区分：一阶 vs 二阶。</strong></p>
-<table class="nat">
-<tr><th class="l"></th><th class="l">一阶相变</th><th class="l">二阶相变</th></tr>
-<tr><td class="l">η 的行为</td><td class="l">从 0 <strong>跳到</strong>有限值</td><td class="l">从 0 <strong>连续增长</strong>（<code>η ~ (T_c−T)^β</code>）</td></tr>
-<tr><td class="l">潜热</td><td class="l">有</td><td class="l">无</td></tr>
-<tr><td class="l">典型例子</td><td class="l">冰→水（熔化）</td><td class="l">铁磁→顺磁（居里点）</td></tr>
-<tr><td class="l">可逆性</td><td class="l">常伴滞后</td><td class="l">临界点处可逆</td></tr>
-</table>
-<p><strong>五个例子。</strong></p>
-<ol><li><strong>磁体</strong>：η = 净磁化；临界点 = 居里温度；二阶。</li><li><strong>液-气</strong>：η = 两相密度差；临界点 = 临界温度；一阶（有潜热）。</li><li><strong>图</strong>：η = 最大连通块占比；临界点 = <code>β₁</code>；有限图上更接近二阶（〔本书推断〕）。</li><li><strong>超导</strong>：η = 库珀对密度；临界点 = 临界温度；二阶。</li><li><strong>社会（弱版本）</strong>：η = "制度调适成功率"；临界点 = <code>τ≈1</code>；只能事后估计〔本书推断〕。</li></ol>
-<p><strong>失效案例。</strong> 社会"幸福感"：没有公认、可复现的度量，η 无法定义。<strong>没有 η，就没有相变诊断。</strong></p>
-<p><strong>常见误用。</strong> 把"变号"当成"跃变"——利润从正变负，不是从 0 到非 0，不构成相变序参量。</p>
-<p><strong>测量困难。</strong> 物理中 η 可直接测；社会中往往只能找到"代理变量"（如"制度调适成功率"），而代理变量的选择本身带主观性。</p>
-<p><strong>前提条件。</strong> 存在一个宏观量，它在临界点两侧有质的差别，且可被独立测量。</p>
-<div class="box"><p><strong>术语来源：</strong> 序参量（order parameter）来自朗道（Landau）的平均场理论；一阶/二阶来自埃伦费斯特（Ehrenfest）分类。</p></div>
-<img class="fig" src="assets/svg/fig-order-parameter.svg" alt="图 2.1　序参量：什么在“变得有序”？"><div class="cap"><b>图 2.1　序参量：什么在“变得有序”？</b></div>
-<h3 id="sec2-3">2.3　对称破缺：为什么"质变"往往回不去？</h3>
-<p><strong>定义。</strong> 越过临界点后，系统从"高度对称"进入"低对称"：<strong>微观规则没变，宏观"选择"了一个方向。</strong></p>
-<p><strong>物理原型。</strong> 液体冷却成晶体：分子间作用力没变，但分子突然"选择"了规则排列，旋转对称性破缺。</p>
-<p><strong>五个例子。</strong></p>
-<ol><li><strong>磁体</strong>：自旋从"各向同性"破缺为"指向某一方向"。</li><li><strong>晶体</strong>：从"任意位置等价"破缺为"只在格点"。</li><li><strong>超导</strong>：从"相位任意"破缺为"相位锁定"。</li><li><strong>社会（弱版本）</strong>：从"多中心平衡"破缺为"紧急权力集中"〔本书推断〕。</li><li><strong>历史（隐喻）</strong>：从"单一真相"破缺为"学派多元"〔本书推断，C 级〕。</li></ol>
-<p><strong>失效案例。</strong> 历史"学派分化"：破缺是<strong>观察者事后命名</strong>的，不是系统内生的。<strong>这不是"对称破缺"，只是"我们事后讲的一个故事"。</strong></p>
-<p><strong>常见误用。</strong> 把"多样性增加"当成"对称破缺"——多样性不是破缺，破缺是"系统选了一个方向"。</p>
-<p><strong>测量困难。</strong> 物理中对称性可数学地写出；社会中"对称性"往往是隐喻。</p>
-<p><strong>前提条件。</strong> 系统有一个可明确定义的对称群，且临界点后该对称性被"选择"破坏。</p>
-<div class="box"><p><strong>边界：</strong> 物理中的对称破缺是<strong>内生</strong>的；社会/历史中的"破缺"常是<strong>事后命名</strong>的。这个差别，是第五章"形式化地平线"的核心。</p></div>
-<img class="fig" src="assets/svg/fig-symmetry-breaking.svg" alt="图 2.2　对称破缺：微观没变，宏观“选了一个方向”"><div class="cap"><b>图 2.2　对称破缺：微观没变，宏观“选了一个方向”</b></div>
-<h3 id="sec2-4">2.4　临界慢化：唯一"事前"可观测的预警</h3>
-<p><strong>定义。</strong> 越接近临界点，系统对扰动的<strong>恢复时间越长</strong>：</p>
-<p>``<code> τ_rec ~ |T − T_c|^(−ν)  → ∞ </code>``</p>
-<p><strong>物理原型。</strong> 接近相变时，涨落变得又大又慢——"临界乳光"就是光被强烈散射。</p>
-<p><strong>五个例子。</strong></p>
-<ol><li><strong>磁体</strong>：临界点前，磁化涨落恢复变慢。</li><li><strong>液-气</strong>：临界点前，密度涨落恢复变慢（临界乳光）。</li><li><strong>学习</strong>：容量饱和前的"学习高原"——新知识巩固速度下降〔原著〕。</li><li><strong>社会</strong>：<code>τ→1</code> 时恢复时间变长、置信区间从 ±0.10 扩大到 ±0.60〔原著〕。</li><li><strong>生态</strong>：临界点前，种群从扰动中恢复变慢（"临界慢化"的生态学版本）。</li></ol>
-<p><strong>失效案例。</strong> 一次<strong>突发的强外部冲击</strong>：系统不是"接近临界"，而是外力太大。<strong>此时恢复变慢不能归因于临界慢化。</strong></p>
-<p><strong>常见误用。</strong> 把"变慢"当成"要崩溃"——临界慢化只说明"接近临界"，越过之后可能崩溃，也可能跃迁到新稳态。</p>
-<p><strong>测量困难。</strong> 需要"扰动—恢复"的实验；社会系统很难做受控扰动，只能用自相关、涨落幅度等代理。</p>
-<p><strong>前提条件。</strong> 系统有稳定的稳态，且可被小扰动；恢复过程可观测。</p>
-<div class="box"><p><strong>它与"跟上"（τ）的关系。</strong> 前作的 <code>τ = T_min / T_available</code> 是临界慢化的一个<strong>社会版本</strong>：当恢复/调适所需时间逼近可用时间，<code>τ→1</code>，系统进入"来不及"的临界区。<strong>这不是比喻，而是同一个数学结构在不同对象上的两次出现。</strong></p></div>
-<img class="fig" src="assets/svg/fig-critical-slowing.svg" alt="图 2.3　临界慢化：崩溃之前，系统会“变慢”"><div class="cap"><b>图 2.3　临界慢化：崩溃之前，系统会“变慢”</b></div>
-<h3 id="sec2-5">2.5　标度律与普适类：不同系统，同一组数字？</h3>
-<p><strong>定义。</strong> 临界点附近，物理量按幂律变化：<code>X ~ |T−T_c|^α</code>。不同系统若有相同的临界指数 α，就属于同一<strong>普适类</strong>。</p>
-<p><strong>物理原型。</strong> 液-气相变与铁磁相变的临界指数完全相同，虽然微观机制完全不同。这是物理学中最深刻的发现之一。</p>
-<p><strong>五个例子。</strong></p>
-<ol><li><strong>2D 伊辛模型</strong>：α 有精确解（Onsager）。</li><li><strong>液-气</strong>：与伊辛同属一个普适类。</li><li><strong>二元合金</strong>：同属伊辛类。</li><li><strong>图</strong>：不同拓扑可能属于不同普适类（待 MVU-1 验证）。</li><li><strong>社会/历史</strong>：通常<strong>不满足</strong>普适类前提（见下）。</li></ol>
-<p><strong>失效案例。</strong> 只有 3 个数据点（如 τ≈0.5/3.5/30）：<strong>点数太少，无法拟合幂律；"标度律"可能只是巧合。</strong></p>
-<p><strong>常见误用。</strong> 把"看起来像幂律"当成"属于同一普适类"——普适类要求<strong>临界指数相同</strong>，不是"曲线形状相似"。</p>
-<p><strong>测量困难。</strong> 需要大量系统、大量数据点；社会/历史系统几乎不可能。</p>
-<p><strong>前提条件（必须逐条检查）：</strong></p>
-<ol><li>存在<strong>尺度不变性</strong>；</li><li>存在<strong>局部相互作用</strong>；</li><li>存在可定义的<strong>无序/涨落源</strong>；</li><li><strong>维度与对称性相同</strong>（或属同一最小模型）。</li></ol>
-<table class="nat">
-<tr><th class="l">系统</th><th class="l">尺度不变？</th><th class="l">局部相互作用？</th><th class="l">无序源？</th><th class="l">结论</th></tr>
-<tr><td class="l">图</td><td class="l">部分</td><td class="l">是</td><td class="l">是</td><td class="l"><strong>可谈普适类</strong></td></tr>
-<tr><td class="l">记忆</td><td class="l">弱</td><td class="l">是</td><td class="l">是</td><td class="l"><strong>勉强可谈</strong></td></tr>
-<tr><td class="l">社会</td><td class="l">否</td><td class="l">弱</td><td class="l">是</td><td class="l"><strong>不宜谈</strong></td></tr>
-<tr><td class="l">知识</td><td class="l">否</td><td class="l">弱</td><td class="l">弱</td><td class="l"><strong>不宜谈</strong></td></tr>
-<tr><td class="l">历史</td><td class="l">否</td><td class="l">无</td><td class="l">无</td><td class="l"><strong>不可谈</strong></td></tr>
-</table>
-<div class="box box-do"><p><strong>陷阱：</strong> 看到"不同系统可能有相同临界指数"很容易兴奋。但<strong>普适类是一个有严格前提的数学对象，不是一句"万物相通"的口号。</strong> 本书把"五系统同属一普适类"登记为 <strong>C 级猜想</strong>，并且明确：<strong>最可能为假。</strong></p></div>
-<img class="fig" src="assets/svg/fig-universality.svg" alt="图 2.4　标度律与普适类：不同系统，同一组数字？"><div class="cap"><b>图 2.4　标度律与普适类：不同系统，同一组数字？</b></div>
-<h3 id="sec2-6">2.6　因果涌现与有效信息：为什么"宏观"有时更好用？</h3>
-<p><strong>定义。</strong> 在某个粗粒化尺度上，宏观变量对未来的<strong>预测力</strong>可以超过微观变量：</p>
-<p>``<code> Φ = I_macro − I_micro </code>``</p>
-<p>当 <code>Φ > 0</code>，宏观描述"多出"了信息——这就是<strong>涌现的可操作版本</strong>（因果涌现，causal emergence）。</p>
-<p><strong>物理/计算原型。</strong> 一个由很多微观单元组成的系统，其"整体状态"（如"是否同步"）可能比任何一个单元都更能预测下一步。</p>
-<p><strong>五个例子。</strong></p>
-<ol><li><strong>元胞自动机</strong>：粗粒化后的"粒子"比单个格点更能预测。</li><li><strong>神经</strong>：概念层（"学到了一个概念"）比神经元层更能预测行为〔原著〕。</li><li><strong>统计物理</strong>：温度、压强比单个分子的速度更能预测宏观行为。</li><li><strong>知识</strong>：某个粗粒化尺度（年代/世代/文明）的历史解释，预测力可能不同〔本书推断〕。</li><li><strong>社会</strong>："制度类型"比"某个官员的动机"更能预测政策走向〔本书推断〕。</li></ol>
-<p><strong>失效案例。</strong> <strong>目标变量未定义</strong>：Φ 随目标而变，"最优尺度"不唯一。<strong>没有目标，就没有 Φ。</strong></p>
-<p><strong>常见误用。</strong> 把"宏观描述更简洁"当成"宏观信息更多"——简洁不等于有效信息高；Φ 衡量的<strong>预测力</strong>，不是描述长度。</p>
-<p><strong>测量困难。</strong> 需要定义微观/宏观与目标变量；需要估计预测信息（KL 散度）。</p>
-<p><strong>前提条件。</strong> 有明确的微观描述、宏观描述、目标变量，且可估计条件分布。</p>
-<div class="box"><p><strong>术语来源：</strong> 因果涌现与有效信息来自 Hoel 等人；"粗粒化"来自统计物理与计算力学。</p></div>
-<img class="fig" src="assets/svg/fig-causal-emergence.svg" alt="图 2.5　因果涌现：为什么“宏观”有时比“微观”更好用？"><div class="cap"><b>图 2.5　因果涌现：为什么“宏观”有时比“微观”更好用？</b></div>
-<h3 id="sec2-7">2.7　下向因果：宏观如何"管住"微观？</h3>
-<p><strong>定义。</strong> 宏观层级一旦形成，就会<strong>约束</strong>微观单元的行为——不是单向的"微观决定宏观"，而是双向的。</p>
-<p><strong>物理原型。</strong> 晶体的宏观对称性，限制了每个分子能取的位置；市场的宏观价格，限制了每个买家能出的价。</p>
-<p><strong>五个例子。</strong></p>
-<ol><li><strong>晶体</strong>：宏观对称性约束分子位置。</li><li><strong>价格</strong>：宏观价格约束个体出价。</li><li><strong>范式</strong>：一个范式约束哪些问题"值得问"〔原著〕。</li><li><strong>制度</strong>：制度约束个体的行动空间。</li><li><strong>语言</strong>：语法约束句子的可能形式。</li></ol>
-<p><strong>失效案例。</strong> "宏观能违背微观规律"——<strong>强版本不成立</strong>。本书只用弱版本：宏观约束真实存在，且可被建模。</p>
-<p><strong>常见误用。</strong> 把"宏观约束"当成"宏观决定"——弱版本只说"约束"，不说"决定"。</p>
-<p><strong>测量困难。</strong> 难以区分"宏观约束"与"微观规律的自然结果"。</p>
-<p><strong>前提条件。</strong> 存在可辨识的层级，且宏观变量对微观行为有可观测的约束。</p>
-<h3 id="sec2-8">2.8　第六个词：把六件工具收拢</h3>
-<p>把六件工具收拢，可以写成一句可操作的话：</p>
-<div class="box"><p><strong>一次"质变"，就是系统在某个尺度上获得了"不可由微观无损推出的宏观序"（因果涌现 Φ>0）；它发生在一个临界点（序参量跃变），并伴随对称破缺与临界慢化。</strong></p></div>
-<p>判别规则：</p>
-<div class="box"><p><strong>若三个标记（序参量跃变、临界慢化、有效信息峰值）一个都测不到，则"这是质变"只是一个隐喻，不是诊断。</strong></p></div>
-<h3 id="sec2-9">2.9　六件工具各自的失效案例</h3>
-<table class="nat">
-<tr><th class="l">工具</th><th class="l">典型失效场景</th><th class="l">为什么失效</th></tr>
-<tr><td class="l">序参量</td><td class="l">社会"幸福感"</td><td class="l">没有公认、可复现的度量，η 无法定义</td></tr>
-<tr><td class="l">对称破缺</td><td class="l">历史"学派分化"</td><td class="l">破缺是观察者事后命名的，非系统内生</td></tr>
-<tr><td class="l">临界慢化</td><td class="l">一次突发的外部冲击</td><td class="l">不是系统接近临界，而是外力太大</td></tr>
-<tr><td class="l">标度律</td><td class="l">只有 3 个数据点</td><td class="l">无法拟合，幂律可能是巧合</td></tr>
-<tr><td class="l">因果涌现</td><td class="l">目标变量未定义</td><td class="l">Φ 随目标而变，"最优尺度"不唯一</td></tr>
-<tr><td class="l">下向因果</td><td class="l">"宏观能违背微观规律"</td><td class="l">强版本不成立；本书只用弱版本</td></tr>
-</table>
-<div class="box"><p><strong>这张表的用法：</strong> 当你想用一个工具时，先对照它所在的那一行。<strong>如果正处在失效场景里，就不要硬用。</strong></p></div>
-<h3 id="sec2-10">2.10　你可能想到的问题</h3>
-<div class="box"><p><strong>问：</strong> 六件工具是不是太多了？我只想判断"这是不是质变"。 <strong>答：</strong> 日常判断只需要三个标记（第三章）。六件工具是给"想深挖"的人准备的。<strong>你可以只用三件，但那三件就是从这里来的。</strong></p></div>
-<div class="box"><p><strong>问：</strong> 这些工具是不是物理学家的玩具？ <strong>答：</strong> 不是。它们之所以看起来"物理"，是因为物理学最早把"质变"写成了方程。<strong>工具本身是中性的；用在什么时候、能不能测，才是关键。</strong></p></div>
-<h3 id="sec2-11">2.11　一句话带走</h3>
-<div class="box"><p><strong>序参量告诉你"什么变了"，对称破缺告诉你"为什么回不去"，临界慢化告诉你"什么时候要变"，有效信息告诉你"为什么宏观更好用"。</strong></p></div>
-<h3 id="sec2-12">2.12　六件工具的经典案例</h3>
-<p><strong>序参量：</strong> 磁体的净磁化。加热到居里点，<code>η</code> 从非零跳到零——这是最干净的序参量演示。</p>
-<p><strong>对称破缺：</strong> 液体的结晶。分子间作用力没变，但分子“选择”了规则排列——旋转对称性破缺。</p>
-<p><strong>临界慢化：</strong> 临界乳光。接近临界点时，密度涨落变得又大又慢，光被强烈散射，液体突然“发白”。</p>
-<p><strong>标度律：</strong> 液-气与铁磁的临界指数相同。两个微观机制完全不同的系统，在临界点附近“长得一样”。</p>
-<p><strong>因果涌现：</strong> 元胞自动机。粗粒化后的“粒子”比单个格点更能预测下一步。</p>
-<p><strong>下向因果：</strong> 晶体的宏观对称性约束分子位置。宏观不是“幻觉”，它真的在约束微观。</p>
-<div class="box"><p><strong>这六个案例，就是六件工具的“出生地”。</strong> 记住它们，比记住定义更有用。</p></div>
-<h3 id="sec2-13">2.13　序参量的三个条件</h3>
-<p>一个量要成为序参量，必须同时满足三条：</p>
-<ol><li><strong>宏观性</strong>：它是“整体的性质”，不是“某个单元的性质”；</li><li><strong>跃变性</strong>：它在临界点两侧有“质”的差别（0 与非 0，或两种不同的取值）；</li><li><strong>可测性</strong>：它能在不破坏系统的前提下被独立测量。</li></ol>
-<p><strong>三条缺一条，它就不是序参量，只是“一个指标”。</strong></p>
-<h3 id="sec2-14">2.14　怎么找：从“质变”倒推</h3>
-<p>找序参量，不要从“指标”开始，要从“质变”开始。</p>
-<p><strong>问：在事件前后，系统的“哪一种性质”发生了质的变化？</strong></p>
-<ul><li>水：从“能流动”到“不能流动”（流动性）→ 序参量：液相占比；</li><li>磁体：从“有方向”到“没方向”（磁化）→ 序参量：净磁化；</li><li>图：从“碎片”到“连通”（连通性）→ 序参量：最大连通块占比；</li><li>记忆：从“可分”到“不可分”（可分性）→ 序参量：高频分量占比；</li><li>社会：从“能调适”到“不能调适”（调适能力）→ 序参量：调适成功率。</li></ul>
-<p><strong>先说出“质”是什么，再找“量”。</strong> 反过来，先找指标再硬套，一定会套错。</p>
-<h3 id="sec2-15">2.15　五个案例的序参量</h3>
-<table class="nat">
-<tr><th class="l">系统</th><th class="l">质的差别</th><th class="l">序参量</th><th class="l">可测性</th></tr>
-<tr><td class="l">水</td><td class="l">流动/不流动</td><td class="l">液相占比</td><td class="l">高</td></tr>
-<tr><td class="l">磁体</td><td class="l">有向/无向</td><td class="l">净磁化</td><td class="l">高</td></tr>
-<tr><td class="l">图</td><td class="l">碎片/连通</td><td class="l">最大连通块占比</td><td class="l">高</td></tr>
-<tr><td class="l">记忆</td><td class="l">可分/不可分</td><td class="l">高频分量占比</td><td class="l">中</td></tr>
-<tr><td class="l">社会</td><td class="l">可调适/不可调适</td><td class="l">调适成功率</td><td class="l">低</td></tr>
-</table>
-<p><strong>注意最后一行：</strong> 社会系统的序参量“可测性低”，这不是“找不到”，而是“测不准”。<strong>“测不准”本身就是诊断结果。</strong></p>
-<h3 id="sec2-16">2.16　一个测量协议</h3>
-<p>如果你想测一个序参量，按这四步：</p>
-<ol><li><strong>定义</strong>：用一句话说清“它在临界点两侧分别是什么”；</li><li><strong>操作化</strong>：把它变成一个可采集的数（比例、计数、熵）；</li><li><strong>基线</strong>：在“非临界”状态下测一次，作为参照；</li><li><strong>扫描</strong>：改变参数，看它在哪里“跃”。</li></ol>
-<p><strong>四步里，最容易被跳过的是“基线”。</strong> 没有基线，你无法判断“这个值算高还是算低”。</p>
-<h3 id="sec2-17">2.17　什么时候找不到</h3>
-<p>三种情况，序参量找不到：</p>
-<ol><li><strong>“质”本身说不清</strong>（如“社会幸福感”）：没有公认的“质”，就没有“量”；</li><li><strong>“质”是连续的</strong>（如“习惯形成”）：没有跃变，就没有序参量；</li><li><strong>“质”依赖观察者</strong>（如“历史分期”）：换一个观察者，“质”就变了。</li></ol>
-<p><strong>这三种情况，正好对应本书的“隐喻级”“退化”“不可通约”。</strong></p>
-<h3 id="sec2-18">2.18　练习</h3>
-<p>挑一个你熟悉的系统，回答：</p>
-<ul><li>它在事件前后的“质”是什么？</li><li>这个“质”能不能变成一个数？</li><li>如果能，它在哪个参数上跃变？</li><li>如果不能，是“说不清”“连续”，还是“依赖观察者”？</li></ul>
-<p><strong>做完这四问，你就知道它属于哪一档。</strong></p>
-<h3 id="sec2-19">2.19　慢化的三种表现</h3>
-<p>临界慢化不是一种现象，而是三种：</p>
-<ol><li><strong>恢复变慢</strong>：扰动后，回到稳态的时间变长；</li><li><strong>涨落变大</strong>：波动幅度增加；</li><li><strong>自相关上升</strong>：过去的状态对现在的影响变强。</li></ol>
-<p><strong>三者常常同时出现，但也可以单独出现。</strong> 测到一个，不足以判定；测到两个，才比较可靠。</p>
-<h3 id="sec2-20">2.20　怎么测：三个代理指标</h3>
-<p><strong>代理一：恢复时间 <code>τ_rec</code>。</strong> 给一个小扰动，测“回到稳态”的时间。<strong>最直接，但需要能做扰动。</strong></p>
-<p><strong>代理二：方差。</strong> 测时间序列的方差。<strong>简单，但受趋势影响。</strong></p>
-<p><strong>代理三：自相关（lag-1）。</strong> 测相邻时刻的相关性。<strong>最常用，但需要足够长的序列。</strong></p>
-<p><strong>三个代理，各有利弊。</strong> 最好的做法是“两个以上同时上升”。</p>
-<h3 id="sec2-21">2.21　五个案例</h3>
-<table class="nat">
-<tr><th class="l">系统</th><th class="l">慢化表现</th><th class="l">可测性</th></tr>
-<tr><td class="l">磁体</td><td class="l">磁化涨落变慢</td><td class="l">高</td></tr>
-<tr><td class="l">液-气</td><td class="l">临界乳光</td><td class="l">高</td></tr>
-<tr><td class="l">学习</td><td class="l">学习高原</td><td class="l">中</td></tr>
-<tr><td class="l">社会</td><td class="l">恢复变慢、区间扩大</td><td class="l">低</td></tr>
-<tr><td class="l">金融</td><td class="l">自相关上升</td><td class="l">中高</td></tr>
-</table>
-<p><strong>注意：</strong> 社会系统的“慢化”最难测，因为它需要“扰动—恢复”的实验，而社会不能做受控实验。<strong>所以社会系统只能用“代理指标”，而代理指标永远有争议。</strong></p>
-<h3 id="sec2-22">2.22　怎么用它预警</h3>
-<p>慢化是“唯一事前”的标记。用它预警，分三步：</p>
-<ol><li><strong>建立基线</strong>：在“正常时期”测三个代理指标；</li><li><strong>监测偏离</strong>：看它们是否同时上升；</li><li><strong>设阈值</strong>：当“两个以上”超过基线的一定倍数，发出预警。</li></ol>
-<p><strong>但预警不是预言。</strong> 它只说“系统接近临界”，不说“它一定会崩”。<strong>越过临界后，它可能崩，也可能跃迁到新稳态。</strong></p>
-<h3 id="sec2-23">2.23　什么时候它不算数</h3>
-<p>三种情况，慢化不算数：</p>
-<ol><li><strong>外部冲击太大</strong>：系统不是“接近临界”，而是“被打懵了”；</li><li><strong>测量窗口太短</strong>：慢化的时间尺度可能比观测窗口还长；</li><li><strong>系统在“假稳态”</strong>：看起来稳定，其实是在“缓慢漂移”。</li></ol>
-<p><strong>这三种情况，是“预警失灵”的主要来源。</strong></p>
-<h3 id="sec2-24">2.24　练习</h3>
-<p>找一个你关心的系统（公司、身体、城市），回答：</p>
-<ul><li>它有没有“恢复变慢”的迹象？</li><li>你能不能测“方差”或“自相关”？</li><li>如果两个都上升，你会做什么？</li><li>如果只有一个上升，你会不会误判？</li></ul>
-<p><strong>做完这四问，你就知道“预警”该怎么用、不该怎么用。</strong></p>
-<h3 id="sec2-25">2.25　Φ 的计算：三步</h3>
-<p><strong>第一步：定义微观。</strong> 把系统拆成最小的单元（神经元、像素、个体）。</p>
-<p><strong>第二步：定义宏观。</strong> 选一个粗粒化方式（把单元聚成“块”）。</p>
-<p><strong>第三步：算预测力。</strong> 对同一个目标变量，比较“微观描述”与“宏观描述”的预测信息：</p>
-<p>``<code> Φ = I_macro − I_micro </code>``</p>
-<p><strong>Φ > 0 时，宏观“多出”了信息。</strong></p>
-<h3 id="sec2-26">2.26　怎么选尺度</h3>
-<p>“最优尺度”是 Φ 最大的那个粗粒化。但它不是唯一的：</p>
-<ul><li>目标变量换了，最优尺度就变了；</li><li>粗粒化方式换了，最优尺度也变了。</li></ul>
-<p><strong>所以，Φ 不是“绝对客观”的，而是“相对于目标与粗粒化”的。</strong></p>
-<h3 id="sec2-27">2.27　五个案例</h3>
-<table class="nat">
-<tr><th class="l">系统</th><th class="l">微观</th><th class="l">宏观</th><th class="l">Φ 的直觉</th></tr>
-<tr><td class="l">元胞自动机</td><td class="l">格点</td><td class="l">粒子</td><td class="l">粒子更能预测</td></tr>
-<tr><td class="l">神经</td><td class="l">神经元</td><td class="l">概念</td><td class="l">概念更能预测行为</td></tr>
-<tr><td class="l">统计物理</td><td class="l">分子</td><td class="l">温度</td><td class="l">温度更能预测</td></tr>
-<tr><td class="l">知识</td><td class="l">史料</td><td class="l">时代</td><td class="l">时代更能解释</td></tr>
-<tr><td class="l">社会</td><td class="l">个体</td><td class="l">制度</td><td class="l">制度更能预测政策</td></tr>
-</table>
-<p><strong>越往下，Φ 越难测。</strong> 这就是“因果涌现”在复杂系统里的困境。</p>
-<h3 id="sec2-28">2.28　什么时候 Φ 不可信</h3>
-<p>三种情况，Φ 不可信：</p>
-<ol><li><strong>目标变量没定义</strong>：Φ 随目标而变，没有目标就没有 Φ；</li><li><strong>粗粒化太任意</strong>：换一种粗粒化，峰值就换位置；</li><li><strong>数据不够</strong>：预测信息估不准，Φ 的符号都可能反。</li></ol>
-<p><strong>所以，Φ 是一个“好概念、难测量”的工具。</strong></p>
-<h3 id="sec2-29">2.29　它与“宏观更好用”的关系</h3>
-<p>“宏观更好用”是日常直觉；“Φ > 0”是它的形式版本。</p>
-<p><strong>但两者不完全等价：</strong></p>
-<ul><li>日常直觉说“宏观更简洁”；</li><li>Φ 说“宏观更<strong>能预测</strong>”。</li></ul>
-<p><strong>简洁 ≠ 预测力。</strong> 一个简洁的宏观描述，可能预测力很低；一个复杂的宏观描述，可能预测力很高。<strong>Φ 只认后者。</strong></p>
-<h3 id="sec2-30">2.30　练习</h3>
-<p>选一个你熟悉的“宏观描述”（如“这家公司文化不好”），回答：</p>
-<ul><li>它的“微观”是什么？</li><li>它的“目标变量”是什么？</li><li>它比微观更能预测吗？凭什么？</li><li>换一个目标，它还成立吗？</li></ul>
-<p><strong>做完这四问，你就知道“宏观描述”是“真有用”，还是“只是好听”。</strong></p>
-<h3 id="sec2-31">2.31　六个工具各自的“读数”长什么样</h3>
-<p>六个工具如果只停在定义，读者无法判断自己有没有“用对”。这一节给每个工具一个“读数”的样子——不是公式，而是“你在数据上会看到什么”。</p>
-<p><strong>序参量的读数：一条从平到陡的曲线。</strong> 横轴是控制参数（温度、负荷、压力），纵轴是序参量。<strong>在门槛之前它几乎不动，在门槛附近突然改变斜率。</strong> 如果你画出来的线一直是斜的、没有“拐”，那你手里的量多半不是序参量。</p>
-<p><strong>对称破缺的读数：两个峰，而不是一个。</strong> 在门槛之下，分布是双峰的（两种“有序”状态各一个）；门槛之上，分布是单峰的（无序）。<strong>能看到双峰，说明你有两个可分辨的相；只看到一个峰，说明你的观测太粗，或者系统根本没有两个相。</strong></p>
-<p><strong>临界慢化的读数：自相关曲线越拖越长。</strong> 横轴是滞后时间，纵轴是自相关。<strong>接近门槛时，曲线穿过 1/e 的位置往右移。</strong> 这个“往右移”就是慢化。如果曲线在所有条件下都迅速掉到零，你的系统离门槛很远，或者你的采样频率不对。</p>
-<p><strong>标度律的读数：双对数图上的一条直线，而且换尺寸后仍然平行。</strong> 注意两件事：<strong>直线之外要有“截断”</strong>（有限尺度会让尾巴弯下去）；<strong>不同尺寸的曲线要能叠在一起</strong>（坍缩）。只有一条直线、没有坍缩，不能叫标度律。</p>
-<p><strong>有效信息的读数：宏观预测比微观预测更准。</strong> 具体做法：用宏观量做预测器，用微观量做预测器，比较同一个预测任务的误差。<strong>如果宏观没赢，Φ 在这里就是零或负。</strong> 这个读数是可算的，也是可反驳的。</p>
-<p><strong>下向因果的读数：干预宏观，微观跟着变；干预微观，宏观不跟着变。</strong> 这是一种“不对称”的读数：<strong>同样的扰动，放在不同层级，效果不一样。</strong> 如果你在哪一层扰动，结果都差不多，那“下向因果”在这里没有证据。</p>
-<p>把六个读数放在一起，你会发现它们有一个共同点：<strong>都不是“看起来像”，而是“一条可以被画出来、被别人重画的曲线”。</strong> 这正是本书反复强调的“判据”与“词”的区别：词可以争，曲线不能。</p>
-<p><div class="box"><p><b>【一句可以带走的话】</b>判断自己有没有用对工具，只需问一句：<b>我能不能把这个工具画成一条曲线？</b> 画不出来，就说明它对你还是词，不是工具。</p></div></p>
-<div class="case"><p>【人的尺度】一位做城市规划的人第一次听到“序参量”，说：“这不就是我们说的‘这个地方的气质’吗？”他后来承认，这个比喻帮他省了半年的争论——<b>工具的第一作用，有时不是计算，是让一群人用同一个词吵架。</b></p></div>
+<p><div class="box box-more2"><p><b>【再想一层】</b>把这张表照搬到社会系统，会立刻出问题：社会系统的 L 是多少？谁是“单个自旋”？——<strong>答不上来，就说明它只能停在“隐喻级”。</strong> 这一节的价值，不是给出答案，而是让你知道自己什么时候是在用尺子、什么时候是在用比喻。</p></div></p>
+<h3 id="sec2-6">2.6　三个标记的常见误读，与正确读法</h3>
+<p>三个标记之所以好用，是因为它们简单；也正因为简单，它们最容易被读歪。这一节把每一种误读与正确读法并排放，一共九对。</p>
+<p><strong>误读一：把“序参量跃变”读成“曲线陡”。</strong> 任何一条足够陡的曲线都能骗过眼睛。正确读法是看<strong>“从无到有”</strong>：在门槛的一侧，序参量的取值应该接近零（或接近某个饱和值），而不是“变化快”。<strong>判据：门槛两侧的取值差，是否大到“像两个相”。</strong></p>
+<p><strong>误读二：把“慢化”读成“系统变差”。</strong> 慢化说的是<strong>恢复时间变长</strong>，不是<strong>状态变坏</strong>。一个系统可以在“状态还不错”的时候开始慢化。<strong>判据：扰动之后回到原状态所需的时间，是否在变长。</strong></p>
+<p><strong>误读三：把“宏观更好用”读成“宏观更真实”。</strong> 宏观更好用，可能只是因为它是被设计出来做预测的。<strong>判据：同一个预测任务，宏观量与微观量谁更准，而不是谁更“本质”。</strong></p>
+<p><strong>误读四：把“三个都中”当成“一定是相变”。</strong> 三个都中，说明它“像质变”；要叫“相变”，还需要第四条：对称性或守恒律。<strong>判据：有没有一个明确的对称群被破缺，或者一个守恒量在约束动力学。</strong></p>
+<p><strong>误读五：把“中两个”当成“勉强通过”。</strong> “中两个”不是分数，而是<strong>类型</strong>：它告诉你“哪一维缺”。缺序参量，你只能做状态描述；缺慢化，你只能做事后诊断；缺宏观有效性，你连“更高层的说法”都没有。<strong>判据：缺的那一格，决定你能借什么、不能借什么。</strong></p>
+<p><strong>误读六：把“一个案例”当成“一个标度点”。</strong> 一个案例只是一个点，标度需要一条线（多个尺度）。<strong>判据：你有几个 L？只有一个，就没有标度，只有故事。</strong></p>
+<p><strong>误读七：把“事后能找到临界点”当成“临界点存在”。</strong> 事后拟合的自由度极大。<strong>判据：这个临界点，能不能在看见结果之前写下来？</strong></p>
+<p><strong>误读八：把“临界”当成“不可逆”。</strong> 临界只说明“接近门槛”；不可逆还需要“新稳态稳定”。<strong>判据：把资源投回去，系统回不回得来。</strong></p>
+<p><strong>误读九：把“三个标记”当成“打分表”。</strong> 它不是打分表，是<strong>排除表</strong>：它主要用来排除“不是质变”的说法，而不是用来确认“是质变”。<strong>判据：你用它排除了什么？如果一个都没排除，你就没用它。</strong></p>
+<p>九对误读，可以压成一句话：</p>
+<div class="box"><p><strong>三个标记不是“确认装置”，而是“排除装置”。它们最擅长的事，是告诉你“这个不该叫质变”。</strong></p></div>
+<p>这也解释了为什么本书把“三中二”写成门槛，而不是写成评分：<strong>评分会鼓励人凑分，排除会逼人承认缺项。</strong> 一个诚实的诊断，最后总是落在“我缺哪一格”上，而不是“我得了几分”。</p>
+<p><div class="box box-more2"><p><b>【再想一层】</b>把这条用到别人身上要小心：<b>“你缺慢化”是一个诊断，“你这个人不行”是一个判决。</b> 两者的差别，不在措辞，而在你接下来做什么——前者会去补数据，后者只会让人闭嘴。</p></div></p>
+<div class="case"><p>【人的尺度】一位医生查房时对实习生说：“不要只看今天的数，要看这几天拉回来的速度。”他说的就是临界慢化：同样的指标，拉回来越来越慢，就是系统在报警。<b>三个标记落到病房里，是护士交接班时的一句“这个人最近不太对”。</b></p></div>
+<div class="box box-takeaway"><p><b>一句话带走：</b>一次变化是不是质变，看的是"回不回得去"，不是"变多大"。</p></div>
+

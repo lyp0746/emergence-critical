@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="794" height="1123">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#0e1117"/><stop offset="0.55" stop-color="#151a23"/><stop offset="1" stop-color="#0b0e14"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.36" r="0.6">
+    <stop offset="0" stop-color="#b8862f" stop-opacity="0.10"/><stop offset="1" stop-color="#b8862f" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="794" height="1123" fill="url(#bg)"/>
+<rect width="794" height="1123" fill="url(#glow)"/>
+<rect x="28" y="28" width="738" height="1067" fill="none" stroke="#b8862f" stroke-opacity="0.28" stroke-width="0.8"/><line x1="28" y1="96" x2="766" y2="96" stroke="#b8862f" stroke-opacity="0.55" stroke-width="1.4"/>
+<polyline points="120,619 125,619 129,619 134,619 138,619 143,619 148,619 152,619 157,619 161,619 166,618 171,618 175,618 180,618 184,617 189,617 194,617 198,616 203,616 207,616 212,615 217,615 221,614 226,613 230,612 235,612 240,611 244,609 249,608 253,607 258,605 263,604 267,602 272,600 276,598 281,596 286,593 290,590 295,587 299,583 304,579 309,575 313,571 318,566 322,561 327,555 332,549 336,543 341,536 345,529 350,521 355,513 359,505 364,496 368,487 373,478 378,469 382,459 387,450 391,441 396,431 401,422 405,413 410,404 414,395 419,387 424,379 428,371 433,364 437,357 442,351 447,345 451,339 456,334 460,329 465,325 470,321 474,317 479,313 483,310 488,307 493,304 497,302 502,300 506,298 511,296 516,295 520,293 525,292 529,291 534,289 539,288 543,288 548,287 552,286 557,285 562,285 566,284 571,284 575,284 580,283 585,283 589,283 594,282 598,282 603,282 608,282 612,281 617,281 621,281 626,281 631,281 635,281 640,281 644,281 649,281 654,281 658,280 663,280 667,280 672,280" stroke="#b8862f" fill="none" stroke-width="1" stroke-opacity="0.55"/><line x1="120" y1="430" x2="684" y2="430" stroke="#b8862f" fill="none" stroke-width="1" stroke-opacity="0.55" stroke-opacity="0.28" stroke-dasharray="5 8"/>
+<text x="644" y="1027" font-family="Georgia, Times New Roman, serif" font-size="210" fill="none" stroke="#b8862f" stroke-opacity="0.34" stroke-width="1.2" text-anchor="end">03</text><line x1="682" y1="1059" x2="682" y2="1045" stroke="#b8862f" stroke-opacity="0.85" stroke-width="1"/><line x1="696" y1="1059" x2="696" y2="1045" stroke="#b8862f" stroke-opacity="0.85" stroke-width="1"/><line x1="710" y1="1059" x2="710" y2="1045" stroke="#b8862f" stroke-opacity="0.85" stroke-width="1"/><line x1="724" y1="1059" x2="724" y2="1053" stroke="#b8862f" stroke-opacity="0.3" stroke-width="1"/><line x1="738" y1="1059" x2="738" y2="1053" stroke="#b8862f" stroke-opacity="0.3" stroke-width="1"/><line x1="752" y1="1059" x2="752" y2="1053" stroke="#b8862f" stroke-opacity="0.3" stroke-width="1"/>
+</svg>
