@@ -12,7 +12,7 @@
 
 | 部分 | 标题 | 章数 | 起 → 止 |
 |---|---|---:|---|
-| 1 | 第一部分　问题、工具与做法 | 4 | 为什么"量变到质变"需要一门科学 → 《区分的语法》：严格相变的应用 |
+| 1 | 第一部分　问题、工具与做法 | 4 | 为什么"量变到质变"需要一门科学 → 《区分的语言》：严格相变的应用 |
 | 2 | 第二部分　五个出口与形式化的地平线 | 5 | 《遗忘的边界》：可能是相变的应用 → 形式化的地平线：为什么效力会递减 |
 | 3 | 第三部分　立论：可验证单元与三条方向 | 5 | 第六种风险：相变与诠释的不可通约 → 认识论方向：不可知的临界 |
 | 4 | 第四部分　方向、案例与反驳 | 5 | 实践方向：在无法精确诊断的世界里决策 → 常见误用与反驳 |
@@ -51,7 +51,7 @@
 | 书 | 仓库 |
 |---|---|
 | 只能选两样 | [knowledge-tradeoffs](https://github.com/lyp0746/knowledge-tradeoffs) |
-| 区分的语法 | [distinction-evolution](https://github.com/lyp0746/distinction-evolution) |
+| 区分的语言 | [distinction-evolution](https://github.com/lyp0746/distinction-evolution) |
 | 遗忘的边界 | [capacity-cascade](https://github.com/lyp0746/capacity-cascade) |
 | 错位的时间 | [entropy-spiral](https://github.com/lyp0746/entropy-spiral) |
 | 选择的代价 | [impossibility-triangle](https://github.com/lyp0746/impossibility-triangle) |

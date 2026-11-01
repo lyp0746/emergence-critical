@@ -1,0 +1,251 @@
+<h2 class="chapter" id="apxB">附录 B　数据、实验与复算</h2>
+<p>这一组回答一个问题：书里的每个数从哪来、怎么复算、失败的那几次长什么样。表多、字少，是刻意如此——附录的任务是可核对，不是可读。</p>
+<h3>B.1　数值实验：参数、结果与失败记录</h3>
+<p>本书正文引用了三组模拟。它们的作用不是“证明理论”，而是<strong>让读者能自己跑一遍、并看到作者在哪里失败</strong>。所有参数、种子与输出都可复算。</p>
+<h4>B.1.1　实验清单</h4>
+<table class="nat">
+<tr><th class="l">编号</th><th class="l">对象</th><th class="l">脚本</th><th class="l">数据</th><th class="l">主要用途</th></tr>
+<tr><td class="l">E1</td><td class="l">二维 Ising（Metropolis）</td><td class="l"><code>analysis/exp_ising.py</code></td><td class="l"><code>data/exp_ising*.json</code></td><td class="l">校准三个标记；做 MVU-1</td></tr>
+<tr><td class="l">E2</td><td class="l">临界分支过程（雪崩）</td><td class="l"><code>analysis/exp_critical.py</code></td><td class="l"><code>data/exp_critical.json</code></td><td class="l">检验“幂律=临界”是否成立</td></tr>
+<tr><td class="l">E3</td><td class="l">临界慢化（AR(1)）与点渗流</td><td class="l">同上</td><td class="l">同上</td><td class="l">检验预警指标的能力与边界</td></tr>
+</table>
+<h4>B.1.2　关键参数</h4>
+<ul><li><strong>E1</strong>：J=1，周期性边界；粗扫 L=16/24/32、T∈[1.6,3.2] 步长 0.1、热化 1500、测量 4000；细扫 L=24/32/48、T∈[2.20,2.36] 步长 0.02、热化 3000、测量 10000；种子 20261016。</li><li><strong>E2</strong>：雪崩 20 万次/组，截断 2×10⁴，m∈{0.9, 1.0, 1.05}；对数分箱后<strong>除以箱宽</strong>再拟合（否则会把 α=1.5 误读成 0.5）。</li><li><strong>E3</strong>：AR(1) 每点 3×10⁵ 步、去前 2×10⁴ 步；渗流 L=64、每个 p 做 200 次独立实现；种子 424242。</li></ul>
+<h4>B.1.3　结果摘要</h4>
+<table class="nat">
+<tr><th class="l">量</th><th class="l">实测</th><th class="l">基准</th><th class="l">判断</th></tr>
+<tr><td class="l">T_c（L=32/48 交点）</td><td class="l">2.2645</td><td class="l">2.26919（精确）</td><td class="l">通过（偏差 0.21%）</td></tr>
+<tr><td class="l">γ/ν</td><td class="l">1.752</td><td class="l">1.75（精确）</td><td class="l">通过（偏差 0.1%）</td></tr>
+<tr><td class="l">β/ν</td><td class="l">0.156</td><td class="l">0.125（精确）</td><td class="l">未通过（偏大 25%）</td></tr>
+<tr><td class="l">临界雪崩指数</td><td class="l">1.495</td><td class="l">1.5（理论）</td><td class="l">通过</td></tr>
+<tr><td class="l">AR(1) 恢复时间</td><td class="l">10/20/101/211</td><td class="l">10/20/100/200</td><td class="l">通过（≤5%）</td></tr>
+<tr><td class="l">渗流阈值（P=0.5）</td><td class="l">p≈0.583</td><td class="l">0.5927（精确）</td><td class="l">偏低 1.6%</td></tr>
+</table>
+<h4>B.1.4　失败记录（这一节比上面那张表重要）</h4>
+<ol><li><strong>ν 没有测出来。</strong> 原计划用 Binder 交点随 L 的漂移估 ν；实测交点不单调（2.2244 → 2.3018 → 2.2645），无法稳定求解。<strong>处理方式：不报告 ν 的估计值，只报告“未测出”。</strong></li><li><strong>Binder 交点中间一对偏差最大。</strong> 原因是 24 与 32 的 U 曲线在转变区几乎重合，噪声与位移同量级。<strong>处理方式：在正文中如实写出，并说明交点法的适用条件。</strong></li><li><strong>超临界雪崩被截断 9.3%。</strong> m=1.05 时 α 的估计受截断影响，不能与临界值直接比较。<strong>处理方式：报告截断比例，并只把 α 用作“方向”读数。</strong></li><li><strong>“仅 L=16”的坍缩残差是事后补算的。</strong> 它不在原协议里，是写第 15.6 节时补的。<strong>处理方式：在正文与本节都注明，避免读者误以为它是事前登记的。</strong></li><li><strong>幂律拟合的第一次尝试是错的。</strong> 早期版本直接对“每箱计数”取对数，得到 α≈0.5，与理论差了三倍。原因是漏掉了“对数箱宽”这一项。<strong>处理方式：修正脚本、在正文 3.5 与 22.26 两处都写出这个坑。</strong></li></ol>
+<h4>B.1.5　复算方法</h4>
+<p>``<code>bash python analysis/exp_ising.py        # 约 3–5 分钟（单机 CPU） python analysis/exp_critical.py     # 约 4 分钟 python analysis/make_exp_figs.py    # 生成正文插图（SVG） </code>``</p>
+<p><strong>判据：</strong> 如果你的结果与本书不一致，以你的为准；请把差异写进 issue，注明硬件、版本与种子。<strong>这本书对数值结果的态度只有一句：能被别人重跑出来的，才算数。</strong></p>
+<h4>B.1.6　代码骨架（便于复现，省略了参数解析与画图）</h4>
+<p><strong>E1：棋盘式 Metropolis 的一次 sweep。</strong></p>
+<p>``<code>python def sweep(s, T, rng): L = s.shape[0]; idx = np.arange(L) for color in (0, 1):                      # 棋盘式：同色格点互不影响 mask = ((idx[:, None] + idx[None, :]) % 2) == color nb = (np.roll(s, 1, 0) + np.roll(s, -1, 0) + np.roll(s, 1, 1) + np.roll(s, -1, 1)) dE = 2.0 * s * nb acc = (dE <= 0) | (rng.random(s.shape) < np.exp(-np.maximum(dE, 0) / T)) s[mask & acc] *= -1 </code>``</p>
+<p><strong>E2：集合式（ensemble）分支过程——为什么它快。</strong></p>
+<p>``<code>python size = np.zeros(n); frontier = np.ones(n); active = frontier > 0 while active.any():                            # 一次推进全部雪崩 size[active] += frontier[active] frontier[active] = rng.poisson(m * frontier[active]) frontier[size >= cutoff] = 0 active = frontier > 0 </code>``</p>
+<p><strong>关键点：</strong> 逐个体循环的复杂度是 O(总后代数)（可达 10⁶/次），集合式的复杂度是 O(最大代数)（约 10²），两者相差四到五个数量级。<strong>这是“把算法想清楚”比“换更快的机器”更有效的例子。</strong></p>
+<p><strong>E3：对数分箱的正确拟合（这里最容易错）。</strong></p>
+<p>``<code>python edges = np.geomspace(lo, hi, bins) h, _ = np.histogram(x, bins=edges) dens = h / np.diff(edges)                     # 必须除以箱宽 centers = np.sqrt(edges[:-1] * edges[1:]) alpha = -np.polyfit(np.log(centers), np.log(dens), 1)[0] </code>``</p>
+<p><strong>为什么必须除箱宽：</strong> 对数箱的宽度正比于 s，若直接用计数拟合，会把 n(s)∝s^{−1.5} 读成 s^{−0.5}。<strong>本书第一版就是这么错的（见 R.4 第 5 条）。</strong></p>
+<h4>B.1.7　一句提醒</h4>
+<p>这三段代码都不长，任何人可以在一个下午重写出来。<strong>这本书能提供的，不是“别人做不出的结果”，而是“别人愿意重做、且知道该防哪些坑”的结果。</strong></p>
+<h3>B.2　全部模拟原始数据</h3>
+<p>这一节把 <code>data/exp_ising.json</code> 的全部结果原样列出，便于读者核对正文中的每一个数字。<strong>没有做任何四舍五入以外的整理。</strong></p>
+<h4>B.2.1　粗扫（L=16/24/32，T=1.6~3.2，步长 0.1）</h4>
+<table class="nat">
+<tr><th class="l">L</th><th class="l">T</th><th class="l">\</th><th class="l">m\</th><th class="l"></th><th class="l">χ</th><th class="l">U（Binder）</th></tr>
+<tr><td class="l">16</td><td class="l">1.6</td><td class="l">0.9793</td><td class="l">0.04</td><td class="l">0.6663</td></tr>
+<tr><td class="l">16</td><td class="l">1.7</td><td class="l">0.9701</td><td class="l">0.07</td><td class="l">0.6660</td></tr>
+<tr><td class="l">16</td><td class="l">1.8</td><td class="l">0.9571</td><td class="l">0.11</td><td class="l">0.6656</td></tr>
+<tr><td class="l">16</td><td class="l">1.9</td><td class="l">0.9371</td><td class="l">0.25</td><td class="l">0.6642</td></tr>
+<tr><td class="l">16</td><td class="l">2.0</td><td class="l">0.9098</td><td class="l">0.37</td><td class="l">0.6625</td></tr>
+<tr><td class="l">16</td><td class="l">2.1</td><td class="l">0.8717</td><td class="l">0.73</td><td class="l">0.6579</td></tr>
+<tr><td class="l">16</td><td class="l">2.2</td><td class="l">0.7847</td><td class="l">2.42</td><td class="l">0.6370</td></tr>
+<tr><td class="l">16</td><td class="l">2.3</td><td class="l">0.6670</td><td class="l">4.94</td><td class="l">0.5900</td></tr>
+<tr><td class="l">16</td><td class="l">2.4</td><td class="l">0.5180</td><td class="l">6.06</td><td class="l">0.5055</td></tr>
+<tr><td class="l">16</td><td class="l">2.5</td><td class="l">0.3818</td><td class="l">5.02</td><td class="l">0.3709</td></tr>
+<tr><td class="l">16</td><td class="l">2.6</td><td class="l">0.2968</td><td class="l">3.90</td><td class="l">0.2507</td></tr>
+<tr><td class="l">16</td><td class="l">2.7</td><td class="l">0.2596</td><td class="l">2.91</td><td class="l">0.2136</td></tr>
+<tr><td class="l">16</td><td class="l">2.8</td><td class="l">0.2199</td><td class="l">2.17</td><td class="l">0.1627</td></tr>
+<tr><td class="l">16</td><td class="l">2.9</td><td class="l">0.1934</td><td class="l">1.67</td><td class="l">0.1306</td></tr>
+<tr><td class="l">16</td><td class="l">3.0</td><td class="l">0.1763</td><td class="l">1.44</td><td class="l">0.1008</td></tr>
+<tr><td class="l">16</td><td class="l">3.1</td><td class="l">0.1554</td><td class="l">1.12</td><td class="l">0.0425</td></tr>
+<tr><td class="l">16</td><td class="l">3.2</td><td class="l">0.1453</td><td class="l">0.92</td><td class="l">0.0286</td></tr>
+<tr><td class="l">24</td><td class="l">1.6</td><td class="l">0.9794</td><td class="l">0.04</td><td class="l">0.6665</td></tr>
+<tr><td class="l">24</td><td class="l">1.7</td><td class="l">0.9700</td><td class="l">0.07</td><td class="l">0.6664</td></tr>
+<tr><td class="l">24</td><td class="l">1.8</td><td class="l">0.9568</td><td class="l">0.11</td><td class="l">0.6662</td></tr>
+<tr><td class="l">24</td><td class="l">1.9</td><td class="l">0.9376</td><td class="l">0.22</td><td class="l">0.6656</td></tr>
+<tr><td class="l">24</td><td class="l">2.0</td><td class="l">0.9120</td><td class="l">0.32</td><td class="l">0.6649</td></tr>
+<tr><td class="l">24</td><td class="l">2.1</td><td class="l">0.8639</td><td class="l">2.01</td><td class="l">0.6586</td></tr>
+<tr><td class="l">24</td><td class="l">2.2</td><td class="l">0.7976</td><td class="l">2.59</td><td class="l">0.6515</td></tr>
+<tr><td class="l">24</td><td class="l">2.3</td><td class="l">0.5722</td><td class="l">13.28</td><td class="l">0.5451</td></tr>
+<tr><td class="l">24</td><td class="l">2.4</td><td class="l">0.3904</td><td class="l">11.47</td><td class="l">0.4075</td></tr>
+<tr><td class="l">24</td><td class="l">2.5</td><td class="l">0.2425</td><td class="l">6.15</td><td class="l">0.2090</td></tr>
+<tr><td class="l">24</td><td class="l">2.6</td><td class="l">0.2010</td><td class="l">4.77</td><td class="l">0.1015</td></tr>
+<tr><td class="l">24</td><td class="l">2.7</td><td class="l">0.1708</td><td class="l">2.92</td><td class="l">0.1787</td></tr>
+<tr><td class="l">24</td><td class="l">2.8</td><td class="l">0.1380</td><td class="l">2.10</td><td class="l">0.0746</td></tr>
+<tr><td class="l">24</td><td class="l">2.9</td><td class="l">0.1249</td><td class="l">1.64</td><td class="l">0.0619</td></tr>
+<tr><td class="l">24</td><td class="l">3.0</td><td class="l">0.1124</td><td class="l">1.35</td><td class="l">0.0253</td></tr>
+<tr><td class="l">24</td><td class="l">3.1</td><td class="l">0.1041</td><td class="l">1.19</td><td class="l">-0.0069</td></tr>
+<tr><td class="l">24</td><td class="l">3.2</td><td class="l">0.0955</td><td class="l">0.97</td><td class="l">0.0101</td></tr>
+<tr><td class="l">32</td><td class="l">1.6</td><td class="l">0.9799</td><td class="l">0.04</td><td class="l">0.6666</td></tr>
+<tr><td class="l">32</td><td class="l">1.7</td><td class="l">0.9701</td><td class="l">0.07</td><td class="l">0.6665</td></tr>
+<tr><td class="l">32</td><td class="l">1.8</td><td class="l">0.9562</td><td class="l">0.12</td><td class="l">0.6664</td></tr>
+<tr><td class="l">32</td><td class="l">1.9</td><td class="l">0.9380</td><td class="l">0.19</td><td class="l">0.6661</td></tr>
+<tr><td class="l">32</td><td class="l">2.0</td><td class="l">0.9108</td><td class="l">0.40</td><td class="l">0.6655</td></tr>
+<tr><td class="l">32</td><td class="l">2.1</td><td class="l">0.8695</td><td class="l">0.83</td><td class="l">0.6638</td></tr>
+<tr><td class="l">32</td><td class="l">2.2</td><td class="l">0.7906</td><td class="l">3.50</td><td class="l">0.6546</td></tr>
+<tr><td class="l">32</td><td class="l">2.3</td><td class="l">0.5819</td><td class="l">17.04</td><td class="l">0.5836</td></tr>
+<tr><td class="l">32</td><td class="l">2.4</td><td class="l">0.3434</td><td class="l">15.40</td><td class="l">0.4028</td></tr>
+<tr><td class="l">32</td><td class="l">2.5</td><td class="l">0.1854</td><td class="l">7.71</td><td class="l">0.0767</td></tr>
+<tr><td class="l">32</td><td class="l">2.6</td><td class="l">0.1515</td><td class="l">4.77</td><td class="l">0.1069</td></tr>
+<tr><td class="l">32</td><td class="l">2.7</td><td class="l">0.1328</td><td class="l">3.75</td><td class="l">0.0256</td></tr>
+<tr><td class="l">32</td><td class="l">2.8</td><td class="l">0.1059</td><td class="l">2.34</td><td class="l">-0.0116</td></tr>
+<tr><td class="l">32</td><td class="l">2.9</td><td class="l">0.0912</td><td class="l">1.75</td><td class="l">-0.0320</td></tr>
+<tr><td class="l">32</td><td class="l">3.0</td><td class="l">0.0857</td><td class="l">1.42</td><td class="l">0.0281</td></tr>
+<tr><td class="l">32</td><td class="l">3.1</td><td class="l">0.0794</td><td class="l">1.19</td><td class="l">0.0151</td></tr>
+<tr><td class="l">32</td><td class="l">3.2</td><td class="l">0.0729</td><td class="l">0.92</td><td class="l">0.0692</td></tr>
+</table>
+<h4>B.2.2　细扫（L=24/32/48，T=2.20~2.36，步长 0.02）</h4>
+<table class="nat">
+<tr><th class="l">L</th><th class="l">T</th><th class="l">\</th><th class="l">m\</th><th class="l"></th><th class="l">χ</th><th class="l">U（Binder）</th></tr>
+<tr><td class="l">24</td><td class="l">2.200</td><td class="l">0.7907</td><td class="l">3.44</td><td class="l">0.6486</td></tr>
+<tr><td class="l">24</td><td class="l">2.220</td><td class="l">0.7510</td><td class="l">5.88</td><td class="l">0.6356</td></tr>
+<tr><td class="l">24</td><td class="l">2.240</td><td class="l">0.7167</td><td class="l">8.33</td><td class="l">0.6215</td></tr>
+<tr><td class="l">24</td><td class="l">2.260</td><td class="l">0.6841</td><td class="l">8.87</td><td class="l">0.6114</td></tr>
+<tr><td class="l">24</td><td class="l">2.280</td><td class="l">0.6481</td><td class="l">10.04</td><td class="l">0.5955</td></tr>
+<tr><td class="l">24</td><td class="l">2.300</td><td class="l">0.6139</td><td class="l">10.89</td><td class="l">0.5804</td></tr>
+<tr><td class="l">24</td><td class="l">2.320</td><td class="l">0.5811</td><td class="l">11.77</td><td class="l">0.5621</td></tr>
+<tr><td class="l">24</td><td class="l">2.340</td><td class="l">0.5047</td><td class="l">12.58</td><td class="l">0.5133</td></tr>
+<tr><td class="l">24</td><td class="l">2.360</td><td class="l">0.4614</td><td class="l">13.24</td><td class="l">0.4726</td></tr>
+<tr><td class="l">32</td><td class="l">2.200</td><td class="l">0.7876</td><td class="l">3.71</td><td class="l">0.6534</td></tr>
+<tr><td class="l">32</td><td class="l">2.220</td><td class="l">0.7632</td><td class="l">4.16</td><td class="l">0.6501</td></tr>
+<tr><td class="l">32</td><td class="l">2.240</td><td class="l">0.7202</td><td class="l">9.51</td><td class="l">0.6346</td></tr>
+<tr><td class="l">32</td><td class="l">2.260</td><td class="l">0.6775</td><td class="l">12.04</td><td class="l">0.6204</td></tr>
+<tr><td class="l">32</td><td class="l">2.280</td><td class="l">0.6418</td><td class="l">12.35</td><td class="l">0.6088</td></tr>
+<tr><td class="l">32</td><td class="l">2.300</td><td class="l">0.5934</td><td class="l">16.06</td><td class="l">0.5848</td></tr>
+<tr><td class="l">32</td><td class="l">2.320</td><td class="l">0.5044</td><td class="l">21.75</td><td class="l">0.5180</td></tr>
+<tr><td class="l">32</td><td class="l">2.340</td><td class="l">0.4287</td><td class="l">21.09</td><td class="l">0.4568</td></tr>
+<tr><td class="l">32</td><td class="l">2.360</td><td class="l">0.3990</td><td class="l">20.24</td><td class="l">0.4290</td></tr>
+<tr><td class="l">48</td><td class="l">2.200</td><td class="l">0.7935</td><td class="l">2.96</td><td class="l">0.6612</td></tr>
+<tr><td class="l">48</td><td class="l">2.220</td><td class="l">0.7543</td><td class="l">6.53</td><td class="l">0.6541</td></tr>
+<tr><td class="l">48</td><td class="l">2.240</td><td class="l">0.7224</td><td class="l">9.53</td><td class="l">0.6476</td></tr>
+<tr><td class="l">48</td><td class="l">2.260</td><td class="l">0.6715</td><td class="l">15.96</td><td class="l">0.6345</td></tr>
+<tr><td class="l">48</td><td class="l">2.280</td><td class="l">0.5275</td><td class="l">40.76</td><td class="l">0.5601</td></tr>
+<tr><td class="l">48</td><td class="l">2.300</td><td class="l">0.4964</td><td class="l">40.08</td><td class="l">0.5399</td></tr>
+<tr><td class="l">48</td><td class="l">2.320</td><td class="l">0.3769</td><td class="l">44.55</td><td class="l">0.4204</td></tr>
+<tr><td class="l">48</td><td class="l">2.340</td><td class="l">0.3320</td><td class="l">35.82</td><td class="l">0.3968</td></tr>
+<tr><td class="l">48</td><td class="l">2.360</td><td class="l">0.3173</td><td class="l">30.75</td><td class="l">0.4024</td></tr>
+</table>
+<h4>B.2.3　由这些数据算出的量</h4>
+<table class="nat">
+<tr><th class="l">量</th><th class="l">值</th></tr>
+<tr><td class="l">Binder 交点（L=16/24）</td><td class="l">2.2244</td></tr>
+<tr><td class="l">Binder 交点（L=24/32）</td><td class="l">2.3018</td></tr>
+<tr><td class="l">Binder 交点（L=32/48）</td><td class="l">2.2645</td></tr>
+<tr><td class="l">精确解 T_c</td><td class="l">2.26919</td></tr>
+<tr><td class="l">γ/ν（实测）</td><td class="l">1.7518</td></tr>
+<tr><td class="l">β/ν（实测）</td><td class="l">0.1563</td></tr>
+<tr><td class="l">坍缩残差（精确指数，L=24+32）</td><td class="l">0.0339</td></tr>
+<tr><td class="l">坍缩残差（平均场指数，L=24+32）</td><td class="l">0.0316</td></tr>
+<tr><td class="l">坍缩残差（精确指数，L=24+32+48）</td><td class="l">0.0509</td></tr>
+<tr><td class="l">坍缩残差（平均场指数，L=24+32+48）</td><td class="l">0.0594</td></tr>
+</table>
+<div class="box"><p>【一句话】一张把每个温度点都列出来的表，比一句“我们做了大规模模拟”更可信——因为它允许别人指出你在哪一个点上错了。</p></div>
+<h3>B.3　预警指标与渗流原始数据</h3>
+<h4>B.3.1　雪崩分箱数据（逐箱）</h4>
+<p>下表是 <code>data/exp_critical.json</code> 中的分箱密度，供读者重画图 17.1。<strong>α 的拟合就是对这些点做 log–log 线性回归（已除以箱宽）。</strong></p>
+<h4>B.3.2　m=0.9（拟合指数 α=1.786，窗口 [15, 120]）</h4>
+<table class="nat">
+<tr><th class="l">箱中心 s</th><th class="l">密度 n(s)</th></tr>
+<tr><td class="l">16.25</td><td class="l">1459.314</td></tr>
+<tr><td class="l">19.07</td><td class="l">945.882</td></tr>
+<tr><td class="l">22.37</td><td class="l">805.504</td></tr>
+<tr><td class="l">26.26</td><td class="l">511.377</td></tr>
+<tr><td class="l">30.81</td><td class="l">425.448</td></tr>
+<tr><td class="l">36.15</td><td class="l">342.868</td></tr>
+<tr><td class="l">42.43</td><td class="l">211.080</td></tr>
+<tr><td class="l">49.79</td><td class="l">196.561</td></tr>
+<tr><td class="l">58.42</td><td class="l">155.533</td></tr>
+<tr><td class="l">68.56</td><td class="l">104.030</td></tr>
+<tr><td class="l">80.45</td><td class="l">78.483</td></tr>
+<tr><td class="l">94.40</td><td class="l">55.768</td></tr>
+<tr><td class="l">110.78</td><td class="l">42.676</td></tr>
+</table>
+<h4>B.3.3　m=1.0（拟合指数 α=1.495，窗口 [50, 3000]）</h4>
+<table class="nat">
+<tr><th class="l">箱中心 s</th><th class="l">密度 n(s)</th></tr>
+<tr><td class="l">58.53</td><td class="l">182.231</td></tr>
+<tr><td class="l">80.19</td><td class="l">109.181</td></tr>
+<tr><td class="l">109.88</td><td class="l">72.144</td></tr>
+<tr><td class="l">150.56</td><td class="l">42.256</td></tr>
+<tr><td class="l">206.29</td><td class="l">27.130</td></tr>
+<tr><td class="l">282.66</td><td class="l">16.735</td></tr>
+<tr><td class="l">387.30</td><td class="l">10.867</td></tr>
+<tr><td class="l">530.67</td><td class="l">6.745</td></tr>
+<tr><td class="l">727.12</td><td class="l">4.023</td></tr>
+<tr><td class="l">996.30</td><td class="l">2.717</td></tr>
+<tr><td class="l">1365.11</td><td class="l">1.610</td></tr>
+<tr><td class="l">1870.47</td><td class="l">0.930</td></tr>
+<tr><td class="l">2562.90</td><td class="l">0.661</td></tr>
+</table>
+<h4>B.3.4　m=1.05（拟合指数 α=2.146，窗口 [50, 3000]）</h4>
+<table class="nat">
+<tr><th class="l">箱中心 s</th><th class="l">密度 n(s)</th></tr>
+<tr><td class="l">58.53</td><td class="l">162.241</td></tr>
+<tr><td class="l">80.19</td><td class="l">96.209</td></tr>
+<tr><td class="l">109.88</td><td class="l">57.180</td></tr>
+<tr><td class="l">150.56</td><td class="l">34.338</td></tr>
+<tr><td class="l">206.29</td><td class="l">18.915</td></tr>
+<tr><td class="l">282.66</td><td class="l">11.634</td></tr>
+<tr><td class="l">387.30</td><td class="l">6.311</td></tr>
+<tr><td class="l">530.67</td><td class="l">3.140</td></tr>
+<tr><td class="l">727.12</td><td class="l">1.700</td></tr>
+<tr><td class="l">996.30</td><td class="l">0.774</td></tr>
+<tr><td class="l">1365.11</td><td class="l">0.294</td></tr>
+<tr><td class="l">1870.47</td><td class="l">0.093</td></tr>
+<tr><td class="l">2562.90</td><td class="l">0.041</td></tr>
+</table>
+<h4>B.3.5　预警指标与渗流的原始数据</h4>
+<p>这一节列出图 13.2 与第 17.9 节所依据的全部原始点。<strong>它们都不构成“预警成功”的证据，只构成“指标可测”的证据。</strong></p>
+<h4>B.3.6　渗流：跨越概率 P(p)（L=64，每个 p 做 200 次）</h4>
+<table class="nat">
+<tr><th class="l">p</th><th class="l">P(p)</th></tr>
+<tr><td class="l">0.50</td><td class="l">0.000</td></tr>
+<tr><td class="l">0.51</td><td class="l">0.000</td></tr>
+<tr><td class="l">0.52</td><td class="l">0.000</td></tr>
+<tr><td class="l">0.53</td><td class="l">0.015</td></tr>
+<tr><td class="l">0.54</td><td class="l">0.025</td></tr>
+<tr><td class="l">0.55</td><td class="l">0.060</td></tr>
+<tr><td class="l">0.56</td><td class="l">0.160</td></tr>
+<tr><td class="l">0.57</td><td class="l">0.270</td></tr>
+<tr><td class="l">0.58</td><td class="l">0.445</td></tr>
+<tr><td class="l">0.59</td><td class="l">0.655</td></tr>
+<tr><td class="l">0.60</td><td class="l">0.805</td></tr>
+<tr><td class="l">0.61</td><td class="l">0.895</td></tr>
+<tr><td class="l">0.62</td><td class="l">0.970</td></tr>
+<tr><td class="l">0.63</td><td class="l">0.990</td></tr>
+<tr><td class="l">0.64</td><td class="l">1.000</td></tr>
+<tr><td class="l">0.65</td><td class="l">1.000</td></tr>
+</table>
+<h4>B.3.7　临界慢化：AR(1) 的自相关（前 20 个滞后）</h4>
+<table class="nat">
+<tr><th class="l">a</th><th class="l">滞后 0–4</th><th class="l">5–9</th><th class="l">10–14</th><th class="l">15–19</th></tr>
+<tr><td class="l">0.9</td><td class="l">1.000 / 0.898 / 0.806 / 0.724 / 0.650</td><td class="l">0.585 / 0.526 / 0.472 / 0.424 / 0.382</td><td class="l">0.343 / 0.308 / 0.277 / 0.248 / 0.221</td><td class="l">0.198 / 0.177 / 0.159 / 0.142 / 0.127</td></tr>
+<tr><td class="l">0.95</td><td class="l">1.000 / 0.950 / 0.903 / 0.858 / 0.815</td><td class="l">0.774 / 0.736 / 0.699 / 0.663 / 0.630</td><td class="l">0.599 / 0.569 / 0.541 / 0.514 / 0.489</td><td class="l">0.465 / 0.442 / 0.420 / 0.400 / 0.381</td></tr>
+<tr><td class="l">0.99</td><td class="l">1.000 / 0.990 / 0.980 / 0.970 / 0.961</td><td class="l">0.951 / 0.942 / 0.932 / 0.923 / 0.913</td><td class="l">0.904 / 0.895 / 0.886 / 0.877 / 0.868</td><td class="l">0.860 / 0.851 / 0.843 / 0.834 / 0.826</td></tr>
+<tr><td class="l">0.995</td><td class="l">1.000 / 0.995 / 0.990 / 0.985 / 0.980</td><td class="l">0.976 / 0.971 / 0.966 / 0.961 / 0.957</td><td class="l">0.952 / 0.947 / 0.943 / 0.938 / 0.933</td><td class="l">0.929 / 0.924 / 0.920 / 0.915 / 0.911</td></tr>
+</table>
+<div class="box"><p>【读法】a 越大，自相关衰减越慢；a=0.995 时，30 个滞后内几乎看不到衰减——<strong>这意味着估计 τ 所需的观测窗口，比许多真实系统的记录还长。</strong> 这不是技术缺陷，而是“用慢化做预警”这一思路的硬边界。</p></div>
+<h4>B.3.8　复算清单（打印出来逐项打勾）</h4>
+<p>在相信本书任何一个数字之前，先逐项核对。<strong>任何一项打不了勾，那个数字就还只是“作者说的”。</strong></p>
+<table class="nat">
+<tr><th class="l">□</th><th class="l">项</th><th class="l">在哪里</th></tr>
+<tr><td class="l">□</td><td class="l">脚本能跑通</td><td class="l"><code>analysis/exp_ising.py</code>、<code>analysis/exp_critical.py</code></td></tr>
+<tr><td class="l">□</td><td class="l">参数与种子已公开</td><td class="l">附录 B.1.2</td></tr>
+<tr><td class="l">□</td><td class="l">原始数据可查看</td><td class="l">附录 B.2、U、V</td></tr>
+<tr><td class="l">□</td><td class="l">结果与精确解对得上（T_c、γ/ν）</td><td class="l">13.13</td></tr>
+<tr><td class="l">□</td><td class="l">偏差被如实写出（β/ν、ν）</td><td class="l">附录 B.1.4</td></tr>
+<tr><td class="l">□</td><td class="l">失败被单独列出</td><td class="l">附录 B.1.4</td></tr>
+<tr><td class="l">□</td><td class="l">区分了“算的／引的／画的”</td><td class="l">14.5</td></tr>
+<tr><td class="l">□</td><td class="l">标注了事后补算的部分</td><td class="l">附录 B.1.4 第 4 条</td></tr>
+<tr><td class="l">□</td><td class="l">判定带“可反驳条件”</td><td class="l">13.13、13.14</td></tr>
+<tr><td class="l">□</td><td class="l">读者能重画出图</td><td class="l">附录 B.3、V + 图 13.1／13.2／15.1／17.1</td></tr>
+</table>
+<p><strong>十项全中，这本书的数字才可以被当作“证据”引用；中八项，可以当作“线索”；不到八项，请只当作“作者的看法”。</strong></p>
+<div class="box"><p>【一句可以带走的话】<strong>“可复算”不是作者给自己的奖章，而是读者手里的一张清单。</strong></p></div>
+<h4>B.3.9　增补：上游、边界与对话（原附录 B，并入本组）</h4>
+
+<div class="box"><p><b>【补编说明】</b>本附录收拢的是原稿中被合并、但未并入正文的几节。它们不是“新增内容”，而是此前被漏装的正文；保留原有小节编号，便于与正文引用对照。</p></div>
+<h3>B.4　十个短案例</h3>
+<div class="box"><p>每个案例只给三样：<strong>什么在变、有没有临界点、判定</strong>。用来练手。</p></div>
+<ol><li><strong>水沸腾</strong>：什么在变——气泡密度；临界点——100°C；判定：严格相变（一阶）。</li><li><strong>磁体退磁</strong>：什么在变——净磁化；临界点——居里温度；判定：严格相变（二阶）。</li><li><strong>图的连通</strong>：什么在变——最大连通块占比；临界点——β₁、β₂；判定：严格相变。</li><li><strong>学习高原</strong>：什么在变——巩固速度；临界点——容量饱和；判定：可能是相变。</li><li><strong>公司垮掉</strong>：什么在变——可持续性；临界点——不明确；判定：渐进退化（不是相变）。</li><li><strong>疫情拐点</strong>：什么在变——<code>R_t</code>；临界点——<code>R_t=1</code>；判定：诊断级。</li><li><strong>金融危机</strong>：什么在变——杠杆/利差；临界点——不明确；判定：诊断级（慢化明显）。</li><li><strong>技术引爆点</strong>：什么在变——采用率；临界点——事后叙事；判定：隐喻级。</li><li><strong>社会极化</strong>：什么在变——极化指数；临界点——不明确；判定：隐喻级（不可通约）。</li><li><strong>历史范式转移</strong>：什么在变——学派分化；临界点——无法定位；判定：隐喻级。</li></ol>
+<p><strong>练习：</strong> 挑一个你熟悉的系统，填这三样。<strong>填不出来，就说明它还不是“相变诊断”，只是“变化描述”。</strong></p>

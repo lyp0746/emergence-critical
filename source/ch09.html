@@ -1,8 +1,4 @@
-<h2 class="chapter">第9章　形式化的地平线：为什么效力会递减</h2>
-<div class="box box-summary"><span class="bt">本章小结</span>
-<ul><li>形式化的效力随对象复杂度递减，这不是技术问题，是定义域问题。</li><li>每加一层形式化，能覆盖的对象就少一批。</li><li>地平线的位置可以估：它大致在"可写出状态空间"的边界。</li></ul></div>
-
-<div class="box box-takeaway"><p class="lead"><b>本章主提问：</b>形式化为什么越走越无力？</p></div>
+<h2 class="chapter">第9章　形式化的地平线：为什么效力会递减</h2><div class="box box-takeaway"><p class="lead"><b>本章主提问：</b>形式化为什么越走越无力？</p></div>
 
 <p>一条路一直往前走，走到雾里就看不见了。有人问：“路是不是断了？”向导说：“不是断了，是看不见了。”<b>看不见和不存在，是两件事。</b></p>
 <h3 id="sec9-1">9.1　先把"复杂度 C"定义清楚</h3>
@@ -25,11 +21,11 @@
 <p><strong>但"指数衰减"不是唯一可能。</strong> 至少还有两种形状：</p>
 <ul><li><strong>S 形</strong>：在某些复杂度区间，"形式化"会突然崩塌（不是渐变）；</li><li><strong>多峰</strong>：存在"高复杂度但高 F"的特例（如某些高度形式化的社会科学模型）。</li></ul>
 <p><strong>本书采用指数型，只是因为它最简单、最容易画。</strong> 它不是定律，是一个<strong>说明性模型</strong>〔等级：C／丙〕。</p>
-<img class="fig" src="assets/svg/fig-formalization-horizon.svg" alt="图 5.1　形式化的地平线"><div class="cap"><b>图 5.1　形式化的地平线</b></div>
+<img class="fig" src="assets/svg/fig-formalization-horizon.svg" alt="图 9.1　形式化的地平线"><div class="cap"><b>图 9.1　形式化的地平线</b>。横轴是系统复杂度，纵轴是可形式化程度；曲线单调下降，这就是地平线。</div>
 <h3 id="sec9-4">9.4　五个系统的 F(C) 曲线</h3>
 <table class="nat">
 <tr><th class="l">系统</th><th class="l">微观可知</th><th class="l">序参量可测</th><th class="l">定义客观</th><th class="l">C（估）</th><th class="l">F（估）</th></tr>
-<tr><td class="l">图（区分的语法）</td><td class="l">0.95</td><td class="l">0.90</td><td class="l">0.95</td><td class="l">0.20</td><td class="l">0.80</td></tr>
+<tr><td class="l">图（区分的语言）</td><td class="l">0.95</td><td class="l">0.90</td><td class="l">0.95</td><td class="l">0.20</td><td class="l">0.80</td></tr>
 <tr><td class="l">记忆（遗忘）</td><td class="l">0.40</td><td class="l">0.30</td><td class="l">0.60</td><td class="l">1.70</td><td class="l">0.45</td></tr>
 <tr><td class="l">社会（错位）</td><td class="l">0.40</td><td class="l">0.30</td><td class="l">0.40</td><td class="l">1.90</td><td class="l">0.40</td></tr>
 <tr><td class="l">知识（选择）</td><td class="l">0.50</td><td class="l">0.40</td><td class="l">0.50</td><td class="l">1.60</td><td class="l">0.55</td></tr>
@@ -42,7 +38,7 @@
 <h3 id="sec9-6">9.6　三条递减条件</h3>
 <p>相变框架要在某个系统中"严格成立"，需要三个条件。它们随系统复杂度依次失效：</p>
 <ol><li><strong>微观可知性</strong>：微观规则是否已知、可写？</li><li><strong>序参量可测性</strong>：是否存在一个可测量、可复现的宏观序参量？</li><li><strong>定义客观性</strong>：临界点与"是否发生质变"，是否独立于观察者？</li></ol>
-<p><strong>三条全满足</strong> → 严格相变（如《区分的语法》）； <strong>掉一条</strong> → 需要削弱（如《遗忘》《错位》）； <strong>掉两条以上</strong> → 只能类比（如《选择》《诠释》）。</p>
+<p><strong>三条全满足</strong> → 严格相变（如《区分的语言》）； <strong>掉一条</strong> → 需要削弱（如《遗忘》《错位》）； <strong>掉两条以上</strong> → 只能类比（如《选择》《诠释》）。</p>
 <h3 id="sec9-7">9.7　F(C) 的三种形状</h3>
 <p><strong>指数型。</strong> 本书采用的形状：复杂度每增一点，可形式化程度按比例衰减。<strong>它假设“衰减率恒定”。</strong></p>
 <p><strong>S 形。</strong> 在某些复杂度区间，“形式化”会突然崩塌，而不是渐变。<strong>它假设“存在一个崩塌区间”。</strong></p>
@@ -92,9 +88,9 @@
 <p>把五个（乃至更多）陌生系统并排，会得到一个“元结论”：</p>
 <div class="box"><p><strong>“临界”这个词的流行，远超过它的“可测量性”。</strong></p></div>
 <p><strong>大多数被称为“临界”的现象，其实只是“变化”；只有少数，能被“三中二”识别；更少数，能被“临界指数”刻画。</strong></p>
-<p><strong>这就是本书想说的“诚实”：不是“什么都是相变”，而是“少数是，多数不是”。</strong></p>
+<p><strong>这就是本书想说的“说清楚”：不是“什么都是相变”，而是“少数是，多数不是”。</strong></p>
 <h3 id="sec9-19">9.19　形式化的三个必要步骤，与本书走到第几步</h3>
-<p>“形式化”常被当成一个褒义词，其实它有明确的门槛。这一节把它拆成三步，并诚实标出本书的位置。</p>
+<p>“形式化”常被当成一个褒义词，其实它有明确的门槛。这一节把它拆成三步，并如实标出本书的位置。</p>
 <p><strong>第一步：定义。</strong> 每一个量都要有可操作的定义——不是“给出一个词”，而是“给出一个能在数据上算出来的式子”。Ising 的 m 是 (1/N)Σs_i；渗流的 P_∞ 是最大连通块占比；<strong>本书的 F(C)、H、三中二，都只有“描述性定义”，没有“可计算的式子”。</strong></p>
 <p><strong>第二步：测量。</strong> 定义之后，要有一个独立于作者的测量程序，且不同人做出来一致。第十三章的两个 MVU 做到了这一点（脚本 + 参数 + 种子）；<strong>但全书的五个应用没有做到。</strong></p>
 <p><strong>第三步：复现。</strong> 别人用你的程序，得到同样的数（在误差内）。这一步最难，因为它要求把“环境的偶然”也写清楚：随机种子、边界条件、迭代次数、硬件精度。<strong>本书对 MVU 做到了，对社会案例做不到。</strong></p>
@@ -113,3 +109,5 @@
 <div class="case"><p>【人的尺度】一位年轻研究者问：“形式化到底能走多远？”导师说：“走到你自己也看不懂的那一步。”<b>地平线的意义不是让人绝望，是让人知道自己的手电筒照到哪儿会暗下去。</b></p></div>
 <div class="box box-takeaway"><p><b>一句话带走：</b>形式化不是越深越好，它有一个用完就失效的位置。</p></div>
 
+<div class="box box-summary"><span class="bt">本章小结</span>
+<ul><li>形式化的效力随对象复杂度递减，这不是技术问题，是定义域问题。</li><li>每加一层形式化，能覆盖的对象就少一批。</li><li>地平线的位置可以估：它大致在"可写出状态空间"的边界。</li></ul></div>
