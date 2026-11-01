@@ -38,7 +38,6 @@ BACK = [
         ("结语　三个思想实验", "back_epilogue.html", "apxe"),
         ("本系列（六本专著 + 两本通俗读本）", "back_series.html", "apxs"),
         ("附录 A　可证伪登记簿", "appendix_a.html", "apxA"),
-        ("附录 B　增补：上游、边界与对话", "appendix_b.html", "apxB"),
 ]
 
 
