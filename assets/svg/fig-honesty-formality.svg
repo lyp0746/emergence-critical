@@ -7,7 +7,7 @@
 <text x="390" y="426" text-anchor="middle" font-size="14">形式化程度 F →</text>
 <text x="44" y="245" text-anchor="middle" font-size="14" transform="rotate(-90 44 245)">诚实性 H</text>
 <circle cx="506" cy="274" r="7" fill="#2f6db0"/>
-<text x="516.0" y="266.0" text-anchor="start" font-size="12" fill="#2f6db0" font-weight="normal">区分的语法</text>
+<text x="516.0" y="266.0" text-anchor="start" font-size="12" fill="#2f6db0" font-weight="normal">区分的语言</text>
 <circle cx="448" cy="158" r="7" fill="#2e7d32"/>
 <text x="458.0" y="150.0" text-anchor="start" font-size="12" fill="#2e7d32" font-weight="normal">选择的代价</text>
 <circle cx="361" cy="129" r="7" fill="#ef6c00"/>

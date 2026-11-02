@@ -152,7 +152,7 @@ def fig_honesty():
     s.append(f'<line x1="{ox}" y1="{oy}" x2="{ox}" y2="{oy-h}" stroke="#333" stroke-width="2"/>')
     s.append(f'<text x="{ox+w/2:.0f}" y="{oy+36}" text-anchor="middle" font-size="14">形式化程度 F →</text>')
     s.append(f'<text x="{ox-56}" y="{oy-h/2:.0f}" text-anchor="middle" font-size="14" transform="rotate(-90 {ox-56} {oy-h/2:.0f})">诚实性 H</text>')
-    data = [("区分的语法", 70, 40, BLU), ("选择的代价", 60, 80, GRN),
+    data = [("区分的语言", 70, 40, BLU), ("选择的代价", 60, 80, GRN),
             ("错位的时间", 45, 90, ORG), ("遗忘的边界", 40, 75, PNK),
             ("诠释的权衡", 25, 95, RED)]
     for name, f, hh, col in data:
@@ -171,7 +171,7 @@ def fig_five_samples():
     s.append(f'<line x1="{ox}" y1="{oy}" x2="{ox}" y2="{oy-h}" stroke="#333" stroke-width="2"/>')
     s.append(f'<text x="{ox+w/2:.0f}" y="{oy+34}" text-anchor="middle" font-size="14">系统复杂性（物理/数学 → 社会/历史）→</text>')
     s.append(f'<text x="{ox-56}" y="{oy-h/2:.0f}" text-anchor="middle" font-size="14" transform="rotate(-90 {ox-56} {oy-h/2:.0f})">形式化程度</text>')
-    data = [("区分的语法", 0.12, 0.70, BLU), ("选择的代价", 0.50, 0.60, GRN),
+    data = [("区分的语言", 0.12, 0.70, BLU), ("选择的代价", 0.50, 0.60, GRN),
             ("错位的时间", 0.42, 0.45, ORG), ("遗忘的边界", 0.60, 0.40, PNK),
             ("诠释的权衡", 0.88, 0.25, RED)]
     for name, xr, yr, col in data:
@@ -210,7 +210,7 @@ def fig_horizon():
         pts.append(f"{x:.1f} {y:.1f}")
     s.append('<path d="M '+ " L ".join(pts) + f'" fill="none" stroke="{GLD}" stroke-width="3.2"/>')
     # mark five books
-    marks=[("区分的语法",0.08,0.70,BLU),("选择的代价",0.45,0.42,GRN),
+    marks=[("区分的语言",0.08,0.70,BLU),("选择的代价",0.45,0.42,GRN),
            ("错位的时间",0.62,0.32,ORG),("遗忘的边界",0.72,0.28,PNK),("诠释的权衡",0.92,0.21,RED)]
     for name,xr,F,col in marks:
         x=ox+xr*w; y=oy-h*F

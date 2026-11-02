@@ -7,7 +7,7 @@
 <text x="420" y="434" text-anchor="middle" font-size="14">系统复杂性（物理/数学 → 社会/历史）→</text>
 <text x="54" y="250" text-anchor="middle" font-size="14" transform="rotate(-90 54 250)">形式化程度</text>
 <circle cx="184" cy="190" r="8" fill="#2f6db0"/>
-<text x="196.39999999999998" y="182.0" text-anchor="start" font-size="13" fill="#2f6db0" font-weight="bold">区分的语法</text>
+<text x="196.39999999999998" y="182.0" text-anchor="start" font-size="13" fill="#2f6db0" font-weight="bold">区分的语言</text>
 <circle cx="420" cy="220" r="8" fill="#2e7d32"/>
 <text x="432.0" y="212.0" text-anchor="start" font-size="13" fill="#2e7d32" font-weight="bold">选择的代价</text>
 <circle cx="370" cy="265" r="8" fill="#ef6c00"/>

@@ -13,7 +13,7 @@ FILES = [
     ("02_工具.md", "ch02.html", None, "ch2"),
     ("03_标记.md", "ch03.html", None, "ch3"),
     ("04_流程.md", "ch04.html", None, "ch4"),
-    ("05_区分的语法.md", "ch05.html", None, "ch5"),
+    ("05_区分的语言.md", "ch05.html", None, "ch5"),
     ("06_遗忘的边界.md", "ch06.html", None, "ch6"),
     ("07_错位的时间.md", "ch07.html", None, "ch7"),
     ("08_选择的代价.md", "ch08.html", None, "ch8"),
