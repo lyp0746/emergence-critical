@@ -1,6 +1,6 @@
 {
-  "title": "涌现的临界：为什么有些变化回不去——临界、涌现与形式化的边界 / The Criticality of Emergence: Why Some Changes Cannot Be Undone — Criticality, Emergence, and the Limits of Formalization",
-  "description": "<p><b>中文.</b> 本著作提出“临界”的可操作定义与检验程序，用以回答“变化究竟在哪一刻换了一个东西”。</p><p>核心主张：一次质变＝系统在某个尺度上获得不可由微观无损推出的宏观序；它有三个可观测标记（序参量跃变、临界慢化、宏观更好用），三个中两个才叫质变。</p><p>结构与证据：25 章、附录 A—X、14 幅图；以二维 Ising 作校准（T_c、γ/ν 与精确解一致，β/ν 与 ν 的偏差如实报告），以雪崩、渗流与慢化实验检验三个标记；核心发现是诊断效力与可观测尺度成正比——尺度不够时，两个竞争假设的图形会一样好看。</p><p>诚实的纪律：六个最小验证单元按“能不能真做”排序，并标明哪些已做、哪些只到部分通过；失败记录单独成节；每张图都配脚本与种子。</p><p>边界：多数社会案例只能到隐喻级；单一指标不能定向；慢化报“近”，不报“何时”。</p><p>版本：2026-10-18，215 页，25 章，14 图，附录 A—X；实验脚本与失败记录随书公开，内容 CC BY 4.0，代码 MIT。</p><p><b>本版更新（2026-10-18 地基版）。</b>本版把全书的共同前提写到卷首：<b>现实中不存在无限</b>——无限只作为极限出现在模型里，从不出现在现实系统的实际状态里。有限性本身只说明“有上界”；它要变成“必须让出一样”，还需要三个条件同时成立：需求随规模增长、描述/组合/传递共享同一承载者、同时维持两种活动更贵（交互惩罚 ψ&gt;0）。因此“至多取二”一律是“紧预算（K/D 有界）下至多取二”的简写；若预算增长快于需求，三项可以同时满格。</p><p><b>本版新增内容。</b>第 5 章新增“有限性诊断”：严格相变之所以严格，正因为图是有限的；真实临界总是有限尺寸的临界。卷首总纲把“回不去”写成有限系统关闭旧选项的时间显影。</p><p><b>系列 / Series.</b> 同一作者的独立研究系列：六本学术专著 + 两本通俗读本。入口与外部登记库：<a href=\"https://github.com/lyp0746/knowledge-tradeoffs\">https://github.com/lyp0746/knowledge-tradeoffs</a>；源码与可复算脚本：<a href=\"https://github.com/lyp0746/emergence-critical\">https://github.com/lyp0746/emergence-critical</a>。首选预览文件：<code>emergence-critical-print.pdf</code>（印刷版）。</p><p><b>English.</b> Abstract (English). This work offers an operational definition and test procedure for criticality, answering the question of when a change becomes another thing. Core thesis: a qualitative transition is the emergence, at some scale, of macro-order that cannot be derived losslessly from the micro-level; it has three observable markers (order-parameter jump, critical slowing down, macro-level usefulness), and two out of three are required. Structure and evidence: 25 chapters, appendices A–X, 14 figures; calibrated on the 2D Ising model (T_c and γ/ν agree with the exact solution; deviations in β/ν and ν are reported), with avalanche, percolation and slowing-down experiments testing the markers. The central finding is that diagnostic power scales with the observable scale — with too small a scale, two competing hypotheses look equally good. Discipline: six minimal verification units are ordered by feasibility and marked as done, partial or open; failures have their own section; every figure ships with a script and a seed. Boundaries: most social cases reach only metaphor; a single indicator cannot orient; slowing down reports “near”, not “when”. Edition: 2026-10-18, 215 pages, 25 chapters, 14 figures, appendices A–X.</p><p><b>What is new in this edition (2026-10-18, Finitude Edition).</b> The common premise is now stated at the front: <b>there is no infinity in reality</b> — infinity appears only as a limit in models, never as a property of a real system. Finitude alone only says that there is a ceiling; to yield a trade-off it also needs three conditions: demand grows with scale, description/composition/transfer share one bearer, and maintaining two activities at once is more expensive (interaction penalty ψ&gt;0). “At most two” is therefore shorthand for “at most two under a tight budget (bounded K/D)”; if the budget grows faster than demand, all three can be full.</p><p><b>New in this edition.</b> Chapter 5 adds a finitude diagnosis: a strict transition is strict because the graph is finite; real criticality is always finite-size. The front matter frames “cannot go back” as the temporal shadow of a finite system closing old options.</p>",
+  "title": "涌现的临界：为什么有些变化回不去：临界、涌现与形式化的边界 / 涌现的临界: 为什么有些变化回不去：临界、涌现与形式化的边界",
+  "description": "<p><b>中文摘要。</b>“量变到质变”为什么听起来像一句口号，而不是一个可检验的命题？本书把它立为这个系列的一个新问题：临界。它给出一个可操作的定义（一次质变＝系统在某个尺度上获得不可由微观无损推出的宏观序，即因果涌现 Φ>0），三个可观测的标记（序参量跃变、临界慢化、有效信息峰值），以及一套可证伪的检验（五个最小验证单元）。前五本书在这本书里不是被诊断的对象，而是五个应用案例：它们检验临界视角的效力，也暴露出它的边界——形式化的地平线。每一条判断都标注证据等级与可反驳条件：结论强度不超过证据强度。卷首《总纲　现实中不存在无限》把临界写成有限尺寸的临界：真实的相变总会被有限的组分与观察窗口抹圆；“回不去”是有限系统关闭旧选项的时间显影。</p>\n<p><b>核心主张。</b>为什么有些变化回不去：临界、涌现与形式化的边界。本书不把「涌现的临界」写成一本无所不包的概论，而是把一个问题做深：一个有限的东西，怎样一边保持结构，一边还能变化。</p>\n<p><b>结构与证据。</b>6 部分、25 章、278 页、附录 A–F、14 幅图；每章保留证据分级（A/B/C 与甲/乙/丙）与可证伪登记，失败与撤回写在正文，不放进脚注。</p>\n<p><b>本版修订（2026-11-02）。</b>统一书名与副题、统一版式与页码；附录收束为 A–F；旧版残留的 DOI、系列计数与错字订正；本版以概念 DOI 归档，版本 DOI 指向 2026-11-02 这一版。</p>\n<p><b>诚实纪律。</b>结论强度不超过证据强度；能算的给出数，不能算的写明「判不了」；每一条硬约束都写清谁在承担代价，以及这条限制使什么成为可能。</p>\n<p><b>边界。</b>本书给坐标与判据，不给判决；它不替代领域专家的材料，也不把类比写成定理。具体边界见各章末与附录的登记簿。</p>\n<p><b>版本信息。</b>2026-11-02，278 页，25 章，附录 A–F；内容 CC BY 4.0，代码 MIT。</p>\n<p><b>Abstract.</b> 涌现的临界: 为什么有些变化回不去：临界、涌现与形式化的边界. The book does not attempt an all-encompassing survey; it works one problem through: how does something finite keep its structure while still being able to change? It is organised in 6 parts and 25 chapters, with appendices A–F and 14 figures; every chapter keeps its evidence grades (A/B/C) and falsifiability register, and reports failures and retractions in the body.</p>\n<p><b>Core thesis.</b> 为什么有些变化回不去：临界、涌现与形式化的边界. The book offers coordinates and criteria, not verdicts.</p>\n<p><b>Structure and evidence.</b> 6 parts, 25 chapters, 278 pages, appendices A–F, 14 figures. The apparatus is open: data, scripts and registers are in the repository; the prose keeps a single visible grade per claim rather than hedging every clause.</p>\n<p><b>This edition (2026-11-02).</b> Title and subtitle unified; layout and folios unified; appendices consolidated to A–F; residual DOI, series-count and typographic errors corrected; the concept DOI is stable and the version DOI points to this edition.</p>\n<p><b>Discipline.</b> Conclusion strength does not exceed evidence strength; what can be computed is computed, what cannot is marked as undecidable; every hard constraint names who pays for it and what it makes possible.</p>\n<p><b>Boundaries.</b> The book gives coordinates and criteria, not verdicts; it does not replace field expertise, and it does not dress an analogy as a theorem. See the chapter ends and the register appendices for specific limits.</p>\n<p><b>Edition.</b> 2026-11-02, 278 pages, 25 chapters, appendices A–F; content CC BY 4.0, code MIT.</p>",
   "creators": [
     {
       "name": "李毅芃",
@@ -49,13 +49,13 @@
       "scheme": "custom"
     }
   ],
-  "notes": "科目（中文）：复杂系统 Complex Systems、涌现与相变 Emergence and Phase Transitions、科学哲学 Philosophy of Science、系统科学 Systems Science、科学方法论 Scientific Methodology。语言：中文（含英文摘要）。结构：25 章，约 212 页。首选预览文件：emergence-critical-print.pdf（印刷版）。引用格式见 CITATION.cff。",
+  "notes": "学术专著/读本。2026-11-02，278 页，25 章，附录 A–F。",
   "license": "CC-BY-4.0",
   "upload_type": "publication",
   "publication_type": "book",
   "language": "zho",
   "access_right": "open",
-  "publication_date": "2026-11-01",
+  "publication_date": "2026-11-02",
   "related_identifiers": [
     {
       "identifier": "https://github.com/lyp0746/emergence-critical",
@@ -68,27 +68,27 @@
       "scheme": "url"
     },
     {
-      "identifier": "https://doi.org/10.5281/zenodo.23286403",
+      "identifier": "https://doi.org/10.5281/zenodo.23217100",
       "relation": "references",
       "scheme": "doi"
     },
     {
-      "identifier": "https://doi.org/10.5281/zenodo.23323277",
+      "identifier": "https://doi.org/10.5281/zenodo.23323276",
       "relation": "references",
       "scheme": "doi"
     },
     {
-      "identifier": "https://doi.org/10.5281/zenodo.23412033",
+      "identifier": "https://doi.org/10.5281/zenodo.23345012",
       "relation": "references",
       "scheme": "doi"
     },
     {
-      "identifier": "https://doi.org/10.5281/zenodo.23388629",
+      "identifier": "https://doi.org/10.5281/zenodo.23388628",
       "relation": "references",
       "scheme": "doi"
     },
     {
-      "identifier": "https://doi.org/10.5281/zenodo.23416220",
+      "identifier": "https://doi.org/10.5281/zenodo.23416219",
       "relation": "references",
       "scheme": "doi"
     },
@@ -103,5 +103,5 @@
       "scheme": "url"
     }
   ],
-  "version": "2026-11-01"
+  "version": "2026-11-02"
 }
