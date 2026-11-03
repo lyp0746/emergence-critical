@@ -50,6 +50,25 @@
 <tr><td class="l">0 条</td><td class="l"><strong>不是质变</strong>（只是退化/波动）</td><td class="l">—</td></tr>
 </table>
 <div class="box"><p><strong>这个定义是本书的"门槛"，也是它的"软肋"。</strong> 门槛太低，什么都是相变；门槛太高，社会历史永远进不来。三条取两条，是一个折中——<strong>它不完美，但它可操作、可反驳。</strong></p></div>
+<h3 id="sec1-6b">1.6b　另一种临界：没有动力学的变分临界</h3>
+<p>上面三条标记都假定系统有<strong>时间</strong>：恢复时间、涨落、动力学。但有一整类质变没有时间——<strong>变分临界</strong>：在给定预算下，最优的“形状”在某个阈值处换成另一种形状。</p>
+<p>2026 年有一个完全有限、精确可解的例子：<strong>单位立方三维环面的等周问题</strong>。设体积为 <code>V</code>，令 <code>v=min(V,1−V)</code>，则最小周长为</p>
+<div class="box"><p><code>I(V) = min{ (36π)^(1/3)·v^(2/3),　2√π·v,　2 }</code></p></div>
+<table class="nat">
+<tr><th class="l">体积区间</th><th class="l">极小者</th><th class="l">面积增长指数</th><th class="l">多一单位体积的边界代价</th></tr>
+<tr><td class="l"><code>0 &lt; V ≤ 4π/81</code></td><td class="l">球，半径 <code>(3V/4π)^(1/3)</code></td><td class="l"><code>2/3</code></td><td class="l">→ 无穷（越小越贵）</td></tr>
+<tr><td class="l"><code>4π/81 ≤ V ≤ 1/π</code></td><td class="l">绕最短闭测地线的实心圆管，半径 <code>√(V/π)</code></td><td class="l"><code>1</code></td><td class="l">常数</td></tr>
+<tr><td class="l"><code>1/π ≤ V ≤ 1/2</code></td><td class="l">两片坐标环面之间的板，宽 <code>V</code></td><td class="l"><code>0</code></td><td class="l"><code>0</code>（加体积不加边界）</td></tr>
+<tr><td class="l"><code>V &gt; 1/2</code></td><td class="l">上述情形的补集</td><td class="l">—</td><td class="l">—</td></tr>
+</table>
+<p>两个转变体积是<strong>精确数</strong>：<code>V₁=4π/81≈0.1551</code>、<code>V₂=1/π≈0.3183</code>；每一处<strong>相邻两类同时极小</strong>，且没有别的等号情形。〔B／乙；未同行评议的预印本〕</p>
+<p><strong>它为什么重要。</strong>这里没有时间、没有恢复时间、没有涨落：临界慢化与有效信息峰值都无从谈起。但两处转变具备临界的一切现象——阈值、共存、类型切换。所以：</p>
+<ul>
+<li><strong>质变可以写成一句话</strong>：最优值面<strong>连续</strong>，而最优者的<strong>身份跳变</strong>。变的不是值，是“谁赢”。</li>
+<li><strong>预算越大，最优结构的增长维数越低</strong>：<code>2/3 → 1 → 0</code> 对应“在三个方向长／在一个方向长／不长（边界不变）”。这是“有限预算生成结构”的精确实例。</li>
+<li><strong>边际代价单调下降</strong>：从无穷到常数到零。这条直觉在这里有闭式。</li>
+</ul>
+<div class="box"><p><strong>本书的定义要因此写清一句：</strong> 第 1.6 节的最小定义只覆盖<strong>动力学临界</strong>。另有一类<strong>变分临界</strong>，其范本就是上表；它不进三标记的判定，但也不该被排除在“质变”之外。把这一句写进边界，是本节的目的。</p></div>
 <h3 id="sec1-7">1.7　本章的"陷阱"</h3>
 <div class="box box-do"><p><strong>陷阱：</strong> 读到这里，你可能想："所以相变框架只是物理学的专利，社会系统根本不适用。" <strong>但请等等：</strong> 本书的主张恰恰相反——<strong>相变的结构（序参量、临界点、对称破缺）在社会系统中也常常存在，只是我们很难"测量"它，而不是它不存在。</strong> 这个区别，是本书后面所有论证的起点。</p></div>
 <h3 id="sec1-8">1.8　六件工具：这套框架的词法</h3>
@@ -97,7 +116,7 @@
 <p><strong>前提条件。</strong> 系统有一个可明确定义的对称群，且临界点后该对称性被"选择"破坏。</p>
 <div class="box"><p><strong>边界：</strong> 物理中的对称破缺是<strong>内生</strong>的；社会/历史中的"破缺"常是<strong>事后命名</strong>的。这个差别，是第五章"形式化地平线"的核心。</p></div>
 <img class="fig" src="assets/svg/fig-symmetry-breaking.svg" alt="图 1.2　对称破缺：微观没变，宏观“选了一个方向”"><div class="cap"><b>图 1.2　对称破缺：微观没变，宏观“选了一个方向”</b>。两个等价的极小值，系统只能落进其中一个；落定之后，微观规则没变，宏观却选了方向。</div>
-<h3 id="sec1-12">1.12　临界慢化：唯一"事前"可观测的预警</h3>
+<h3 id="sec1-12">1.12　临界慢化：最常见的"事前"预警（不是唯一的）</h3>
 <p><strong>定义。</strong> 越接近临界点，系统对扰动的<strong>恢复时间越长</strong>：</p>
 <p>``<code> τ_rec ~ |T − T_c|^(−ν)  → ∞ </code>``</p>
 <p><strong>物理原型。</strong> 接近相变时，涨落变得又大又慢——"临界乳光"就是光被强烈散射。</p>
@@ -109,6 +128,23 @@
 <p><strong>前提条件。</strong> 系统有稳定的稳态，且可被小扰动；恢复过程可观测。</p>
 <div class="box"><p><strong>它与"跟上"（τ）的关系。</strong> 前作的 <code>τ = T_min / T_available</code> 是临界慢化的一个<strong>社会版本</strong>：当恢复/调适所需时间逼近可用时间，<code>τ→1</code>，系统进入"来不及"的临界区。<strong>这不是比喻，而是同一个数学结构在不同对象上的两次出现。</strong></p></div>
 <img class="fig" src="assets/svg/fig-critical-slowing.svg" alt="图 1.3　临界慢化：崩溃之前，系统会“变慢”"><div class="cap"><b>图 1.3　临界慢化：崩溃之前，系统会“变慢”</b>。纵轴是恢复时间：越接近临界点，扰动后回到稳态越慢；这是唯一可以在事前观测的标记。</div>
+<h3 id="sec1-12b">1.12b　预警的可靠性：一个模型把三件事拆开了</h3>
+<p>§1.12 的标题说临界慢化是“<strong>唯一</strong>事前可观测的预警”。这个“唯一”需要降级——不是因为修辞过强，而是因为有一个可算的反例把三件事拆开了。</p>
+<p><strong>模型。</strong> 零场高斯 Sherrington–Kirkpatrick（SK）自旋玻璃，热浴动力学、每自旋单位速率更新。它的逆温度 <code>β</code> 有三个区：</p>
+<table class="nat">
+<tr><th class="l">区间</th><th class="l">混合（动力学的“恢复时间”）</th><th class="l">涨落</th><th class="l">哪条标记出现</th></tr>
+<tr><td class="l"><code>0 ≤ β &lt; 1</code>（遍历相）</td><td class="l"><strong>最坏起点 cutoff</strong>，尺度 <code>log n</code>——变化<strong>极快且突然</strong></td><td class="l">类中心极限</td><td class="l">突变 ✓　慢化 ✗　临界 ✗</td></tr>
+<tr><td class="l"><code>β = 1</code>（临界）</td><td class="l"><code>n^(2/3+o(1))</code>；重标度后的自相关有<strong>普适随机极限</strong></td><td class="l">—</td><td class="l">三条全 ✓</td></tr>
+<tr><td class="l"><code>β &gt; 1</code>（玻璃相）</td><td class="l">从 Gibbs 起点仍是<strong>伸展指数</strong>（持续地慢）</td><td class="l">方差 <code>~c_β·n^(1/3)</code>，标准差 <code>n^(1/6)</code>，<strong>不是中心极限</strong></td><td class="l">慢化 ✓　临界 ✗</td></tr>
+</table>
+<p><strong>三条读法。</strong></p>
+<ol>
+<li><strong>“突变”不等于“临界”。</strong> cutoff 在整个 <code>β&lt;1</code> 区都有，而那里没有临界点。把“突然”当成“要质变”，会把整个遍历相误判成临界区。</li>
+<li><strong>“慢化”作为标记既会漏也会误。</strong> 它会漏：<code>β&lt;1</code> 有突变而无临界；它会误：<code>β&gt;1</code> 已经远离临界点，混合仍然是伸展指数地慢。</li>
+<li><strong>只有“重标度后的普适极限”真正定位在临界点</strong>，而且它比“有效信息峰值”更硬：它是一个<strong>分布的极限</strong>，不是一条曲线的峰。</li>
+</ol>
+<div class="box"><p><strong>改法（不动编号）：</strong> 第 1.6 节的三条标记从“并列”改为<strong>分级</strong>——<strong>定位级</strong>（身份跳变或重标度普适极限）／<strong>验证级</strong>（普适类与指数）／<strong>参考级</strong>（临界慢化与有效信息峰值）。临界慢化仍然有用，但它不再是“唯一”或“决定性”的那一条。</p></div>
+<p><strong>它使什么成为可能。</strong> 分级之后，“这是不是质变”不再取决于某一条预警是否出现，而取决于<strong>哪一级的证据出现了</strong>。这也让第 1.6b 节的变分临界有了位置：它直接命中“定位级”，却完全没有“参考级”的两个记号。</p>
 <h3 id="sec1-13">1.13　标度律与普适类：不同系统，同一组数字？</h3>
 <p><strong>定义。</strong> 临界点附近，物理量按幂律变化：<code>X ~ |T−T_c|^α</code>。不同系统若有相同的临界指数 α，就属于同一<strong>普适类</strong>。</p>
 <p><strong>物理原型。</strong> 液-气相变与铁磁相变的临界指数完全相同，虽然微观机制完全不同。这是物理学中最深刻的发现之一。</p>
