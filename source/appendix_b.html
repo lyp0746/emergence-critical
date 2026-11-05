@@ -22,7 +22,7 @@
 <tr><td class="l">渗流阈值（P=0.5）</td><td class="l">p≈0.583</td><td class="l">0.5927（精确）</td><td class="l">偏低 1.6%</td></tr>
 </table>
 <h4>B.1.4　失败记录（这一节比上面那张表重要）</h4>
-<ol><li><strong>ν 没有测出来。</strong> 原计划用 Binder 交点随 L 的漂移估 ν；实测交点不单调（2.2244 → 2.3018 → 2.2645），无法稳定求解。<strong>处理方式：不报告 ν 的估计值，只报告“未测出”。</strong></li><li><strong>Binder 交点中间一对偏差最大。</strong> 原因是 24 与 32 的 U 曲线在转变区几乎重合，噪声与位移同量级。<strong>处理方式：在正文中如实写出，并说明交点法的适用条件。</strong></li><li><strong>超临界雪崩被截断 9.3%。</strong> m=1.05 时 α 的估计受截断影响，不能与临界值直接比较。<strong>处理方式：报告截断比例，并只把 α 用作“方向”读数。</strong></li><li><strong>“仅 L=16”的坍缩残差是事后补算的。</strong> 它不在原协议里，是写第 15.6 节时补的。<strong>处理方式：在正文与本节都注明，避免读者误以为它是事前登记的。</strong></li><li><strong>幂律拟合的第一次尝试是错的。</strong> 早期版本直接对“每箱计数”取对数，得到 α≈0.5，与理论差了三倍。原因是漏掉了“对数箱宽”这一项。<strong>处理方式：修正脚本、在正文 3.5 与 22.26 两处都写出这个坑。</strong></li></ol>
+<ol><li><strong>ν 没有测出来。</strong> 原计划用 Binder 交点随 L 的漂移估 ν；实测交点不单调（2.2244 → 2.3018 → 2.2645），无法稳定求解。<strong>处理方式：不报告 ν 的估计值，只报告“未测出”。</strong></li><li><strong>Binder 交点中间一对偏差最大。</strong> 原因是 24 与 32 的 U 曲线在转变区几乎重合，噪声与位移同量级。<strong>处理方式：在正文中如实写出，并说明交点法的适用条件。</strong></li><li><strong>超临界雪崩被截断 9.3%。</strong> m=1.05 时 α 的估计受截断影响，不能与临界值直接比较。<strong>处理方式：报告截断比例，并只把 α 用作“方向”读数。</strong></li><li><strong>“仅 L=16”的坍缩残差是事后补算的。</strong> 它不在原协议里，是写第 15.6 节时补的。<strong>处理方式：在正文与本节都注明，避免读者误以为它是事前登记的。</strong></li><li><strong>幂律拟合的第一次尝试是错的。</strong> 早期版本直接对“每箱计数”取对数，得到 α≈0.5，与理论差了三倍。原因是漏掉了“对数箱宽”这一项。<strong>处理方式：修正脚本、在正文 3.5 与第 22 章两处都写出这个坑。</strong></li></ol>
 <h4>B.1.5　复算方法</h4>
 <p>``<code>bash python analysis/exp_ising.py        # 约 3–5 分钟（单机 CPU） python analysis/exp_critical.py     # 约 4 分钟 python analysis/make_exp_figs.py    # 生成正文插图（SVG） </code>``</p>
 <p><strong>判据：</strong> 如果你的结果与本书不一致，以你的为准；请把差异写进 issue，注明硬件、版本与种子。<strong>这本书对数值结果的态度只有一句：能被别人重跑出来的，才算数。</strong></p>
@@ -232,12 +232,12 @@
 <tr><td class="l">□</td><td class="l">脚本能跑通</td><td class="l"><code>analysis/exp_ising.py</code>、<code>analysis/exp_critical.py</code></td></tr>
 <tr><td class="l">□</td><td class="l">参数与种子已公开</td><td class="l">附录 B.1.2</td></tr>
 <tr><td class="l">□</td><td class="l">原始数据可查看</td><td class="l">附录 B.2、U、V</td></tr>
-<tr><td class="l">□</td><td class="l">结果与精确解对得上（T_c、γ/ν）</td><td class="l">13.13</td></tr>
+<tr><td class="l">□</td><td class="l">结果与精确解对得上（T_c、γ/ν）</td><td class="l">附录 B.1.3</td></tr>
 <tr><td class="l">□</td><td class="l">偏差被如实写出（β/ν、ν）</td><td class="l">附录 B.1.4</td></tr>
 <tr><td class="l">□</td><td class="l">失败被单独列出</td><td class="l">附录 B.1.4</td></tr>
 <tr><td class="l">□</td><td class="l">区分了“算的／引的／画的”</td><td class="l">14.5</td></tr>
 <tr><td class="l">□</td><td class="l">标注了事后补算的部分</td><td class="l">附录 B.1.4 第 4 条</td></tr>
-<tr><td class="l">□</td><td class="l">判定带“可反驳条件”</td><td class="l">13.13、13.14</td></tr>
+<tr><td class="l">□</td><td class="l">判定带“可反驳条件”</td><td class="l">附录 B.1.3、B.1.4</td></tr>
 <tr><td class="l">□</td><td class="l">读者能重画出图</td><td class="l">附录 B.3、V + 图 13.1／13.2／15.1／17.1</td></tr>
 </table>
 <p><strong>十项全中，这本书的数字才可以被当作“证据”引用；中八项，可以当作“线索”；不到八项，请只当作“作者的看法”。</strong></p>
