@@ -1,5 +1,5 @@
 <h2 class="chapter" id="apxA">附录 A　形式化：推导与解析</h2>
-<p>这一组是本册最"硬"的部分：五段推导，从朗道自由能到有限尺度标度，再到边界条件与约束优化。它们不构成新的理论主张，只把正文里用到的结论一步一步写出来，便于复算与挑错。读法：每段开头一句"这一段要得到什么"，段末一句"它对本书意味着什么"；中间的代数可以跳，结论不能跳。</p>
+<p>这一组是本册最“硬”的部分：五段推导，从朗道自由能到有限尺度标度，再到边界条件与约束优化。它们不构成新的理论主张，只把正文里用到的结论一步一步写出来，便于复算与挑错。读法：每段开头一句“这一段要得到什么”，段末一句“它对本书意味着什么”；中间的代数可以跳，结论不能跳。</p>
 <h3>A.1　推导与解析（一）：朗道理论、临界指数与标度关系</h3>
 
 <div class="box"><p>前面讲“序参量”“临界指数”，但没推导。这一章补上：从自由能出发，推出临界指数与标度关系。</p></div>
@@ -126,37 +126,37 @@
 <p><strong>这正是“同约束而不同构”的例子：</strong> 同一张图，两种机制，两种相变。</p>
 <h3>A.3　推导与解析（三）：有限尺度标度与临界指数的估计</h3>
 
-<div class="box"><p>理论给了临界指数，但"怎么从数据里把它估出来"？这一章讲有限尺度标度——这是把"相变"从"概念"变成"可测量"的关键技术。</p></div>
+<div class="box"><p>理论给了临界指数，但“怎么从数据里把它估出来”？这一章讲有限尺度标度——这是把“相变”从“概念”变成“可测量”的关键技术。</p></div>
 <h4>A.3.1　为什么需要有限尺度标度</h4>
 <p>在无限系统里，关联长度 <code>ξ</code> 在临界点发散。但任何真实系统都是<strong>有限大小</strong> <code>L</code>。</p>
-<p><strong>有限大小会"抹平"临界点：</strong> <code>ξ</code> 最多长到 <code>L</code>，所以临界行为被"圆滑"了。<strong>你直接测，永远测不到"尖锐的奇点"。</strong></p>
-<p><strong>解决办法：</strong> 用不同 <code>L</code> 的数据，做"标度坍缩"。</p>
+<p><strong>有限大小会“抹平”临界点：</strong> <code>ξ</code> 最多长到 <code>L</code>，所以临界行为被“圆滑”了。<strong>你直接测，永远测不到“尖锐的奇点”。</strong></p>
+<p><strong>解决办法：</strong> 用不同 <code>L</code> 的数据，做“标度坍缩”。</p>
 <h4>A.3.2　标度假设</h4>
 <p>设某个可观测量 <code>A</code>（如磁化、序参量）满足：</p>
 <p>``<code> A(L, T) = L^{ω/ν} · f( L^{1/ν} (T − T_c) ) </code>``</p>
 <p>其中 <code>ν</code> 是关联长度指数，<code>ω</code> 是 <code>A</code> 的标度维数，<code>f</code> 是标度函数。</p>
-<p><strong>这个假设的意思是：</strong> 不同 <code>L</code> 的曲线，只要按 <code>L</code> 重新标度，就会"坍缩"到同一条 <code>f</code> 上。</p>
+<p><strong>这个假设的意思是：</strong> 不同 <code>L</code> 的曲线，只要按 <code>L</code> 重新标度，就会“坍缩”到同一条 <code>f</code> 上。</p>
 <h4>A.3.3　数据坍缩：三步</h4>
 <p><strong>第一步：固定 <code>T_c</code> 与 <code>ν</code> 的猜测值。</strong></p>
 <p><strong>第二步：把每个 <code>L</code> 的数据，画成 <code>L^{−ω/ν} A</code> 对 <code>L^{1/ν}(T−T_c)</code>。</strong></p>
-<p><strong>第三步：调 <code>T_c</code>、<code>ν</code>、<code>ω</code>，直到所有曲线"叠成一条"。</strong></p>
-<p><strong>叠得越好，参数越可信。</strong> 这就是"用数据估临界指数"的标准做法。</p>
+<p><strong>第三步：调 <code>T_c</code>、<code>ν</code>、<code>ω</code>，直到所有曲线“叠成一条”。</strong></p>
+<p><strong>叠得越好，参数越可信。</strong> 这就是“用数据估临界指数”的标准做法。</p>
 <h4>A.3.4　Binder 累积量：更稳的 <code>T_c</code> 估计</h4>
 <p>``<code> U = 1 − ⟨m⁴⟩ / (3⟨m²⟩²) </code>``</p>
 <p><strong>为什么用它？</strong> 因为不同 <code>L</code> 的 <code>U</code> 曲线，<strong>在 <code>T_c</code> 处相交</strong>。<strong>交点就是 <code>T_c</code>，而且它不依赖 <code>ω</code>。</strong></p>
-<p><strong>这是"最稳"的 <code>T_c</code> 估计法之一。</strong></p>
+<p><strong>这是“最稳”的 <code>T_c</code> 估计法之一。</strong></p>
 <h4>A.3.5　一个可复算的例子</h4>
 <p>以二维伊辛为例（<code>T_c≈2.269</code>）：</p>
 <ul><li>取 <code>L=16, 32, 64, 128</code>；</li><li>每个 <code>L</code> 跑 Monte Carlo，测 <code>m</code>、<code>χ</code>、<code>U</code>；</li><li>画 <code>U</code> 对 <code>T</code>，找交点 → <code>T_c</code>；</li><li>画 <code>m L^{β/ν}</code> 对 <code>L^{1/ν}(T−T_c)</code>，调 <code>β/ν</code>、<code>ν</code> 直到坍缩；</li><li>得到 <code>β≈0.125</code>、<code>ν≈1</code>。</li></ul>
-<p><strong>这与 Onsager 的精确解一致。</strong> 这就是"数值验证理论"的完整流程。</p>
+<p><strong>这与 Onsager 的精确解一致。</strong> 这就是“数值验证理论”的完整流程。</p>
 <h4>A.3.6　这对本书的意义</h4>
-<p><strong>它说明"临界指数"不是"哲学词"，而是"可以估出来的数"。</strong> 但本书也承认：<strong>这套方法需要"可重复的实验/模拟"与"大样本"。</strong></p>
-<p><strong>社会/历史系统，两条都不满足。</strong> 所以，本书只能借"标度"的<strong>思想</strong>（不同尺度要一起看），不能借"标度坍缩"的<strong>技术</strong>。</p>
+<p><strong>它说明“临界指数”不是“哲学词”，而是“可以估出来的数”。</strong> 但本书也承认：<strong>这套方法需要“可重复的实验/模拟”与“大样本”。</strong></p>
+<p><strong>社会/历史系统，两条都不满足。</strong> 所以，本书只能借“标度”的<strong>思想</strong>（不同尺度要一起看），不能借“标度坍缩”的<strong>技术</strong>。</p>
 <h4>A.3.7　一句话带走</h4>
-<div class="box"><p><strong>临界指数之所以可信，不是因为它"推导得漂亮"，而是因为它"能被数据坍缩估出来"。</strong></p></div>
-<h3>A.4　边界（一）：为什么决定性质的是"边"，不是"里面"</h3>
+<div class="box"><p><strong>临界指数之所以可信，不是因为它“推导得漂亮”，而是因为它“能被数据坍缩估出来”。</strong></p></div>
+<h3>A.4　边界（一）：为什么决定性质的是“边”，不是“里面”</h3>
 
-<div class="box"><p>前面讲"临界点"，但没讲"边界"这个更一般的概念。这一章把数学的边界条件、经济学的边际、物理化学生物的临界条件并排，看它们是不是同一件事。</p></div>
+<div class="box"><p>前面讲“临界点”，但没讲“边界”这个更一般的概念。这一章把数学的边界条件、经济学的边际、物理化学生物的临界条件并排，看它们是不是同一件事。</p></div>
 <h4>A.4.1　数学：边界条件决定解</h4>
 <p><strong>最干净的例子：拉普拉斯方程。</strong></p>
 <p>``<code> ∇²u = 0  （在区域 Ω 内） u = f     （在边界 ∂Ω 上） </code>``</p>
@@ -203,10 +203,10 @@
 <div class="box"><p><strong>决定性质的，往往不是“里面有什么”，而是“边界在哪里、跨过去会发生什么”。</strong></p></div>
 <h3>A.5　边界（二）：约束、可行域与 KKT</h3>
 
-<div class="box"><p>附录 A.4 讲"边界决定性质"的直觉。这一章把它形式化：约束优化、可行域、KKT 条件——这是"边际"与"边界"的数学骨架。</p></div>
+<div class="box"><p>附录 A.4 讲“边界决定性质”的直觉。这一章把它形式化：约束优化、可行域、KKT 条件——这是“边际”与“边界”的数学骨架。</p></div>
 <h4>A.5.1　约束优化</h4>
 <p>``<code> max f(x)   s.t.  g_i(x) ≤ 0,  h_j(x) = 0 </code>``</p>
-<p><strong>可行域</strong> <code>𝔽 = {x : g_i(x)≤0, h_j(x)=0}</code>。<strong>最优解可能在"内部"，也可能在"边界"。</strong></p>
+<p><strong>可行域</strong> <code>𝔽 = {x : g_i(x)≤0, h_j(x)=0}</code>。<strong>最优解可能在“内部”，也可能在“边界”。</strong></p>
 <h4>A.5.2　拉格朗日乘子</h4>
 <p>对等式约束 <code>h(x)=0</code>，构造：</p>
 <p>``<code> L = f(x) − λ h(x) </code>``</p>
@@ -215,22 +215,22 @@
 <h4>A.5.3　KKT 条件</h4>
 <p>对不等式约束，最优解满足：</p>
 <p>``<code> ∇f = Σ μ_i ∇g_i + Σ λ_j ∇h_j μ_i ≥ 0,   μ_i g_i = 0 g_i ≤ 0,   h_j = 0 </code>``</p>
-<p><strong>关键是"互补松弛" <code>μ_i g_i = 0</code>：</strong></p>
+<p><strong>关键是“互补松弛” <code>μ_i g_i = 0</code>：</strong></p>
 <ul><li>若约束<strong>不起作用</strong>（<code>g_i<0</code>），则 <code>μ_i=0</code>；</li><li>若约束<strong>起作用</strong>（<code>g_i=0</code>，在边界上），则 <code>μ_i≥0</code>。</li></ul>
-<p><strong>这就是"边界解"与"内点解"的数学区分：</strong> 内点解里，约束的"价格"为零；边界解里，约束有正价格。</p>
-<h4>A.5.4　与"边际"的关系</h4>
+<p><strong>这就是“边界解”与“内点解”的数学区分：</strong> 内点解里，约束的“价格”为零；边界解里，约束有正价格。</p>
+<h4>A.5.4　与“边际”的关系</h4>
 <p>在经济学里：</p>
-<ul><li><code>∇f</code> 是"边际收益"；</li><li><code>∇g</code> 是"边际成本"；</li><li><code>λ</code>、<code>μ</code> 是"边际约束的价格"。</li></ul>
-<p><strong>所以，"边际分析"就是"在边界上做导数"。</strong> 不是在"总量"上做文章，而是在"再走一步"上做文章。</p>
+<ul><li><code>∇f</code> 是“边际收益”；</li><li><code>∇g</code> 是“边际成本”；</li><li><code>λ</code>、<code>μ</code> 是“边际约束的价格”。</li></ul>
+<p><strong>所以，“边际分析”就是“在边界上做导数”。</strong> 不是在“总量”上做文章，而是在“再走一步”上做文章。</p>
 <h4>A.5.5　与 C-A-T 三角的关系</h4>
 <p>本书的 C-A-T 三角，本质上是一个<strong>可行域</strong>：</p>
-<ul><li>三项预算 <code>Σ ≤ K</code>；</li><li>三角的边界，就是"可行域的边界"；</li><li>"让出哪一个顶点"，就是"在边界的哪一段"。</li></ul>
-<p><strong>"诊断"的动作，就是"找边界"：不是问"系统内部怎么运作"，而是问"它撞到了哪条边界"。</strong></p>
+<ul><li>三项预算 <code>Σ ≤ K</code>；</li><li>三角的边界，就是“可行域的边界”；</li><li>“让出哪一个顶点”，就是“在边界的哪一段”。</li></ul>
+<p><strong>“诊断”的动作，就是“找边界”：不是问“系统内部怎么运作”，而是问“它撞到了哪条边界”。</strong></p>
 <h4>A.5.6　分岔：稳定性的边界</h4>
-<p>除了"约束边界"，还有"稳定性边界"。</p>
+<p>除了“约束边界”，还有“稳定性边界”。</p>
 <p>设系统 <code>ẋ = F(x, μ)</code>。平衡点 <code>x*(μ)</code> 的稳定性，由 Jacobian <code>J = ∂F/∂x</code> 的特征值决定：</p>
 <ul><li>所有特征值实部为负 → 稳定；</li><li>有特征值实部为正 → 不稳定；</li><li>特征值实部过零 → <strong>分岔</strong>。</li></ul>
-<p><strong>分岔点，就是"稳定性边界"。</strong> 越过它，系统的"质"就变了。</p>
+<p><strong>分岔点，就是“稳定性边界”。</strong> 越过它，系统的“质”就变了。</p>
 <h4>A.5.7　三种边界，一个结构</h4>
 <table class="nat">
 <tr><th class="l">边界类型</th><th class="l">数学</th><th class="l">例子</th></tr>
@@ -238,7 +238,7 @@
 <tr><td class="l">稳定性边界</td><td class="l">特征值过零、分岔</td><td class="l">失稳、振荡、临界慢化</td></tr>
 <tr><td class="l">相边界</td><td class="l">自由能极小切换</td><td class="l">固/液/气、序参量跃变</td></tr>
 </table>
-<p><strong>三者都是"边界决定性质"的不同写法：</strong></p>
-<ul><li>约束边界决定"能做什么"；</li><li>稳定性边界决定"稳不稳"；</li><li>相边界决定"是什么相"。</li></ul>
+<p><strong>三者都是“边界决定性质”的不同写法：</strong></p>
+<ul><li>约束边界决定“能做什么”；</li><li>稳定性边界决定“稳不稳”；</li><li>相边界决定“是什么相”。</li></ul>
 <h4>A.5.8　一句话带走</h4>
-<div class="box"><p><strong>"边际"是在边界上做导数，"分岔"是稳定性过零，"相变"是自由能极小切换——三者都是"边界决定性质"。</strong></p></div>
+<div class="box"><p><strong>“边际”是在边界上做导数，“分岔”是稳定性过零，“相变”是自由能极小切换——三者都是“边界决定性质”。</strong></p></div>

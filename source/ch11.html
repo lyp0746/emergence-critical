@@ -1,25 +1,25 @@
 <h2 class="chapter">第11章　六个可验证单元：让这套框架可被推翻</h2><div class="box box-takeaway"><p class="lead"><b>本章主提问：</b>一本书的框架，怎样才能被别人推翻？</p></div>
 
 <p>一张验收单：尺寸、材质、承重、交付日期。每一项后面都要签字。<b>能验收的东西，才是真的做完了。</b></p>
-<h3 id="sec11-1">11.1　什么是"最小验证单元"</h3>
-<p>一个 MVU 必须满足三条：<strong>可执行</strong>（有明确步骤）、<strong>可失败</strong>（有明确的推翻条件）、<strong>可复现</strong>（别人能重做）。缺一条，它就只是"一个愿望"。</p>
+<h3 id="sec11-1">11.1　什么是“最小验证单元”</h3>
+<p>一个 MVU 必须满足三条：<strong>可执行</strong>（有明确步骤）、<strong>可失败</strong>（有明确的推翻条件）、<strong>可复现</strong>（别人能重做）。缺一条，它就只是“一个愿望”。</p>
 <h3 id="sec11-2">11.2　MVU 之间的依赖关系</h3>
 <p>它们不是六个平行的单元，而是一张有方向的网：</p>
 <p>``<code> MVU-1（临界指数） │  决定“是否存在统一普适类” ├──→ 影响 MVU-2 / MVU-5 的“普适性假设” ↓ MVU-6（编码一致性） │  检验前五个的“尺子准不准” ↓ MVU-2（临界慢化） │  决定“坍塌是不是相变” ↓ MVU-3（τ 与结果） │  依赖 MVU-2 的“慢化”是否成立 ↓ MVU-4（有效信息） 最依赖哲学前提，最后做 </code>``</p>
 <p><strong>读法：</strong> 先做 MVU-1（最硬），再做 MVU-6（验尺子），然后 MVU-2（验机制），最后 MVU-3/4（验应用）。<strong>顺序不是随意的，是依赖关系决定的。</strong></p>
 <h3 id="sec11-3">11.3　MVU-1：图上相变的临界指数（最易）</h3>
-<ul><li><strong>任务</strong>：对多种图（2D 格、随机图、小世界、无标度）算最大连通块占比的跃变，拟合 <code>η ~ (β−β_c)^α</code>。</li><li><strong>方法</strong>：数值模拟 + 有限尺度标度分析。</li><li><strong>工作量</strong>：3—6 个月（要谈"普适类"，需 20+ 拓扑，约 2 年）。</li><li><strong>哲学前提</strong>：无（纯数学）。</li><li><strong>依赖</strong>：无。</li><li><strong>会推翻什么</strong>：若不同图的 α <strong>显著不同</strong>，则"统一普适类"猜想被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它的结论会<strong>收窄</strong> MVU-2/5 的野心（如果连图之间都不同类，"五系统同类"更不可能）。</li><li><strong>等级</strong>：若完成，A／甲。</li></ul>
+<ul><li><strong>任务</strong>：对多种图（2D 格、随机图、小世界、无标度）算最大连通块占比的跃变，拟合 <code>η ~ (β−β_c)^α</code>。</li><li><strong>方法</strong>：数值模拟 + 有限尺度标度分析。</li><li><strong>工作量</strong>：3—6 个月（要谈“普适类”，需 20+ 拓扑，约 2 年）。</li><li><strong>哲学前提</strong>：无（纯数学）。</li><li><strong>依赖</strong>：无。</li><li><strong>会推翻什么</strong>：若不同图的 α <strong>显著不同</strong>，则“统一普适类”猜想被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它的结论会<strong>收窄</strong> MVU-2/5 的野心（如果连图之间都不同类，“五系统同类”更不可能）。</li><li><strong>等级</strong>：若完成，A／甲。</li></ul>
 <h3 id="sec11-4">11.4　MVU-5：历史诠释的 C-A-T 分布（较易，但有样本难题）</h3>
-<ul><li><strong>任务</strong>：让多位历史学家独立评估 5—10 场争论中不同诠释的 (c,a,t)，看是否出现聚类。</li><li><strong>方法</strong>：标准化问卷 + 评审间一致性（Fleiss' κ）。</li><li><strong>工作量</strong>：1—2 年。</li><li><strong>哲学前提</strong>：<strong>先要相信"不同诠释可以被同一套坐标描述"</strong>——这正是《诠释的权衡》的核心假设。</li><li><strong>依赖</strong>：需要一批愿意用统一问卷的历史学家。</li><li><strong>会推翻什么</strong>：若无聚类，则"学派=不同 C-A-T 位置"被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它检验的是"坐标是否可复现"，与 MVU-6 互补。</li><li><strong>风险</strong>：样本代表性（跨文明背景的历史学家能否用同一问卷）。</li><li><strong>等级</strong>：B／乙。</li></ul>
+<ul><li><strong>任务</strong>：让多位历史学家独立评估 5—10 场争论中不同诠释的 (c,a,t)，看是否出现聚类。</li><li><strong>方法</strong>：标准化问卷 + 评审间一致性（Fleiss' κ）。</li><li><strong>工作量</strong>：1—2 年。</li><li><strong>哲学前提</strong>：<strong>先要相信“不同诠释可以被同一套坐标描述”</strong>——这正是《诠释的权衡》的核心假设。</li><li><strong>依赖</strong>：需要一批愿意用统一问卷的历史学家。</li><li><strong>会推翻什么</strong>：若无聚类，则“学派=不同 C-A-T 位置”被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它检验的是“坐标是否可复现”，与 MVU-6 互补。</li><li><strong>风险</strong>：样本代表性（跨文明背景的历史学家能否用同一问卷）。</li><li><strong>等级</strong>：B／乙。</li></ul>
 <h3 id="sec11-5">11.5　MVU-2：学习系统的临界慢化（中等）</h3>
-<ul><li><strong>任务</strong>：在人类或 AI 学习中，测容量饱和前的 <code>τ_rec</code> 是否发散。</li><li><strong>方法</strong>：逐步加压的记忆/分类任务；测学习曲线变平率、涨落、恢复时间。</li><li><strong>工作量</strong>：6—12 个月。</li><li><strong>哲学前提</strong>：<strong>先要相信"容量"是可定义、可操纵的</strong>。</li><li><strong>依赖</strong>：需要一个可控制容量的实验平台。</li><li><strong>会推翻什么</strong>：若 <code>τ_rec</code> 不上升，则"坍塌=相变"被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它的失败会<strong>直接削弱</strong> MVU-3（因为 τ 的"慢化"是 MVU-3 的前提）。</li><li><strong>风险</strong>：不同系统（人/AI/动物）的临界慢化指标可能不同，需要通用测量框架。</li><li><strong>等级</strong>：B／乙。</li></ul>
+<ul><li><strong>任务</strong>：在人类或 AI 学习中，测容量饱和前的 <code>τ_rec</code> 是否发散。</li><li><strong>方法</strong>：逐步加压的记忆/分类任务；测学习曲线变平率、涨落、恢复时间。</li><li><strong>工作量</strong>：6—12 个月。</li><li><strong>哲学前提</strong>：<strong>先要相信“容量”是可定义、可操纵的</strong>。</li><li><strong>依赖</strong>：需要一个可控制容量的实验平台。</li><li><strong>会推翻什么</strong>：若 <code>τ_rec</code> 不上升，则“坍塌=相变”被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它的失败会<strong>直接削弱</strong> MVU-3（因为 τ 的“慢化”是 MVU-3 的前提）。</li><li><strong>风险</strong>：不同系统（人/AI/动物）的临界慢化指标可能不同，需要通用测量框架。</li><li><strong>等级</strong>：B／乙。</li></ul>
 <h3 id="sec11-6">11.6　MVU-3：社会系统的 τ 与结果（困难，且概念定义本身是难题）</h3>
-<ul><li><strong>任务</strong>：对历史危机做事后 τ 编码，检验 τ 与系统级失效的相关性。</li><li><strong>方法</strong>：建"适应时间表"与"威胁时间表"；算 τ；看相关。</li><li><strong>工作量</strong>：2—3 年（乐观）；<strong>更可能是 5—10 年的学科建设</strong>。</li><li><strong>哲学前提</strong>：<strong>先要相信"政治调适时间"与"威胁发展时间"可以被定义且跨国可比</strong>——这是一个未解决的争议。</li><li><strong>依赖</strong>：需要跨学科团队与统一编码手册。</li><li><strong>会推翻什么</strong>：若 τ 与结果无关，则"时间错配"诊断价值被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它依赖 MVU-2（慢化是否成立），又为 MVU-4 提供"目标变量"的候选。</li><li><strong>风险</strong>：<strong>概念定义争议 > 数据争议</strong>。这是本书最该降级的一个 MVU。</li><li><strong>等级</strong>：B／乙（若定义能统一）。</li></ul>
+<ul><li><strong>任务</strong>：对历史危机做事后 τ 编码，检验 τ 与系统级失效的相关性。</li><li><strong>方法</strong>：建“适应时间表”与“威胁时间表”；算 τ；看相关。</li><li><strong>工作量</strong>：2—3 年（乐观）；<strong>更可能是 5—10 年的学科建设</strong>。</li><li><strong>哲学前提</strong>：<strong>先要相信“政治调适时间”与“威胁发展时间”可以被定义且跨国可比</strong>——这是一个未解决的争议。</li><li><strong>依赖</strong>：需要跨学科团队与统一编码手册。</li><li><strong>会推翻什么</strong>：若 τ 与结果无关，则“时间错配”诊断价值被削弱。</li><li><strong>与其他 MVU 的关系</strong>：它依赖 MVU-2（慢化是否成立），又为 MVU-4 提供“目标变量”的候选。</li><li><strong>风险</strong>：<strong>概念定义争议 > 数据争议</strong>。这是本书最该降级的一个 MVU。</li><li><strong>等级</strong>：B／乙（若定义能统一）。</li></ul>
 <h3 id="sec11-7">11.7　MVU-4：知识系统的有效信息（最困难，可能是开放问题）</h3>
-<ul><li><strong>任务</strong>：对不同知识体系测 <code>Φ = I_macro − I_micro</code>。</li><li><strong>方法</strong>：定义微观/宏观；测预测信息；看 Φ 的峰值。</li><li><strong>工作量</strong>：3—5 年（乐观）；<strong>可能本质上是开放问题</strong>。</li><li><strong>哲学前提</strong>：<strong>先要回答"知识的预测目标是什么"</strong>——这是一个哲学问题，不是工程问题。</li><li><strong>依赖</strong>：需要一个被广泛接受的"知识预测目标"。</li><li><strong>会推翻什么</strong>：若 Φ 单调递减，则"因果涌现"在知识系统中不成立。</li><li><strong>与其他 MVU 的关系</strong>：它几乎依赖前面所有 MVU 的结论；所以放在最后。</li><li><strong>判定</strong>：<strong>把它标为"开放问题"，而不是"困难但可做"。</strong></li><li><strong>等级</strong>：C（目前）。</li></ul>
+<ul><li><strong>任务</strong>：对不同知识体系测 <code>Φ = I_macro − I_micro</code>。</li><li><strong>方法</strong>：定义微观/宏观；测预测信息；看 Φ 的峰值。</li><li><strong>工作量</strong>：3—5 年（乐观）；<strong>可能本质上是开放问题</strong>。</li><li><strong>哲学前提</strong>：<strong>先要回答“知识的预测目标是什么”</strong>——这是一个哲学问题，不是工程问题。</li><li><strong>依赖</strong>：需要一个被广泛接受的“知识预测目标”。</li><li><strong>会推翻什么</strong>：若 Φ 单调递减，则“因果涌现”在知识系统中不成立。</li><li><strong>与其他 MVU 的关系</strong>：它几乎依赖前面所有 MVU 的结论；所以放在最后。</li><li><strong>判定</strong>：<strong>把它标为“开放问题”，而不是“困难但可做”。</strong></li><li><strong>等级</strong>：C（目前）。</li></ul>
 <h3 id="sec11-8">11.8　MVU-6：跨案例的编码一致性</h3>
-<ul><li><strong>任务</strong>：让多位评审用同一套 (c,a,t) 坐标给五个应用打分，看是否一致。</li><li><strong>方法</strong>：双盲编码 + κ 系数。</li><li><strong>哲学前提</strong>：坐标本身是可操作的。</li><li><strong>依赖</strong>：需要多个独立评审。</li><li><strong>会推翻什么</strong>：若一致性极低，则"坐标"作为测量工具失效。</li><li><strong>与其他 MVU 的关系</strong>：它是"尺子校准"，最好在 MVU-1 之后、MVU-3/4 之前做。</li><li><strong>价值</strong>：它检验的不是"相变是否存在"，而是"我们的测量是否可靠"。</li><li><strong>等级</strong>：B／乙。</li></ul>
-<h3 id="sec11-9">11.9　优先级：按"能不能真做"排，而不是按"重不重要"排</h3>
+<ul><li><strong>任务</strong>：让多位评审用同一套 (c,a,t) 坐标给五个应用打分，看是否一致。</li><li><strong>方法</strong>：双盲编码 + κ 系数。</li><li><strong>哲学前提</strong>：坐标本身是可操作的。</li><li><strong>依赖</strong>：需要多个独立评审。</li><li><strong>会推翻什么</strong>：若一致性极低，则“坐标”作为测量工具失效。</li><li><strong>与其他 MVU 的关系</strong>：它是“尺子校准”，最好在 MVU-1 之后、MVU-3/4 之前做。</li><li><strong>价值</strong>：它检验的不是“相变是否存在”，而是“我们的测量是否可靠”。</li><li><strong>等级</strong>：B／乙。</li></ul>
+<h3 id="sec11-9">11.9　优先级：按“能不能真做”排，而不是按“重不重要”排</h3>
 <table class="nat">
 <tr><th class="l">顺序</th><th class="l">MVU</th><th class="l">为什么这个顺序</th></tr>
 <tr><td class="l">1</td><td class="l">MVU-1（临界指数）</td><td class="l">纯数学，几个月能出结果</td></tr>
@@ -29,14 +29,14 @@
 <tr><td class="l">5</td><td class="l">MVU-3（τ 与结果）</td><td class="l">概念定义未统一，先做定义</td></tr>
 <tr><td class="l">6</td><td class="l">MVU-4（有效信息）</td><td class="l">哲学前提未解决，标为开放</td></tr>
 </table>
-<div class="box"><p><strong>这条顺序本身就是本书的一个主张：</strong> <strong>先做能做的，再谈重要的。</strong> 因为"重要但做不出来"的单元，最后往往变成一句漂亮话。</p></div>
+<div class="box"><p><strong>这条顺序本身就是本书的一个主张：</strong> <strong>先做能做的，再谈重要的。</strong> 因为“重要但做不出来”的单元，最后往往变成一句漂亮话。</p></div>
 <h3 id="sec11-10">11.10　如果 MVU-1 就失败了？</h3>
-<p>如果 MVU-1（图的临界指数）的结果是"不同图的 α 显著不同"，那会怎样？</p>
-<ul><li><strong>"统一普适类"猜想被削弱</strong>（这是预料之中的）；</li><li><strong>但"三中二规则"不受影响</strong>——因为它不依赖普适类，只依赖三个标记；</li><li><strong>受影响的，是"跨领域传递"的强主张</strong>：如果连图与图之间都不能同类，那"五系统同属一类"就更不可能。</li></ul>
+<p>如果 MVU-1（图的临界指数）的结果是“不同图的 α 显著不同”，那会怎样？</p>
+<ul><li><strong>“统一普适类”猜想被削弱</strong>（这是预料之中的）；</li><li><strong>但“三中二规则”不受影响</strong>——因为它不依赖普适类，只依赖三个标记；</li><li><strong>受影响的，是“跨领域传递”的强主张</strong>：如果连图与图之间都不能同类，那“五系统同属一类”就更不可能。</li></ul>
 <p><strong>所以，MVU-1 失败，不会推翻这本书，但会收窄它的野心。</strong> 这正是可证伪框架该有的样子：<strong>失败不是灾难，是边界。</strong></p>
 <h3 id="sec11-11">11.11　你可能想到的问题：关于六个可验证单元</h3>
-<div class="box"><p><strong>问：</strong> 这些 MVU 真的有人会做吗？ <strong>答：</strong> MVU-1 和 MVU-5 的门槛很低，一个研究生就能启动。<strong>其余的需要团队，但不需要"新物理"。</strong></p></div>
-<div class="box"><p><strong>问：</strong> 如果所有 MVU 都失败了，这本书是不是就废了？ <strong>答：</strong> 不会。它会退化成"一个失败的框架 + 一份失败记录"。<strong>而这本身，比一个"永远正确"的框架更有价值。</strong></p></div>
+<div class="box"><p><strong>问：</strong> 这些 MVU 真的有人会做吗？ <strong>答：</strong> MVU-1 和 MVU-5 的门槛很低，一个研究生就能启动。<strong>其余的需要团队，但不需要“新物理”。</strong></p></div>
+<div class="box"><p><strong>问：</strong> 如果所有 MVU 都失败了，这本书是不是就废了？ <strong>答：</strong> 不会。它会退化成“一个失败的框架 + 一份失败记录”。<strong>而这本身，比一个“永远正确”的框架更有价值。</strong></p></div>
 <h3 id="sec11-12">11.12　六个 MVU 的具体设计</h3>
 <p><strong>MVU-1（临界指数）</strong></p>
 <ul><li>样本：20+ 种图（2D 格、随机图、小世界、无标度、规则图）；</li><li>数据：每种图 10 个规模、每个规模 50 次随机实现；</li><li>分析：有限尺度标度坍缩，拟合 α；</li><li>时间：约 2 年；</li><li>风险：图类太多，结论可能“分类型”。</li></ul>
@@ -135,25 +135,25 @@
 <p>五个坑合起来，说明一件事：<strong>“可复算”不是一种态度，而是一组具体的技术习惯。</strong> 没有这些习惯，“代码开源”只是把错误公开。</p>
 <div class="box"><p>【一句可以带走的话】<strong>能被复算的结果，通常来自一个踩过坑的人；没踩过坑的人，说不出坑在哪。</strong></p></div>
 <div class="case"><p>【人的尺度】一位实验室技术员说，他不怕结论错，怕的是“没法验”。<b>六个可验证单元的意义，不是让人相信，是让人能动手。</b>动手的人多了，理论才有机会被真正杀掉。</p></div>
-<h3 id="sec11-19">11.19　教育系统：入学人数与"质量门槛"的错位</h3>
+<h3 id="sec11-19">11.19　教育系统：入学人数与“质量门槛”的错位</h3>
 <p>教育扩张常被描述为线性过程：入学率从 30% 到 60% 到 90%。但质量指标（师生比、生均资源）不是线性的：当入学率跨过某个点，新增学生的边际资源需求会突然上升，因为此前被忽略的群体（偏远、残疾、语言少数）需要更高的单位成本。</p>
-<p>这是一个"临界"的可验证单元：序参量是"入学率"，对称破缺是"教育供给从单一轨道分化为多轨道"（普通/职业/特教），慢化是"政策调整的滞后时间变长"。三者都可以在公开统计里找到代理。</p>
+<p>这是一个“临界”的可验证单元：序参量是“入学率”，对称破缺是“教育供给从单一轨道分化为多轨道”（普通/职业/特教），慢化是“政策调整的滞后时间变长”。三者都可以在公开统计里找到代理。</p>
 <div class="define"><span class="bt">断言 13.5（B 级，教育统计）</span>
-入学率跨过普及门槛后，生均成本的增速会上升而非下降；若观察到"入学率上升而生均成本不变"，说明该系统的供给结构尚未分化，这一条不成立。
+入学率跨过普及门槛后，生均成本的增速会上升而非下降；若观察到“入学率上升而生均成本不变”，说明该系统的供给结构尚未分化，这一条不成立。
 </div>
 <p><b>它在哪里会失败。</b>教育数据的口径变化频繁（学制调整、统计口径），跨年比较常常不可靠。因此这条只能在同一口径的短序列上检验。</p>
 <p><b>它使什么成为可能。</b>它给了一个政策判据：<strong>普及阶段的成本曲线不是外推得到的</strong>——用前 30% 的成本去估后 30%，一定低估。</p>
 
-<h3 id="sec11-20">11.20　公共卫生：疫苗覆盖与群体免疫的"有效门槛"</h3>
-<p>群体免疫常被写成一个固定数字（例如 95%），但它其实是一个<strong>随接触结构变化</strong>的阈值：均匀混合的人群门槛低，结构异质（超级传播者、聚集性社区）的人群门槛高。这与本书第 16 章"局部先行"完全对应——真正决定阻断的，不是全国平均值，而是最容易爆发的那一小块。</p>
-<p>用三标记读：序参量是"有效再生数 R<sub>e</sub>"，对称破缺是"传播从分散变为聚集"，慢化是"疫情回落时间变长"。三者都在跨过门槛前后表现出可测的变化。</p>
+<h3 id="sec11-20">11.20　公共卫生：疫苗覆盖与群体免疫的“有效门槛”</h3>
+<p>群体免疫常被写成一个固定数字（例如 95%），但它其实是一个<strong>随接触结构变化</strong>的阈值：均匀混合的人群门槛低，结构异质（超级传播者、聚集性社区）的人群门槛高。这与本书第 16 章“局部先行”完全对应——真正决定阻断的，不是全国平均值，而是最容易爆发的那一小块。</p>
+<p>用三标记读：序参量是“有效再生数 R<sub>e</sub>”，对称破缺是“传播从分散变为聚集”，慢化是“疫情回落时间变长”。三者都在跨过门槛前后表现出可测的变化。</p>
 <div class="define"><span class="bt">断言 13.6（B 级，流行病学）</span>
-在结构异质的群体里，达到名义覆盖率而局部覆盖不足的地区，仍会出现聚集性爆发；因此"全国覆盖率"不是群体免疫的有效判据。
+在结构异质的群体里，达到名义覆盖率而局部覆盖不足的地区，仍会出现聚集性爆发；因此“全国覆盖率”不是群体免疫的有效判据。
 </div>
-<p><b>它在哪里会失败。</b>接触结构难以测量，且随行为变化。这使得"局部覆盖"的判定常常滞后于疫情本身。</p>
-<p><b>它使什么成为可能。</b>它把"平均"这个陷阱讲清了：<strong>临界现象从来不由平均值决定，而由最薄弱的那一块决定</strong>。这句话可以跨到城市、组织与制度上。</p>
+<p><b>它在哪里会失败。</b>接触结构难以测量，且随行为变化。这使得“局部覆盖”的判定常常滞后于疫情本身。</p>
+<p><b>它使什么成为可能。</b>它把“平均”这个陷阱讲清了：<strong>临界现象从来不由平均值决定，而由最薄弱的那一块决定</strong>。这句话可以跨到城市、组织与制度上。</p>
 
 <div class="box box-summary"><span class="bt">本章小结</span>
-<ul><li>六个可验证单元，每一个都写成"若观察到 X，则本框架在这一处失效"。</li><li>单元必须小到可以被单例否定。</li><li>六个里已经有三个被部分否定，这是设计成功而非失败。</li></ul></div>
+<ul><li>六个可验证单元，每一个都写成“若观察到 X，则本框架在这一处失效”。</li><li>单元必须小到可以被单例否定。</li><li>六个里已经有三个被部分否定，这是设计成功而非失败。</li></ul></div>
 <h3 id="sec11-21">11.21　一句话带走</h3>
-<div class="box"><p><strong>一个框架的可信度，不取决于它有多少猜想，而取决于它有多少"能被做出来、也能被做砸"的单元。</strong></p></div>
+<div class="box"><p><strong>一个框架的可信度，不取决于它有多少猜想，而取决于它有多少“能被做出来、也能被做砸”的单元。</strong></p></div>
