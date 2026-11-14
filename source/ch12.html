@@ -59,9 +59,9 @@
 <table class="nat">
 <tr><th class="l">数字</th><th class="l">出处</th><th class="l">脚本</th></tr>
 <tr><td class="l">T_c=2.2645、γ/ν=1.752、β/ν=0.156、坍缩残差 5.09%/5.94%</td><td class="l">附录 B.1、15.6</td><td class="l"><code>analysis/exp_ising.py</code></td></tr>
-<tr><td class="l">雪崩指数 1.495 / 1.786 / 2.146</td><td class="l">17.9、22.6</td><td class="l"><code>analysis/exp_critical.py</code></td></tr>
-<tr><td class="l">AR(1) 的 τ=10/20/101/211、方差 5.15/10.28/50.89/102.11</td><td class="l">17.9</td><td class="l">同上</td></tr>
-<tr><td class="l">渗流 P(p) 曲线、阈值 0.583</td><td class="l">附录 B.2、17.9</td><td class="l">同上</td></tr>
+<tr><td class="l">雪崩指数 1.495 / 1.786 / 2.146</td><td class="l">17.10、22.6</td><td class="l"><code>analysis/exp_critical.py</code></td></tr>
+<tr><td class="l">AR(1) 的 τ=10/20/101/211、方差 5.15/10.28/50.89/102.11</td><td class="l">17.10</td><td class="l">同上</td></tr>
+<tr><td class="l">渗流 P(p) 曲线、阈值 0.583</td><td class="l">附录 B.2、17.10</td><td class="l">同上</td></tr>
 </table>
 <p>这一类数字的纪律：<strong>参数、种子、迭代数全部公开；偏差如实写；失败单独列（附录 D.4（原 R）.4）。</strong> 它们可以被称为“数据”，但只限于“在本书设定的模型内”。</p>
 <p><strong>第二类：引自文献的（有出处，但不是本书算的）。</strong></p>
@@ -69,7 +69,7 @@
 <tr><th class="l">数字</th><th class="l">出处</th><th class="l">性质</th></tr>
 <tr><td class="l">T_c = 2/ln(1+√2) ≈ 2.26919</td><td class="l">Onsager (1944)</td><td class="l">精确解</td></tr>
 <tr><td class="l">β=1/8、γ=7/4、ν=1</td><td class="l">二维 Ising 精确解</td><td class="l">精确解</td></tr>
-<tr><td class="l">p_c ≈ 0.5927</td><td class="l">方格点渗流数值结果</td><td class="l">高精度数值</td></tr>
+<tr><td class="l">p_c ≈ 0.5927</td><td class="l">方格点渗流数值结果（Stauffer &amp; Aharony，1994）</td><td class="l">高精度数值</td></tr>
 <tr><td class="l">平均场 β=1/2、γ=1、ν=1/2</td><td class="l">Landau 理论</td><td class="l">解析结果</td></tr>
 </table>
 <p>这一类数字的纪律：<strong>只引能在教科书中查到的标准结果；不引“某研究表明”的二手数字。</strong> 它们的作用是“校准尺”，不是“证据”。</p>
@@ -91,5 +91,7 @@
 
 <div class="box box-summary"><span class="bt">本章小结</span>
 <ul><li>三处：临界判据在多数真实对象上不可判；形式化的收益低于预期；案例的编码是单人完成。</li><li>每一处都写明“若要补，需要什么数据”。</li><li>自证的意义不在于自谦，而在于把可攻击面标出来。</li></ul></div>
+<div class="note"><b>若这条判据错了，会看到什么：</b>若三处缺口被补齐之后结论完全不变，自证就只是自谦。</div>
+
 <h3 id="sec12-11">12.11　一句话带走</h3>
 <div class="box"><p><strong>一个框架的可信，不在于它承认有局限，而在于它把局限写成了可被检查的条目。</strong></p></div>
