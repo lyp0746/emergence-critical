@@ -66,3 +66,13 @@
 - 第 16 章（五个陌生系统）与第 17 章（四部经典对标）合并为第 16 章「外部检验：五个陌生系统与四部经典」，约 1.24 万字、19 节；新增合并小结 16.19。
 - 章数 25 → 24；原 18—25 顺移为 17—24；节/锚点/parts.json 一次改完。
 - 页数 306 → 301。
+
+## 2026-11-25　工作区清理（断舍离）
+
+派生件与旧快照不留副本；版本靠本文件与 Zenodo 记录追溯。本次删除：
+
+- `output/book-ereader.html`
+- `output/book.html`
+
+重建：`build_book.py --pdf` / `--ereader --pdf`、`build_markdown.py`、`build_epub.py`；
+论文用 `generate_publication_suite.py`。
